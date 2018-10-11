@@ -1,5 +1,6 @@
 pkey.json
 stations.csv
+entrances.csv
 build/
 .gradle/
 .DS_Store
