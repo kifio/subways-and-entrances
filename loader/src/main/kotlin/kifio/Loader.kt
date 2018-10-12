@@ -78,9 +78,9 @@ private fun buildEntrance(attrs: List<String>): Entrance {
 	return Entrance(UUID.randomUUID().toString(), ref?.toInt() ?: 0, color, geoPoint.first, geoPoint.second)
 }
 
-private fun parseTags(entries: List<String>, tags: List<String>): HashMap<String, String> {
+// private fun parseTags(entries: List<String>, tags: List<String>): HashMap<String, String> {
 	//TOOD: Create HashMap. Fill it with entries. Search in map by keys,
-}
+// }
 
 private fun parseGeoPoint(attrs: List<String>): Pair<Double, Double> {
 	if (attrs.size < 2) throw IllegalArgumentException("Station data must contains tags, lon and lat")

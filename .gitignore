@@ -4,3 +4,7 @@ entrances.csv
 build/
 .gradle/
 .DS_Store
+local.properties
+android/src/main/res/values/google_maps_api.xml
+android/⁨⁨⁨⁨⁨⁨⁨src/⁨main/⁨res/values⁩/mapbox_conf.xml
+android/src/main/assets/sputnik.json 
