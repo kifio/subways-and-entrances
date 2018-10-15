@@ -5,29 +5,19 @@ import java.net.*
 import java.lang.*
 import java.util.*
 import com.google.gson.*
-import com.google.api.client.googleapis.auth.oauth2.*
+import kifio.model.*
 
-val baseUrl = "https://subways-and-entrances.firebaseio.com/"
-val token = generateToken()
-
-private fun generateToken(): String {
-	val serviceAccount = FileInputStream("pkey.json")
-	val googleCred = GoogleCredential.fromStream(serviceAccount)
-	val scoped = googleCred.createScoped(listOf(
-		"https://www.googleapis.com/auth/firebase.database",
-	    "https://www.googleapis.com/auth/userinfo.email"))
-	scoped.refreshToken()
-	return scoped.getAccessToken()
-}
+val token = Common.generateToken(FileInputStream("pkey.json"))
 
 fun main(args: Array<String>) {
-	loadFromTextFile("stations", ::buildStation)
-	loadFromTextFile("entrances", ::buildEntrance)
+	println(token)
+	// loadFromTextFile("stations", ::buildStation)
+	// loadFromTextFile("entrances", ::buildEntrance)
 }
 
 private fun <T> loadFromTextFile(type: String, initializer: (attrs: List<String>) -> T) {
 	val path = "$type.csv"
-	val url = URL("$baseUrl/$type.json?access_token=$token")
+	val url = URL("${Common.baseUrl}/$type.json?access_token=$token")
 	val objects = mutableListOf<String>()
 	File(path).useLines { objects.addAll(it) }
 
@@ -86,9 +76,6 @@ private fun parseGeoPoint(attrs: List<String>): Pair<Double, Double> {
 	if (attrs.size < 2) throw IllegalArgumentException("Station data must contains tags, lon and lat")
 	return(Pair<Double, Double>(attrs[attrs.size - 1].toDouble(), attrs[attrs.size - 2].toDouble()))
 }
-
-private data class Station(val id: String, val name: String?, val color: String?, val lat: Double, val lon: Double)
-private data class Entrance(val id: String, val ref: Int, val color: String?, val lat: Double, val lon: Double)
 
 @Throws(IOException::class)
 private fun sendJsonToFirebase(jsonString: String, url: URL)  {

@@ -1,11 +1,9 @@
+apply plugin: 'java'
 apply plugin: 'kotlin'
-apply plugin: 'application'
-
-mainClassName = 'kifio.LoaderKt'
 
 dependencies {
-    implementation project (":common")
     implementation 'com.google.code.gson:gson:2.8.2'
+   	implementation 'com.google.api-client:google-api-client:1.25.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
 
