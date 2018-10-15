@@ -2,7 +2,6 @@ package kifio
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import com.google.android.gms.maps.GoogleMap
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.maps.*
 import com.mapbox.geojson.Feature
@@ -13,17 +12,17 @@ import android.graphics.drawable.*
 import java.io.*
 import java.net.*
 import java.lang.*
-import java.util.*
 import com.google.gson.*
+import com.mapbox.mapboxsdk.camera.CameraPosition
+import com.mapbox.mapboxsdk.geometry.LatLng
 import timber.log.*
 import kotlinx.coroutines.experimental.*
-import android.widget.*
 import com.mapbox.mapboxsdk.style.sources.*
 import com.mapbox.mapboxsdk.style.layers.*
+import kifio.Common.generateToken
+import kifio.model.Station
 
 class MapsActivity : AppCompatActivity() {
-
-    private lateinit var mapboxMap: MapboxMap
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,53 +32,70 @@ class MapsActivity : AppCompatActivity() {
 
     private fun setMapBoxFragment() {
         Mapbox.getInstance(this, getString(R.string.mapbox_access_token))
-        val fragment = MapBoxUtils.newFragment(this)
+        val fragment = SupportMapFragment.newInstance(MapboxMapOptions()
+                .camera(getCameraPosition(LatLng(55.7558, 37.6173))))
         supportFragmentManager.beginTransaction()
-                .add(R.id.content, fragment, MapBoxUtils::class.java.simpleName).commit()
+                .add(R.id.content, fragment, SupportMapFragment::class.java.simpleName).commit()
         fragment.getMapAsync {
-            mapboxMap = it
-            loadData()
+            loadData(it)
         }
     }
 
-    private fun loadData() {
+    private fun getCameraPosition(postion: LatLng) = CameraPosition.Builder()
+            .target(postion)
+            .zoom(9.0)
+            .build()
+
+    private fun loadData(mapboxMap: MapboxMap) {
         GlobalScope.launch {
             val token = generateToken(getAssets().open("pkey.json"))
-            setStations(token)
+            loadEntitites(mapboxMap, token, "stations", ::getSubwayIcon)
+            loadEntitites(mapboxMap, token, "entrances", ::getSubwayIcon)
         }
     }
 
-    private fun setStations(token: String) {
-        Timber.d("${Common.baseUrl}/stations.json?access_token=$token")
-        val url = URL("${Common.baseUrl}/stations.json?access_token=$token")
-        val response = getData(url, Stations::class.java) ?: return
-        mapboxMap.addSource(GeoJsonSource("stations-source",
-            FeatureCollection.fromFeatures(response.stations.values.map {
-            Feature.fromGeometry(Point.fromLngLat(it.lat, it.lon))
-        }.toList())))
-        mapboxMap.addImage("stations-image", getBitmap(getDrawable(R.drawable.metro)))
-        mapboxMap.addLayer(SymbolLayer("stations-layer", "stations-source")
-        .withProperties(PropertyFactory.iconImage("stations-image")))
-    }
-
-    @Throws(IOException::class)
-    private fun <T> getData(url: URL, cl: Class<T>): T? {
+    private fun loadEntitites(mapboxMap: MapboxMap, token: String, layer: String, getIcon: (Int) -> Drawable) {
+        Timber.d("${Common.baseUrl}/$layer.json?access_token=$token")
+        val url = URL("${Common.baseUrl}/$layer.json?access_token=$token")
         val connection = url.openConnection() as HttpURLConnection
         connection.connect()
-        if (connection.getResponseCode() == 200) {
-            val response = connection.getInputStream().bufferedReader().use(BufferedReader::readText)
-            return Gson().fromJson(response, cl)
-        } else {
-            return null
+        if (connection.responseCode == 200) {
+            val response = connection.inputStream.bufferedReader().use(BufferedReader::readText)
+            runOnUiThread{ drawEntities(mapboxMap, response, getIcon, layer) }
         }
     }
 
+    private fun drawEntities(mapboxMap: MapboxMap, responseString: String, getIcon: (Int) -> Drawable, layer: String) {
+        val json = JsonParser().parse(responseString).asJsonObject
+        val features = FeatureCollection.fromFeatures(
+                json.entrySet().asSequence()
+                        .map { entry -> buildFeature(entry.value.asJsonObject) }.toList())
+
+        mapboxMap.addSource(GeoJsonSource("$layer-source", features))
+        mapboxMap.addImage("$layer-image", getBitmap(getIcon(0)))
+        mapboxMap.addLayer(SymbolLayer("$layer-layer", "$layer-source")
+                .withProperties(PropertyFactory.iconImage("$layer-image"),
+                        PropertyFactory.iconSize(0.5f)))
+    }
+
+    private fun buildFeature(jsonElement: JsonObject): Feature {
+        Timber.d(jsonElement.toString())
+        val lat: Double = jsonElement.get("lat").asDouble
+        val lon: Double = jsonElement.get("lon").asDouble
+        return Feature.fromGeometry(Point.fromLngLat(lon, lat))
+    }
+
+    private fun getSubwayIcon(stub: Int) = getDrawable(R.drawable.metro)
+
+    private fun getEntranceIcon(ref: Int) = resources.getIdentifier("metro_$ref",
+            "drawable", packageName)
+
     private fun getBitmap(vectorDrawable: Drawable): Bitmap {
-        val width = vectorDrawable.getIntrinsicWidth()
-        val height = vectorDrawable.getIntrinsicHeight() 
+        val width = vectorDrawable.intrinsicWidth
+        val height = vectorDrawable.intrinsicHeight
         val bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
-        vectorDrawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight())
+        vectorDrawable.setBounds(0, 0, canvas.width, canvas.height)
         vectorDrawable.draw(canvas)
         return bitmap
     }

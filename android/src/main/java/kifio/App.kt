@@ -1,4 +1,4 @@
-package kifio.subwaysandentrances
+package kifio
 
 import android.app.Application
 import timber.log.*
