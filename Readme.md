@@ -7,5 +7,10 @@ For running project you must place file *pkey.json* with your Firebase project p
 * android/src/main/assets/ - for android client.
 * loader/ - for data parser.
 
+In additional, you must add Mapbox access token:
+
+    <string name="mapbox_access_token" translatable="false">YOUR_TOKEN</string>
+
+
 Also, you must have drawables for subway entrances. Current logic implemented for Moscow subway, where entrances have numbers from 1 to 16. 
 Every entrance in response have an integer field ref. If you want to draw entrances you need to add icons with names in format: metro{ref}.xml into *android/src/main/drawable/* folder. 
