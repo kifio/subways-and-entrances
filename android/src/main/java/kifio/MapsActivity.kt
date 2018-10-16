@@ -11,7 +11,6 @@ import android.graphics.*
 import android.graphics.drawable.*
 import java.io.*
 import java.net.*
-import java.lang.*
 import com.google.gson.*
 import com.mapbox.mapboxsdk.camera.CameraPosition
 import com.mapbox.mapboxsdk.geometry.LatLng
@@ -20,7 +19,7 @@ import kotlinx.coroutines.experimental.*
 import com.mapbox.mapboxsdk.style.sources.*
 import com.mapbox.mapboxsdk.style.layers.*
 import kifio.Common.generateToken
-import kifio.model.Station
+import java.lang.StringBuilder
 
 class MapsActivity : AppCompatActivity() {
 
@@ -37,6 +36,7 @@ class MapsActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
                 .add(R.id.content, fragment, SupportMapFragment::class.java.simpleName).commit()
         fragment.getMapAsync {
+            initIcons(it)
             loadData(it)
         }
     }
@@ -48,33 +48,43 @@ class MapsActivity : AppCompatActivity() {
 
     private fun loadData(mapboxMap: MapboxMap) {
         GlobalScope.launch {
-            val token = generateToken(getAssets().open("pkey.json"))
-            loadEntitites(mapboxMap, token, "stations", ::getSubwayIcon)
-            loadEntitites(mapboxMap, token, "entrances", ::getSubwayIcon)
+            val token = generateToken(assets.open("pkey.json"))
+            loadEntities(mapboxMap, token, "stations")
+            loadEntities(mapboxMap, token, "entrances")
         }
     }
 
-    private fun loadEntitites(mapboxMap: MapboxMap, token: String, layer: String, getIcon: (Int) -> Drawable) {
+    private fun initIcons(mapboxMap: MapboxMap) {
+        // "metro" - icon for station
+        // "metro{n}" - is drawable for entrance, where n - is number for entrance.
+        for (i in 0..16) {
+            val sb = StringBuilder("metro")
+            if (i > 0) sb.append(i)
+            val name = sb.toString()
+            mapboxMap.addImage(name, getBitmap(getIcon(name)))
+        }
+    }
+
+    private fun loadEntities(mapboxMap: MapboxMap, token: String, layer: String) {
         Timber.d("${Common.baseUrl}/$layer.json?access_token=$token")
         val url = URL("${Common.baseUrl}/$layer.json?access_token=$token")
         val connection = url.openConnection() as HttpURLConnection
         connection.connect()
         if (connection.responseCode == 200) {
             val response = connection.inputStream.bufferedReader().use(BufferedReader::readText)
-            runOnUiThread{ drawEntities(mapboxMap, response, getIcon, layer) }
+            runOnUiThread{ drawEntities(mapboxMap, response, layer) }
         }
     }
 
-    private fun drawEntities(mapboxMap: MapboxMap, responseString: String, getIcon: (Int) -> Drawable, layer: String) {
+    private fun drawEntities(mapboxMap: MapboxMap, responseString: String, layer: String) {
         val json = JsonParser().parse(responseString).asJsonObject
         val features = FeatureCollection.fromFeatures(
                 json.entrySet().asSequence()
                         .map { entry -> buildFeature(entry.value.asJsonObject) }.toList())
 
         mapboxMap.addSource(GeoJsonSource("$layer-source", features))
-        mapboxMap.addImage("$layer-image", getBitmap(getIcon(0)))
         mapboxMap.addLayer(SymbolLayer("$layer-layer", "$layer-source")
-                .withProperties(PropertyFactory.iconImage("$layer-image"),
+                .withProperties(PropertyFactory.iconImage("{icon-name}"),
                         PropertyFactory.iconSize(0.5f)))
     }
 
@@ -82,13 +92,15 @@ class MapsActivity : AppCompatActivity() {
         Timber.d(jsonElement.toString())
         val lat: Double = jsonElement.get("lat").asDouble
         val lon: Double = jsonElement.get("lon").asDouble
-        return Feature.fromGeometry(Point.fromLngLat(lon, lat))
+        val feature = Feature.fromGeometry(Point.fromLngLat(lon, lat))
+        val hasRef = jsonElement.has("ref")
+        val iconName = if (hasRef) "metro${jsonElement.get("ref")}" else "metro"
+        feature.addStringProperty("icon-name", iconName)
+        return feature
     }
 
-    private fun getSubwayIcon(stub: Int) = getDrawable(R.drawable.metro)
-
-    private fun getEntranceIcon(ref: Int) = resources.getIdentifier("metro_$ref",
-            "drawable", packageName)
+    private fun getIcon(name: String) = getDrawable(
+            resources.getIdentifier(name, "drawable", packageName))
 
     private fun getBitmap(vectorDrawable: Drawable): Bitmap {
         val width = vectorDrawable.intrinsicWidth
