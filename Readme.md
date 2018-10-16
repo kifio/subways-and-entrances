@@ -1,6 +1,8 @@
-Simple project for drawing subway stations and entrances on map in mobile clients.
-For storing data used Firebase.
-For running you must have file pkey.json with Firebase private key.
-Also you must place entrances.csv and stations.csv files with columns: tags, lon, lat.
-Easiest way to get data for entrances.csv and stations.csv is take them from OSM.
-For creating Firebase private key you must create app in Firebase console.
+Simple project for parsing OSM, uploading subway stations and entrances into Firebase, and drawing them on map in mobile client.
+
+For running project you must place file pkey.json with your Firebase project private key in two directories:
+android/src/main/assets/ - for android client.
+loader/ - for data parser.
+
+Also, you must have drawables for subway entrances. Current logic implemented for Moscow subway, where entrances have numbers from 1 to 16. 
+Every entrance in response have an integer field ref. If you want to draw entrances you need to add icons with names in format: metro{ref}.xml. 

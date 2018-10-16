@@ -1,5 +1,6 @@
 package kifio
 
+import android.content.res.Resources
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import com.mapbox.mapboxsdk.Mapbox
@@ -61,7 +62,13 @@ class MapsActivity : AppCompatActivity() {
             val sb = StringBuilder("metro")
             if (i > 0) sb.append(i)
             val name = sb.toString()
-            mapboxMap.addImage(name, getBitmap(getIcon(name)))
+            var icon: Drawable
+            icon = try {
+                getIcon(name)
+            } catch (e: Resources.NotFoundException) {
+                getIcon("metro")
+            }
+            mapboxMap.addImage(name, getBitmap(icon))
         }
     }
 
