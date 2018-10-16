@@ -2,96 +2,89 @@ package kifio
 
 import java.io.*
 import java.net.*
-import java.lang.*
 import java.util.*
 import com.google.gson.*
 import kifio.model.*
+import org.w3c.dom.*
+import javax.xml.parsers.*
 
 val token = Common.generateToken(FileInputStream("pkey.json"))
+val tmpMap = mutableMapOf<String, String>()
+val gson = Gson()
 
 fun main(args: Array<String>) {
-	println(token)
-	// loadFromTextFile("stations", ::buildStation)
-	// loadFromTextFile("entrances", ::buildEntrance)
+	loadFromOsm("stations", ::buildStation)
+	loadFromOsm("entrances",::buildEntrance)
 }
 
-private fun <T> loadFromTextFile(type: String, initializer: (attrs: List<String>) -> T) {
-	val path = "$type.csv"
+private fun loadFromOsm(type: String, parse: (data: Map<String, String>) -> String?) {
+	val factory = DocumentBuilderFactory.newInstance()
+	val builder = factory.newDocumentBuilder()
 	val url = URL("${Common.baseUrl}/$type.json?access_token=$token")
-	val objects = mutableListOf<String>()
-	File(path).useLines { objects.addAll(it) }
-
-	try {
-		objects.forEach { sendJsonToFirebase(Gson().toJson(initializer(it.split(","))), url) }
-    } catch (e: IOException) {
-    	e.printStackTrace()
-    }
-}
-
-private fun buildStation(attrs: List<String>): Station {
-	val geoPoint = parseGeoPoint(attrs)
-	var name: String? = null
-	var color: String? = null
-
-	attrs.map { it.split(" => ") }.forEach {
-		if (it.size == 2) {
-			val key = it[0].replace("\"", "").trim()
-			val value = it[1].replace("\"", "")
-			if (key == "name") {
-				name = value
-			} else if (key == "colour") {
-				color = value
-			}
+	val doc = builder.parse(File("$type.osm"))
+	doc.documentElement.normalize()
+	val nodes = doc.getElementsByTagName("node")
+	for (i in 0 until nodes.length) {
+		val node = nodes.item(i)
+		if (node.nodeType == Node.ELEMENT_NODE) {
+			handleNode(node as Element)
+			sendJsonToFirebase(parse(tmpMap), url)
+			tmpMap.clear()
 		}
 	}
-
-	return Station(UUID.randomUUID().toString(), name, color, geoPoint.first, geoPoint.second)
 }
 
-private fun buildEntrance(attrs: List<String>): Entrance {
-	val geoPoint = parseGeoPoint(attrs)
-	var ref: String? = null
-	var color: String? = null
+private fun handleNode(element: Element) {
+	handleAttrs(element.attributes)
+	handleTags(element.getElementsByTagName("tag"))
+}
 
-	attrs.map { it.split(" => ") }.forEach {
-		if (it.size == 2) {
-			val key = it[0].replace("\"", "").trim()
-			val value = it[1].replace("\"", "")
-			if (key == "ref") {
-				ref = value
-			} else if (key == "colour") {
-				color = value
-			}
-		}
+private fun handleAttrs(attrs: NamedNodeMap) {
+	tmpMap["lat"] = attrs.getNamedItem("lat").nodeValue
+	tmpMap["lon"] = attrs.getNamedItem("lon").nodeValue
+}
+
+private fun handleTags(tags: NodeList) {
+	for (i in 0 until tags.length) {
+		handleTag(tags.item(i))
 	}
-
-	return Entrance(UUID.randomUUID().toString(), ref?.toInt() ?: 0, color, geoPoint.first, geoPoint.second)
 }
 
-// private fun parseTags(entries: List<String>, tags: List<String>): HashMap<String, String> {
-	//TOOD: Create HashMap. Fill it with entries. Search in map by keys,
-// }
+private fun handleTag(tag: Node) {
+	val key = tag.attributes.getNamedItem("k").nodeValue
+	val value = tag.attributes.getNamedItem("v").nodeValue
+	if (key == "ref" || key == "name") tmpMap[key] = value
+}
 
-private fun parseGeoPoint(attrs: List<String>): Pair<Double, Double> {
-	if (attrs.size < 2) throw IllegalArgumentException("Station data must contains tags, lon and lat")
-	return(Pair<Double, Double>(attrs[attrs.size - 1].toDouble(), attrs[attrs.size - 2].toDouble()))
+private fun buildStation(data: Map<String, String>): String? {
+	val lat = data["lat"]?.toDouble() ?: return null
+	val lon = data["lon"]?.toDouble() ?: return null
+	return gson.toJson(Station(UUID.randomUUID().toString(), data["name"], data["colour"], lat, lon))
+}
+
+private fun buildEntrance(data: Map<String, String>): String? {
+	val lat = data["lat"]?.toDouble() ?: return null
+	val lon = data["lon"]?.toDouble() ?: return null
+	val ref = data["ref"]?.toInt() ?: return null
+	return gson.toJson(Entrance(UUID.randomUUID().toString(), ref, data["colour"], lat, lon))
 }
 
 @Throws(IOException::class)
-private fun sendJsonToFirebase(jsonString: String, url: URL)  {
+private fun sendJsonToFirebase(jsonString: String?, url: URL)  {
+	if (jsonString == null) return
 	val connection = url.openConnection() as HttpURLConnection
-	connection.setRequestMethod("POST")
-	connection.setDoOutput(true);
+	connection.requestMethod = "POST"
+	connection.doOutput = true
 
-	val os = OutputStreamWriter(connection.getOutputStream());
-	os.write(jsonString);
-	os.flush();
-	os.close();
+	val os = OutputStreamWriter(connection.outputStream)
+	os.write(jsonString)
+	os.flush()
+	os.close()
 
-	val responseCode = connection.getResponseCode();
-	println("Sending $jsonString to URL : " + url);
-	println("Response Code : " + responseCode);
-	
-	val response = connection.getInputStream().bufferedReader().use(BufferedReader::readText)
-	println(response.toString());
+	val responseCode = connection.responseCode
+	println("Sending $jsonString to URL : $url")
+	println("Response Code : $responseCode")
+
+	val response = connection.inputStream.bufferedReader().use(BufferedReader::readText)
+	println(response)
 }
