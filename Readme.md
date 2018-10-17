@@ -35,7 +35,7 @@ and run commands like:
 
 ***Uploading data***
 
-If you run command like ./gradlew run -p loader, data from these filew will be uploaded to your Realtime Database in json format.
+If you run command ./gradlew run -p loader, data from these filew will be uploaded to your Realtime Database in json format.
 
 
 ***Drawing data***
