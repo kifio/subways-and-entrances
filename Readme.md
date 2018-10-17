@@ -41,3 +41,7 @@ If you run command like ./gradlew run -p loader, data from these filew will be u
 ***Drawing data***
 
 After this, you can run ./gradlew build -p android for creating .apk, which get data from firebase and draw it on map.
+
+***Screenshots:***
+![](https://github.com/kifio/subways-and-entrances/raw/master/1.jpg)
+![](https://github.com/kifio/subways-and-entrances/raw/master/2.jpg)
