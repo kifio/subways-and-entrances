@@ -7,14 +7,17 @@ import com.google.gson.*
 import kifio.model.*
 import org.w3c.dom.*
 import javax.xml.parsers.*
+import java.nio.charset.Charset
 
 val token = Common.generateToken(FileInputStream("pkey.json"))
 val tmpMap = mutableMapOf<String, String>()
 val gson = Gson()
+val colors = mutableSetOf<String>()
 
 fun main(args: Array<String>) {
-	loadFromOsm("stations", ::buildStation)
-	loadFromOsm("entrances",::buildEntrance)
+	// loadFromOsm("stations", ::buildStation)
+	// loadFromOsm("entrances",::buildEntrance)
+	loadEntrancesDetails("data-397-2018-10-02.json", "Windows-1251")
 }
 
 private fun loadFromOsm(type: String, parse: (data: Map<String, String>) -> String?) {
@@ -28,10 +31,60 @@ private fun loadFromOsm(type: String, parse: (data: Map<String, String>) -> Stri
 		val node = nodes.item(i)
 		if (node.nodeType == Node.ELEMENT_NODE) {
 			handleNode(node as Element)
-			sendJsonToFirebase(parse(tmpMap), url)
+			// sendJsonToFirebase(parse(tmpMap), url)
 			tmpMap.clear()
 		}
 	}
+	colors.forEach { println(it) }
+}
+
+private fun loadEntrancesDetails(path: String, encoding: String) {
+	val content = File(path).readText(Charset.forName(encoding))
+	val jsonArr = JsonParser().parse(content).asJsonArray
+	for (i in 0 until jsonArr.size()) {
+		handleEntranceDetails(jsonArr.get(i).asJsonObject)
+	}
+}
+
+private fun handleEntranceDetails(json: JsonObject) {
+	val name = json.get("Name").asString
+	val line = json.get("Line").asString
+	val arr = name.split(",")
+	arr.forEach { 
+		val value = it.trim()
+		if (value.contains("вход-выход")) {
+			println(value.split(" ").last())
+		} 
+
+	}
+	println("$name\n$line\n")
+}
+
+private fun parseColor(color: String, stationName: String): String {
+	return when (color) {
+		"red" -> "#da322a"	//	Сокольническая линия 1
+		"green" ->"#46ae5c"	//	"Замоскворецкая линия" 2
+		"blue" -> "#006da8"	//	"Арбатско-Покровская линия" 3
+		"lightblue" -> if (isButovskaya(stationName)) "" else ""	//	"Филевская линия" 4, Бутовская 12
+		"brown" -> "#794835"	// Кольцевая линия 5
+		"orange" -> "#f8c73e"	//	"Калининская линия" 6
+		"violet" -> "#804388"	//	"Таганско-Краснопресненская линия" 7
+		"yellow" -> "#f8c73e"	// Калининская линия, Солнцевская линия	8, 8A
+		"#a0a2a3" -> "9c9c99"	//	Серпуховско-Тимирязевская линия	9
+		"b4d445" -> "#adce4b"	//	Люблинско-Дмитровская линия	10
+		"darkgreen" -> "#79c5bf"	//	"Каховская линия", Большая кольцевая 11, 11А
+		else -> ""
+	}
+}
+
+private fun isButovskaya(stationName: String): Boolean {
+	return stationName == "Битцевский парк"
+		|| stationName == "Лесопарковая"
+		|| stationName == "Улица Старокачаловская"	
+		|| stationName == "Улица Скобелевская"
+		|| stationName == "Бульвар Адмирала Ушакова"
+		|| stationName == "Улица Горчакова"
+		|| stationName == "Бунинская аллея"
 }
 
 private fun handleNode(element: Element) {
@@ -54,6 +107,7 @@ private fun handleTag(tag: Node) {
 	val key = tag.attributes.getNamedItem("k").nodeValue
 	val value = tag.attributes.getNamedItem("v").nodeValue
 	if (key == "ref" || key == "name") tmpMap[key] = value
+	if (key == "colour") colors.add("$key:$value")
 }
 
 private fun buildStation(data: Map<String, String>): String? {
