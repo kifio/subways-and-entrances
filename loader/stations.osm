@@ -3113,6 +3113,7 @@
   <node id="5174653609" version="2" timestamp="2018-01-03T07:05:11Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.654962" lon="37.6486874">
     <tag k="name" v="Каширская"/>
     <tag k="subway" v="yes"/>
+    <tag k="colour" v="darkgreen"/>
     <tag k="name:be" v="Кашырская"/>
     <tag k="name:en" v="Kashirskaya"/>
     <tag k="name:ru" v="Каширская"/>
