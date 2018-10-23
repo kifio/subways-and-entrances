@@ -7,6 +7,7 @@ import org.w3c.dom.NamedNodeMap
 import org.w3c.dom.Node
 import org.w3c.dom.NodeList
 import java.io.File
+import java.io.InputStream
 import java.lang.IllegalArgumentException
 import java.util.*
 import javax.xml.parsers.DocumentBuilderFactory
@@ -15,11 +16,11 @@ class OpenStreetMapParser {
 
     private val tmpMap = mutableMapOf<String, String>()
 
-    fun<T> loadFromOsm(type: String, parse: (data: Map<String, String>) -> T): Set<T> {
+    fun<T> loadFromOsm(inputStream: InputStream, parse: (data: Map<String, String>) -> T): Set<T> {
         val results = mutableSetOf<T>()
         val factory = DocumentBuilderFactory.newInstance()
         val builder = factory.newDocumentBuilder()
-        val doc = builder.parse(File("$type.osm"))
+        val doc = builder.parse(inputStream)
         doc.documentElement.normalize()
         val nodes = doc.getElementsByTagName("node")
         for (i in 0 until nodes.length) {
@@ -53,6 +54,25 @@ class OpenStreetMapParser {
         val key = tag.attributes.getNamedItem("k").nodeValue
         val value = tag.attributes.getNamedItem("v").nodeValue
         if (key == "ref" || key == "name" || key == "colour") tmpMap[key] = value
+    }
+
+    fun nearestStation(lat: Double, lon: Double, stations: MutableSet<Station>): String {
+        var nearest: String? = null
+        var distance = Double.POSITIVE_INFINITY
+        for (station in stations) {
+
+            val latSqr = (station.lat - lat) * (station.lat - lat)
+            val lonSqr = (station.lon - lon) * (station.lon - lon)
+            val d = latSqr + lonSqr
+
+            if (d < distance) {
+                distance = d
+                nearest = "${station.name}:$${station.color}"
+            }
+
+        }
+        if (nearest == null) throw IllegalArgumentException("Nearest station does not exists")
+        return nearest
     }
 
     companion object {

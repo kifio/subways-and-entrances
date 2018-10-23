@@ -1,5 +1,6 @@
 package kifio
 
+import android.content.res.AssetManager
 import android.content.res.Resources
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -16,10 +17,12 @@ import com.google.gson.*
 import com.mapbox.mapboxsdk.camera.CameraPosition
 import com.mapbox.mapboxsdk.geometry.LatLng
 import timber.log.*
-import kotlinx.coroutines.experimental.*
 import com.mapbox.mapboxsdk.style.sources.*
 import com.mapbox.mapboxsdk.style.layers.*
-import kifio.Common.generateToken
+import kifio.model.Entrance
+import kifio.model.Station
+import kotlinx.coroutines.experimental.GlobalScope
+import kotlinx.coroutines.experimental.launch
 import java.lang.StringBuilder
 
 class MapsActivity : AppCompatActivity() {
@@ -49,9 +52,10 @@ class MapsActivity : AppCompatActivity() {
 
     private fun loadData(mapboxMap: MapboxMap) {
         GlobalScope.launch {
-            val token = generateToken(assets.open("pkey.json"))
-            loadEntities(mapboxMap, token, "stations")
-            loadEntities(mapboxMap, token, "entrances")
+//            val token = generateToken(assets.open("pkey.json"))
+//            loadEntities(mapboxMap, token, "stations")
+//            loadEntities(mapboxMap, token, "entrances")
+            loadEntrancesOffline(mapboxMap, "entrances")
         }
     }
 
@@ -72,6 +76,27 @@ class MapsActivity : AppCompatActivity() {
         }
     }
 
+    private fun loadEntrancesOffline(mapboxMap: MapboxMap, layer: String) {
+        val entrances = mutableSetOf<Entrance>()
+        val stations = mutableSetOf<Station>()
+        val osmParser = OpenStreetMapParser()
+        val odmParser = OpenDataMosParser()
+
+        stations.addAll(osmParser.loadFromOsm(assets.open("stations.osm"), OpenStreetMapParser.Companion::buildStation))
+        entrances.addAll(osmParser.loadFromOsm(assets.open("entrances.osm"), OpenStreetMapParser.Companion::buildEntrance))
+        entrances.forEach {
+            it.station = osmParser.nearestStation(it.lat, it.lon, stations)
+        }
+//        odmParser.mapOsmData(assets.open("data-397-2018-10-02.json"), "Windows-1251", entrances)
+//        entrances.addAll(odmParser.parseOpenDataMosEntrances(assets.open("data-397-2018-10-02.json"), "Windows-1251"))
+
+        val features = FeatureCollection.fromFeatures(
+                entrances.filter { it.station == null }.asSequence()
+                        .map { buildFeature(it.lat, it.lon, it.ref.toString()) }.toList())
+
+        runOnUiThread{ drawEntities(mapboxMap, features, layer) }
+    }
+
     private fun loadEntities(mapboxMap: MapboxMap, token: String, layer: String) {
         Timber.d("${Common.baseUrl}/$layer.json?access_token=$token")
         val url = URL("${Common.baseUrl}/$layer.json?access_token=$token")
@@ -79,29 +104,37 @@ class MapsActivity : AppCompatActivity() {
         connection.connect()
         if (connection.responseCode == 200) {
             val response = connection.inputStream.bufferedReader().use(BufferedReader::readText)
-            runOnUiThread{ drawEntities(mapboxMap, response, layer) }
+            runOnUiThread{
+                val json = JsonParser().parse(response).asJsonObject
+                val features = FeatureCollection.fromFeatures(
+                        json.entrySet().asSequence()
+                                .map { entry -> buildFeatureFromJson(entry.value.asJsonObject) }.toList())
+                drawEntities(mapboxMap, features, layer)
+            }
         }
     }
 
-    private fun drawEntities(mapboxMap: MapboxMap, responseString: String, layer: String) {
-        val json = JsonParser().parse(responseString).asJsonObject
-        val features = FeatureCollection.fromFeatures(
-                json.entrySet().asSequence()
-                        .map { entry -> buildFeature(entry.value.asJsonObject) }.toList())
-
+    private fun drawEntities(mapboxMap: MapboxMap, features: FeatureCollection, layer: String) {
         mapboxMap.addSource(GeoJsonSource("$layer-source", features))
         mapboxMap.addLayer(SymbolLayer("$layer-layer", "$layer-source")
                 .withProperties(PropertyFactory.iconImage("{icon-name}"),
                         PropertyFactory.iconSize(0.5f)))
     }
 
-    private fun buildFeature(jsonElement: JsonObject): Feature {
+    private fun buildFeatureFromJson(jsonElement: JsonObject): Feature {
         Timber.d(jsonElement.toString())
         val lat: Double = jsonElement.get("lat").asDouble
         val lon: Double = jsonElement.get("lon").asDouble
+        return if (jsonElement.has("ref")) {
+            buildFeature(lat, lon, jsonElement.get("ref").asString)
+        } else {
+            buildFeature(lat, lon, null)
+        }
+    }
+
+    private fun buildFeature(lat: Double, lon: Double, ref: String?): Feature {
         val feature = Feature.fromGeometry(Point.fromLngLat(lon, lat))
-        val hasRef = jsonElement.has("ref")
-        val iconName = if (hasRef) "metro${jsonElement.get("ref")}" else "metro"
+        val iconName = if (ref != null) "metro$ref" else "metro"
         feature.addStringProperty("icon-name", iconName)
         return feature
     }
