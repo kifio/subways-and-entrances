@@ -16,7 +16,7 @@ class OpenStreetMapParser {
 
     private val tmpMap = mutableMapOf<String, String>()
 
-    fun<T> loadFromOsm(inputStream: InputStream, parse: (data: Map<String, String>) -> T): Set<T> {
+    fun <T> loadFromOsm(inputStream: InputStream, parse: (data: Map<String, String>) -> T): Set<T> {
         val results = mutableSetOf<T>()
         val factory = DocumentBuilderFactory.newInstance()
         val builder = factory.newDocumentBuilder()
@@ -67,7 +67,7 @@ class OpenStreetMapParser {
 
             if (d < distance) {
                 distance = d
-                nearest = "${station.name}:$${station.color}"
+                nearest = "${station.name}:${station.color}"
             }
 
         }
@@ -103,10 +103,10 @@ class OpenStreetMapParser {
                 "blue" -> "#006da8"    //	"Арбатско-Покровская линия" 3
                 "lightblue" -> if (isButovskaya(stationName)) "#a7b9d4" else "#00b8e0"    //	Бутовская линия 12, "Филевская линия" 4
                 "brown" -> "#794835"    // Кольцевая линия 5
-                "orange" -> "#f8c73e"    //	"Калининская линия" 6
+                "orange" -> "#e77a38"    //	Калужская линия" 6
                 "violet" -> "#804388"    //	"Таганско-Краснопресненская линия" 7
-                "yellow" -> "#f8c73e"    // Калининская линия, Солнцевская линия	8, 8A
-                "#a0a2a3" -> "9c9c99"    //	Серпуховско-Тимирязевская линия	9
+                "yellow" -> "#f8c73e"     // Калининская линия, Солнцевская линия	8, 8A
+                "#a0a2a3" -> "#9c9c99"    //	Серпуховско-Тимирязевская линия	9
                 "#b4d445" -> "#adce4b"    //	Люблинско-Дмитровская линия	10
                 "darkgreen" -> "#79c5bf"    //	"Каховская линия", Большая кольцевая 11, 11А
                 else -> null

@@ -87,11 +87,9 @@ class MapsActivity : AppCompatActivity() {
         entrances.forEach {
             it.station = osmParser.nearestStation(it.lat, it.lon, stations)
         }
-//        odmParser.mapOsmData(assets.open("data-397-2018-10-02.json"), "Windows-1251", entrances)
-//        entrances.addAll(odmParser.parseOpenDataMosEntrances(assets.open("data-397-2018-10-02.json"), "Windows-1251"))
 
         val features = FeatureCollection.fromFeatures(
-                entrances.filter { it.station == null }.asSequence()
+                entrances.asSequence().filter { it.station != null }
                         .map { buildFeature(it.lat, it.lon, it.ref.toString()) }.toList())
 
         runOnUiThread{ drawEntities(mapboxMap, features, layer) }
