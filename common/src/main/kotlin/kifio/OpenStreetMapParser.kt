@@ -56,8 +56,8 @@ class OpenStreetMapParser {
         if (key == "ref" || key == "name" || key == "colour") tmpMap[key] = value
     }
 
-    fun nearestStation(lat: Double, lon: Double, stations: MutableSet<Station>): String {
-        var nearest: String? = null
+    fun nearestStation(lat: Double, lon: Double, stations: MutableSet<Station>): Station {
+        var nearest: Station? = null
         var distance = Double.POSITIVE_INFINITY
         for (station in stations) {
 
@@ -67,7 +67,7 @@ class OpenStreetMapParser {
 
             if (d < distance) {
                 distance = d
-                nearest = "${station.name}:${station.color}"
+                nearest = station
             }
 
         }
@@ -84,7 +84,7 @@ class OpenStreetMapParser {
                     ?: throw IllegalArgumentException("Station without lon")
             val name = data["name"] ?: throw IllegalArgumentException("Station without name")
             val color = data["colour"]
-            return Station(UUID.randomUUID().toString(), name, parseColor(color, name), lat, lon)
+            return Station(name, parseColor(color, name), lat, lon)
         }
 
         fun buildEntrance(data: Map<String, String>): Entrance {
@@ -93,7 +93,7 @@ class OpenStreetMapParser {
             val lon = data["lon"]?.toDouble()
                     ?: throw IllegalArgumentException("Entrance without lon")
             val ref = data["ref"]?.toInt() ?: -1
-            return Entrance(UUID.randomUUID().toString(), ref, data["colour"], lat, lon)
+            return Entrance(ref, data["colour"], lat, lon)
         }
 
         fun parseColor(color: String?, stationName: String): String? {

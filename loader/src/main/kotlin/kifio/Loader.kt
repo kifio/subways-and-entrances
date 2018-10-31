@@ -12,7 +12,7 @@ fun main(args: Array<String>) {
     writeMapToFile(buildMap(efis, sfis), args[2])
 }
 
-private fun writeMapToFile(map: Map<String, MutableList<Entrance>>, outputFile: String) {
+private fun writeMapToFile(map: Map<Station, MutableList<Entrance>>, outputFile: String) {
     val sb = StringBuilder()
     File("../entrances.csv").bufferedWriter().use { out ->
         for (station in map.keys) {

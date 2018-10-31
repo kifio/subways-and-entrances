@@ -1,1 +1,1 @@
-include ':android', ':loader', ':common'
+include ':android', ':loader', ':common', ':db'

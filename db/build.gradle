@@ -4,8 +4,10 @@ apply plugin: 'application'
 mainClassName = 'kifio.LoaderKt'
 
 dependencies {
+    implementation fileTree(dir: '../libs', include: ['*.jar'])
     implementation project (":common")
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation 'com.mchange:c3p0:0.9.5.2'
 }
 
 sourceCompatibility = 1.8

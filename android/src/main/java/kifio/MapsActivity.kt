@@ -24,6 +24,7 @@ import kifio.model.Station
 import kotlinx.coroutines.experimental.GlobalScope
 import kotlinx.coroutines.experimental.launch
 import java.lang.StringBuilder
+import kifio.Common.buildMap
 
 class MapsActivity : AppCompatActivity() {
 
@@ -77,26 +78,21 @@ class MapsActivity : AppCompatActivity() {
     }
 
     private fun loadEntrancesOffline(mapboxMap: MapboxMap, layer: String) {
-        val entrances = mutableSetOf<Entrance>()
-        val stations = mutableSetOf<Station>()
-        val osmParser = OpenStreetMapParser()
-        val odmParser = OpenDataMosParser()
+        val entrances = buildMap(assets.open("entrances.osm"), assets.open("stations.osm"))
+        val featuresList = mutableListOf<Feature>()
 
-        stations.addAll(osmParser.loadFromOsm(assets.open("stations.osm"), OpenStreetMapParser.Companion::buildStation))
-        entrances.addAll(osmParser.loadFromOsm(assets.open("entrances.osm"), OpenStreetMapParser.Companion::buildEntrance))
-        entrances.forEach {
-            it.station = osmParser.nearestStation(it.lat, it.lon, stations)
+        entrances.keys.forEach { station ->
+            entrances[station]?.forEach { entrance ->
+                featuresList.add(buildFeature(entrance.lat, entrance.lon, entrance.ref.toString()))
+            }
         }
 
-        val features = FeatureCollection.fromFeatures(
-                entrances.asSequence().filter { it.station != null }
-                        .map { buildFeature(it.lat, it.lon, it.ref.toString()) }.toList())
-
+        val features = FeatureCollection.fromFeatures(featuresList)
         runOnUiThread{ drawEntities(mapboxMap, features, layer) }
     }
 
     private fun loadEntities(mapboxMap: MapboxMap, token: String, layer: String) {
-        Timber.d("${Common.baseUrl}/$layer.json?access_token=$token")
+        /* Timber.d("${Common.baseUrl}/$layer.json?access_token=$token")
         val url = URL("${Common.baseUrl}/$layer.json?access_token=$token")
         val connection = url.openConnection() as HttpURLConnection
         connection.connect()
@@ -109,7 +105,7 @@ class MapsActivity : AppCompatActivity() {
                                 .map { entry -> buildFeatureFromJson(entry.value.asJsonObject) }.toList())
                 drawEntities(mapboxMap, features, layer)
             }
-        }
+        } */
     }
 
     private fun drawEntities(mapboxMap: MapboxMap, features: FeatureCollection, layer: String) {
