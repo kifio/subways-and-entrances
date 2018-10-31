@@ -41,12 +41,12 @@ class OpenDataMosParser {
 
         val nearestOsmEntrance = nearest(entrance.coordinates, entrances)
 
-        if (nearestOsmEntrance != null) {
+        /* if (nearestOsmEntrance != null) {
             nearestOsmEntrance.station = "${entrance.nameOfStation}:${entrance.line}"
             println("${nearestOsmEntrance.station} : ${Arrays.toString(entrance.coordinates)} is $entrance")
         } else {
             println("${entrance.name} is not founded")
-        }
+        } */
     }
 
     private fun buildEntrance(json: JsonObject): Entrance? {

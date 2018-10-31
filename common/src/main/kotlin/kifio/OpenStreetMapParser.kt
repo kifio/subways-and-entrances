@@ -16,7 +16,7 @@ class OpenStreetMapParser {
 
     private val tmpMap = mutableMapOf<String, String>()
 
-    fun <T> loadFromOsm(inputStream: InputStream, parse: (data: Map<String, String>) -> T): Set<T> {
+    fun <T> loadFromOsm(inputStream: InputStream, parse: (data: Map<String, String>) -> T): MutableSet<T> {
         val results = mutableSetOf<T>()
         val factory = DocumentBuilderFactory.newInstance()
         val builder = factory.newDocumentBuilder()

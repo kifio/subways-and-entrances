@@ -1,18 +1,24 @@
 package kifio
 
-import com.google.api.client.googleapis.auth.oauth2.*
+import kifio.OpenStreetMapParser.Companion.buildEntrance
+import kifio.OpenStreetMapParser.Companion.buildStation
+import kifio.model.Entrance
+import kifio.model.Station
 import java.io.*
+import java.util.*
 
 object Common {
 
-    const val baseUrl = "https://subways-and-entrances.firebaseio.com"
-
-	fun generateToken(inputStream: InputStream): String {
-		val googleCred = GoogleCredential.fromStream(inputStream)
-		val scoped = googleCred.createScoped(listOf(
-			"https://www.googleapis.com/auth/firebase.database",
-		    "https://www.googleapis.com/auth/userinfo.email"))
-		scoped.refreshToken()
-		return scoped.getAccessToken()
-	}
+    fun buildMap(efis: FileInputStream, sfis: FileInputStream): Map<String, MutableList<Entrance>> {
+        val osmParser = OpenStreetMapParser()
+        val entrances = osmParser.loadFromOsm(efis, ::buildEntrance)
+        val stations = osmParser.loadFromOsm(sfis, ::buildStation)
+        val map = mutableMapOf<String, MutableList<Entrance>>()
+        entrances.forEach {
+            val station = osmParser.nearestStation(it.lat, it.lon, stations)
+            val entrances = map.getOrPut(station, {mutableListOf<Entrance>()})
+            entrances.add(it)
+        }
+        return map
+    }
 }
