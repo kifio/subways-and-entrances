@@ -14,9 +14,9 @@ fun main(args: Array<String>) {
 
 private fun writeMapToFile(map: Map<Station, MutableList<Entrance>>, outputFile: String) {
     val sb = StringBuilder()
-    File("../entrances.csv").bufferedWriter().use { out ->
+    File(outputFile).bufferedWriter().use { out ->
         for (station in map.keys) {
-            map[station]?.sortedWith(compareBy({it.ref}))?.forEach {
+            map[station]?.sortedWith(compareBy {it.ref})?.forEach {
                 val line = sb.append(station)
                               .append(",")
                               .append(it)
