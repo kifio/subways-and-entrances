@@ -172,11 +172,15 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="description" v="северный вестибюль"/>
   </node>
-  <node id="170533049" version="15" timestamp="2018-01-18T17:47:15Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6544277" lon="37.6479113">
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
+  <node id="170533049" version="16" timestamp="2018-12-04T07:21:38Z" uid="8912234" user="Quinn Mallory" changeset="65149476" lat="55.6544277" lon="37.6479113">
+    <tag k="amenity" v="clock"/>
+    <tag k="display" v="electronic"/>
     <tag k="entrance" v="main"/>
+    <tag k="faces" v="1"/>
+    <tag k="network" v="Московский метрополитен"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="visibility" v="area"/>
   </node>
   <node id="175727206" version="11" timestamp="2018-01-18T17:47:15Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7957218" lon="37.7990027">
     <tag k="ref" v="1"/>
@@ -271,34 +275,38 @@
     <tag k="entrance" v="yes"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="244118400" version="17" timestamp="2018-01-18T17:47:16Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.81839" lon="37.4990703">
+  <node id="244118400" version="19" timestamp="2018-10-16T08:43:09Z" uid="481934" user="iWowik" changeset="63568198" lat="55.81839" lon="37.4990703">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="6"/>
+  </node>
+  <node id="244118412" version="18" timestamp="2018-10-16T08:37:11Z" uid="481934" user="iWowik" changeset="63568019" lat="55.8177693" lon="37.4995488">
     <tag k="colour" v="darkgreen"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
-  </node>
-  <node id="244118412" version="17" timestamp="2018-01-18T17:47:16Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8177693" lon="37.4995488">
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="7"/>
+  </node>
+  <node id="244118414" version="19" timestamp="2018-10-16T08:43:09Z" uid="481934" user="iWowik" changeset="63568198" lat="55.8181342" lon="37.4979987">
     <tag k="colour" v="darkgreen"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
-  </node>
-  <node id="244118414" version="17" timestamp="2018-01-18T17:47:16Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8181342" lon="37.4979987">
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="5"/>
-    <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="244118429" version="18" timestamp="2018-01-18T17:47:16Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8198752" lon="37.4966148">
-    <tag k="ref" v="3"/>
+  <node id="244118429" version="20" timestamp="2018-10-16T08:43:09Z" uid="481934" user="iWowik" changeset="63568198" lat="55.8198752" lon="37.4966148">
     <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="entrance" v="yes"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="3"/>
   </node>
   <node id="247691213" version="14" timestamp="2018-01-18T17:47:17Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7519166" lon="37.6123351">
     <tag k="ref" v="5"/>
@@ -420,24 +428,19 @@
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="wheelchair" v="no"/>
   </node>
-  <node id="251067017" version="11" timestamp="2018-01-18T17:47:18Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7904378" lon="37.5566381">
+  <node id="251475241" version="19" timestamp="2018-11-09T23:25:00Z" uid="3821748" user="yegorm" changeset="64341982" lat="55.8077218" lon="37.465444">
+    <tag k="colour" v="violet"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="4"/>
+  </node>
+  <node id="251475278" version="18" timestamp="2018-11-09T23:25:00Z" uid="3821748" user="yegorm" changeset="64341982" lat="55.8094351" lon="37.4633218">
+    <tag k="colour" v="violet"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="2"/>
-    <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-  </node>
-  <node id="251475241" version="18" timestamp="2018-03-16T11:02:33Z" uid="396906" user="ghost_07" changeset="57238379" lat="55.8077218" lon="37.465444">
-    <tag k="colour" v="violet"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-  </node>
-  <node id="251475278" version="17" timestamp="2018-02-13T16:47:37Z" uid="5490781" user="molnike" changeset="56328411" lat="55.8094351" lon="37.4633218">
-    <tag k="colour" v="violet"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
   <node id="251645002" version="26" timestamp="2018-01-18T17:47:19Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8039222" lon="37.4005105">
     <tag k="ref" v="2"/>
@@ -447,11 +450,12 @@
     <tag k="entrance" v="yes"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="251648798" version="20" timestamp="2018-02-13T16:47:38Z" uid="5490781" user="molnike" changeset="56328411" lat="55.8091222" lon="37.4628136">
+  <node id="251648798" version="21" timestamp="2018-11-09T23:25:00Z" uid="3821748" user="yegorm" changeset="64341982" lat="55.8091222" lon="37.4628136">
     <tag k="colour" v="violet"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
   </node>
   <node id="251649559" version="23" timestamp="2018-01-18T17:47:19Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8046581" lon="37.4009899">
     <tag k="ref" v="3"/>
@@ -484,13 +488,14 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="252856344" version="15" timestamp="2018-03-01T17:35:31Z" uid="674027" user="F-5 System" changeset="56795838" lat="55.8000414" lon="37.5344075">
-    <tag k="ref" v="4"/>
+  <node id="252856344" version="16" timestamp="2018-10-16T08:50:44Z" uid="481934" user="iWowik" changeset="63568428" lat="55.8000414" lon="37.5344075">
+    <tag k="access:conditional" v="yes @ (05:20-01:00)"/>
     <tag k="colour" v="darkgreen"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
+    <tag k="opening_hours" v="05:20-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="access:conditional" v="yes @ (05:20-01:00)"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="4"/>
   </node>
   <node id="252856369" version="15" timestamp="2018-01-18T17:47:20Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8004972" lon="37.5305095">
     <tag k="colour" v="darkgreen"/>
@@ -499,21 +504,23 @@
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="wheelchair" v="no"/>
   </node>
-  <node id="252856429" version="22" timestamp="2018-01-18T17:47:20Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8055549" lon="37.5150538">
+  <node id="252856429" version="23" timestamp="2018-10-16T08:43:10Z" uid="481934" user="iWowik" changeset="63568198" lat="55.8055549" lon="37.5150538">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="5:20-01:00"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="2"/>
-    <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="entrance" v="yes"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="252856435" version="19" timestamp="2018-01-18T17:47:20Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8044604" lon="37.5145372">
-    <tag k="ref" v="1"/>
+  <node id="252856435" version="20" timestamp="2018-10-16T08:43:10Z" uid="481934" user="iWowik" changeset="63568198" lat="55.8044604" lon="37.5145372">
     <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="entrance" v="yes"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="5:20-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
   </node>
   <node id="252934241" version="13" timestamp="2018-01-18T17:47:20Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7615733" lon="37.6242463">
     <tag k="ref" v="1"/>
@@ -593,14 +600,14 @@
     <tag k="wheelchair" v="no"/>
     <tag k="description" v="выход к Триумфальной арке"/>
   </node>
-  <node id="253229389" version="18" timestamp="2018-01-18T17:47:22Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7366613" lon="37.5174078">
-    <tag k="ref" v="2"/>
+  <node id="253229389" version="19" timestamp="2018-12-06T09:24:48Z" uid="830106" user="literan" changeset="65232256" lat="55.7366582" lon="37.5173906">
     <tag k="colour" v="blue"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wheelchair" v="no"/>
     <tag k="description" v="северный выход"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="2"/>
+    <tag k="wheelchair" v="no"/>
   </node>
   <node id="253768351" version="14" timestamp="2018-01-18T17:47:22Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6103196" lon="37.7181163">
     <tag k="ref" v="13"/>
@@ -650,20 +657,14 @@
     <tag k="wheelchair" v="no"/>
     <tag k="description" v="Филёвская линия"/>
   </node>
-  <node id="266501799" version="14" timestamp="2018-01-18T17:47:23Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7890085" lon="37.5598459">
-    <tag k="ref" v="1"/>
+  <node id="266835843" version="17" timestamp="2018-10-16T08:37:11Z" uid="481934" user="iWowik" changeset="63568019" lat="55.8391083" lon="37.4873218">
     <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-  </node>
-  <node id="266835843" version="16" timestamp="2018-01-18T17:47:23Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8391083" lon="37.4873218">
-    <tag k="ref" v="2"/>
-    <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="entrance" v="main"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="2"/>
   </node>
   <node id="267336516" version="12" timestamp="2018-01-18T17:47:23Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7591086" lon="37.6256885">
     <tag k="ref" v="10"/>
@@ -836,19 +837,19 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="282416522" version="11" timestamp="2018-01-18T17:47:26Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6553036" lon="37.5392495">
-    <tag k="ref" v="6"/>
+  <node id="282416522" version="12" timestamp="2018-11-09T23:22:00Z" uid="3821748" user="yegorm" changeset="64341916" lat="55.6553036" lon="37.5392495">
     <tag k="colour" v="orange"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
-  </node>
-  <node id="282416526" version="13" timestamp="2018-01-18T17:47:26Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.65555" lon="37.5383871">
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="5"/>
+  </node>
+  <node id="282416526" version="14" timestamp="2018-11-09T23:22:00Z" uid="3821748" user="yegorm" changeset="64341916" lat="55.65555" lon="37.5383871">
     <tag k="colour" v="orange"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="6"/>
   </node>
   <node id="282416689" version="15" timestamp="2018-01-18T17:47:26Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6436854" lon="37.5274178">
     <tag k="ref" v="4"/>
@@ -1165,7 +1166,7 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="320021765" version="11" timestamp="2018-09-10T10:48:56Z" uid="5490781" user="molnike" changeset="62449188" lat="55.6931524" lon="37.5344901">
+  <node id="320021765" version="12" timestamp="2018-12-26T18:12:18Z" uid="830106" user="literan" changeset="65792126" lat="55.6931524" lon="37.5344901">
     <tag k="colour" v="red"/>
     <tag k="network" v="Московский метрополитен"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
@@ -1173,7 +1174,7 @@
     <tag k="ref" v="1"/>
     <tag k="wheelchair" v="no"/>
   </node>
-  <node id="320021770" version="11" timestamp="2018-09-10T10:48:56Z" uid="5490781" user="molnike" changeset="62449188" lat="55.6935319" lon="37.5344901">
+  <node id="320021770" version="12" timestamp="2018-12-26T18:12:18Z" uid="830106" user="literan" changeset="65792126" lat="55.6935319" lon="37.5344901">
     <tag k="colour" v="red"/>
     <tag k="network" v="Московский метрополитен"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
@@ -1252,14 +1253,15 @@
     <tag k="entrance" v="yes"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="375602934" version="20" timestamp="2018-03-01T17:35:31Z" uid="674027" user="F-5 System" changeset="56795838" lat="55.8010171" lon="37.5321493">
-    <tag k="ref" v="1"/>
+  <node id="375602934" version="21" timestamp="2018-10-16T08:50:44Z" uid="481934" user="iWowik" changeset="63568428" lat="55.8010171" lon="37.5321493">
+    <tag k="access:conditional" v="yes @ (05:20-01:00)"/>
     <tag k="colour" v="darkgreen"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
+    <tag k="opening_hours" v="05:20-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
     <tag k="wheelchair" v="no"/>
-    <tag k="access:conditional" v="yes @ (05:20-01:00)"/>
   </node>
   <node id="380403021" version="13" timestamp="2018-01-18T17:47:33Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7512314" lon="37.7165139">
     <tag k="ref" v="6"/>
@@ -1958,17 +1960,17 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="663152228" version="9" timestamp="2018-01-18T17:47:44Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6534164" lon="37.6003109">
+  <node id="663152228" version="10" timestamp="2018-12-21T01:00:05Z" uid="485808" user="Alexey Lukin" changeset="65656234" lat="55.653445" lon="37.6002858">
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="6"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="663152229" version="9" timestamp="2018-01-18T17:47:44Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.65341" lon="37.5996482">
-    <tag k="ref" v="5"/>
+  <node id="663152229" version="10" timestamp="2018-12-21T01:00:05Z" uid="485808" user="Alexey Lukin" changeset="65656234" lat="55.6534402" lon="37.5995836">
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="5"/>
   </node>
   <node id="663152230" version="11" timestamp="2018-01-18T17:47:44Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6529988" lon="37.6004502">
     <tag k="ref" v="7"/>
@@ -2382,12 +2384,12 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="815105237" version="17" timestamp="2018-01-18T17:47:55Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7723217" lon="37.6330942">
-    <tag k="ref" v="2"/>
+  <node id="815105237" version="18" timestamp="2018-12-18T13:24:24Z" uid="326091" user="Vadiм" changeset="65580951" lat="55.7723271" lon="37.6330804">
     <tag k="colour" v="orange"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="2"/>
   </node>
   <node id="815105289" version="13" timestamp="2018-01-18T17:47:55Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7729684" lon="37.6329256">
     <tag k="colour" v="orange"/>
@@ -2411,21 +2413,23 @@
     <tag k="entrance" v="yes"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="835241985" version="18" timestamp="2018-01-18T17:47:56Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.805477" lon="37.5153563">
+  <node id="835241985" version="19" timestamp="2018-10-16T08:43:10Z" uid="481934" user="iWowik" changeset="63568198" lat="55.805477" lon="37.5153563">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="yes"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="5:20-01:00"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="2"/>
-    <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="entrance" v="yes"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="835241987" version="18" timestamp="2018-01-18T17:47:56Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8045177" lon="37.5143197">
-    <tag k="ref" v="1"/>
+  <node id="835241987" version="19" timestamp="2018-10-16T08:43:10Z" uid="481934" user="iWowik" changeset="63568198" lat="55.8045177" lon="37.5143197">
     <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="entrance" v="yes"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="5:20-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
   </node>
   <node id="870455593" version="11" timestamp="2018-01-18T17:47:56Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7599954" lon="37.6284365">
     <tag k="ref" v="3"/>
@@ -2596,52 +2600,53 @@
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="wheelchair" v="limited"/>
   </node>
-  <node id="912010984" version="9" timestamp="2018-01-18T17:47:59Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7585997" lon="37.6588209">
-    <tag k="ref" v="1"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="entrance" v="yes"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+  <node id="912010984" version="10" timestamp="2018-10-28T16:44:59Z" uid="830106" user="literan" changeset="63954945" lat="55.7586037" lon="37.6588733">
     <tag k="description" v="Арбатско-Покровская и Кольцевая линии"/>
-  </node>
-  <node id="912010995" version="10" timestamp="2018-01-18T17:47:59Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7559087" lon="37.6582067">
-    <tag k="ref" v="6"/>
-    <tag k="note" v="Курская;Чкаловская"/>
-    <tag k="colour" v="lightgreen"/>
+    <tag k="entrance" v="yes"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="description" v="Курская — Кольцевая линия"/>
-  </node>
-  <node id="912170095" version="14" timestamp="2018-01-18T17:47:59Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6578576" lon="37.5419399">
-    <tag k="colour" v="orange"/>
-    <tag k="network" v="Московский метрополитен"/>
     <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wheelchair" v="no"/>
-  </node>
-  <node id="912170141" version="13" timestamp="2018-01-18T17:48:00Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6578948" lon="37.5408072">
-    <tag k="ref" v="2"/>
-    <tag k="colour" v="orange"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wheelchair" v="no"/>
-  </node>
-  <node id="912170143" version="13" timestamp="2018-01-18T17:48:00Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.658151" lon="37.541088">
     <tag k="ref" v="1"/>
+  </node>
+  <node id="912010995" version="11" timestamp="2018-10-30T12:02:52Z" uid="830106" user="literan" changeset="64009107" lat="55.7559622" lon="37.6583138">
+    <tag k="colour" v="lightgreen"/>
+    <tag k="description" v="Курская — Кольцевая линия"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="note" v="Курская;Чкаловская"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="6"/>
+  </node>
+  <node id="912170095" version="15" timestamp="2018-11-09T23:22:00Z" uid="3821748" user="yegorm" changeset="64341916" lat="55.6578576" lon="37.5419399">
     <tag k="colour" v="orange"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="7"/>
     <tag k="wheelchair" v="no"/>
   </node>
-  <node id="912170160" version="14" timestamp="2018-01-18T17:48:00Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6576211" lon="37.5416801">
-    <tag k="ref" v="3"/>
+  <node id="912170141" version="14" timestamp="2018-11-09T23:22:00Z" uid="3821748" user="yegorm" changeset="64341916" lat="55.6578948" lon="37.5408072">
     <tag k="colour" v="orange"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="9"/>
+    <tag k="wheelchair" v="no"/>
+  </node>
+  <node id="912170143" version="14" timestamp="2018-11-09T23:22:00Z" uid="3821748" user="yegorm" changeset="64341916" lat="55.658151" lon="37.541088">
+    <tag k="colour" v="orange"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="10"/>
+    <tag k="wheelchair" v="no"/>
+  </node>
+  <node id="912170160" version="15" timestamp="2018-11-09T23:22:00Z" uid="3821748" user="yegorm" changeset="64341916" lat="55.6576211" lon="37.5416801">
+    <tag k="colour" v="orange"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="8"/>
     <tag k="wheelchair" v="no"/>
   </node>
   <node id="913167372" version="11" timestamp="2018-01-18T17:48:00Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7464589" lon="37.6815003">
@@ -2899,26 +2904,13 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="960299763" version="13" timestamp="2018-01-18T17:48:04Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7774624" lon="37.5170913">
-    <tag k="ref" v="2"/>
-    <tag k="colour" v="violet"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-  </node>
-  <node id="960299764" version="17" timestamp="2018-01-18T17:48:04Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7941489" lon="37.587136">
-    <tag k="ref" v="1"/>
+  <node id="960299764" version="18" timestamp="2018-12-30T20:35:56Z" uid="397326" user="trolleway" changeset="65897228" lat="55.7941489" lon="37.587136">
     <tag k="colour" v="gray"/>
+    <tag k="name" v="Савёловская"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
-  </node>
-  <node id="960299769" version="13" timestamp="2018-01-18T17:48:04Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7776863" lon="37.5176858">
-    <tag k="ref" v="4"/>
-    <tag k="colour" v="violet"/>
-    <tag k="network" v="Московский метрополитен"/>
     <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="ref" v="1"/>
   </node>
   <node id="960299778" version="13" timestamp="2018-01-18T17:48:04Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7935687" lon="37.5898653">
     <tag k="ref" v="5"/>
@@ -2927,17 +2919,13 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="960299800" version="5" timestamp="2018-01-01T12:01:18Z" uid="5490781" user="molnike" changeset="55074230" lat="55.7940639" lon="37.5900357">
-    <tag k="ref" v="3"/>
-    <tag k="railway" v="subway_entrance"/>
+  <node id="960299800" version="6" timestamp="2018-10-17T05:43:31Z" uid="8692210" user="john2w" changeset="63598446" lat="55.7940639" lon="37.5900357">
+    <tag k="colour" v="gray"/>
     <tag k="entrance" v="yes"/>
-  </node>
-  <node id="960299819" version="13" timestamp="2018-01-18T17:48:04Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7777695" lon="37.5172233">
-    <tag k="ref" v="3"/>
-    <tag k="colour" v="violet"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="3"/>
   </node>
   <node id="960299834" version="14" timestamp="2018-02-28T17:21:11Z" uid="5490781" user="molnike" changeset="56762297" lat="55.7779787" lon="37.5209547">
     <tag k="ref" v="5"/>
@@ -2953,36 +2941,36 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="963544856" version="13" timestamp="2018-01-18T17:48:05Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6563079" lon="37.5403162">
-    <tag k="ref" v="3"/>
+  <node id="963544856" version="14" timestamp="2018-11-09T23:22:00Z" uid="3821748" user="yegorm" changeset="64341916" lat="55.6563079" lon="37.5403162">
     <tag k="colour" v="orange"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wheelchair" v="no"/>
-  </node>
-  <node id="963544886" version="13" timestamp="2018-01-18T17:48:05Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6560341" lon="37.5400118">
-    <tag k="ref" v="4"/>
-    <tag k="colour" v="orange"/>
-    <tag k="network" v="Московский метрополитен"/>
     <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wheelchair" v="no"/>
-  </node>
-  <node id="963544891" version="13" timestamp="2018-01-18T17:48:05Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6565739" lon="37.5394444">
     <tag k="ref" v="1"/>
-    <tag k="colour" v="orange"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="wheelchair" v="no"/>
   </node>
-  <node id="963544894" version="13" timestamp="2018-01-18T17:48:05Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6563183" lon="37.5391907">
-    <tag k="ref" v="2"/>
+  <node id="963544886" version="14" timestamp="2018-11-09T23:22:01Z" uid="3821748" user="yegorm" changeset="64341916" lat="55.6560341" lon="37.5400118">
     <tag k="colour" v="orange"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="2"/>
+    <tag k="wheelchair" v="no"/>
+  </node>
+  <node id="963544891" version="14" timestamp="2018-11-09T23:22:01Z" uid="3821748" user="yegorm" changeset="64341916" lat="55.6565739" lon="37.5394444">
+    <tag k="colour" v="orange"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="3"/>
+    <tag k="wheelchair" v="no"/>
+  </node>
+  <node id="963544894" version="14" timestamp="2018-11-09T23:22:01Z" uid="3821748" user="yegorm" changeset="64341916" lat="55.6563183" lon="37.5391907">
+    <tag k="colour" v="orange"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="4"/>
     <tag k="wheelchair" v="no"/>
   </node>
   <node id="963868245" version="13" timestamp="2018-01-18T17:48:05Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7569115" lon="37.6156402">
@@ -3014,19 +3002,19 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="969288216" version="14" timestamp="2018-07-11T14:18:47Z" uid="260756" user="Felis Pimeja" changeset="60617889" lat="55.7531896" lon="37.6335283">
+  <node id="969288216" version="15" timestamp="2018-11-04T14:00:26Z" uid="260756" user="Felis Pimeja" changeset="64166975" lat="55.7531863" lon="37.6335314">
+    <tag k="colour" v="orange"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="11"/>
-    <tag k="colour" v="orange"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="969291188" version="16" timestamp="2018-07-11T14:18:47Z" uid="260756" user="Felis Pimeja" changeset="60617889" lat="55.7529392" lon="37.6334311">
-    <tag k="ref" v="12"/>
+  <node id="969291188" version="17" timestamp="2018-11-04T14:00:26Z" uid="260756" user="Felis Pimeja" changeset="64166975" lat="55.7529332" lon="37.6334599">
     <tag k="colour" v="orange"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="12"/>
   </node>
   <node id="969291717" version="14" timestamp="2018-01-18T17:48:06Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7537427" lon="37.6354563">
     <tag k="ref" v="8"/>
@@ -4048,12 +4036,12 @@
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="description" v="Северный выход"/>
   </node>
-  <node id="1196793233" version="11" timestamp="2018-01-18T17:48:23Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.740628" lon="37.6564562">
-    <tag k="ref" v="5"/>
+  <node id="1196793233" version="12" timestamp="2018-11-14T18:15:55Z" uid="830106" user="literan" changeset="64496174" lat="55.7406182" lon="37.6564485">
     <tag k="colour" v="yellow"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="5"/>
   </node>
   <node id="1196793234" version="10" timestamp="2018-01-18T17:48:23Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7392942" lon="37.6530041">
     <tag k="ref" v="4"/>
@@ -4308,20 +4296,22 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="description" v="только выход из метро;входа нет"/>
   </node>
-  <node id="1215209976" version="12" timestamp="2018-01-18T17:48:28Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8178928" lon="37.4982026">
+  <node id="1215209976" version="14" timestamp="2018-10-16T08:43:10Z" uid="481934" user="iWowik" changeset="63568198" lat="55.8178928" lon="37.4982026">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="4"/>
-    <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="1215209978" version="13" timestamp="2018-01-18T17:48:28Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8196332" lon="37.4968158">
-    <tag k="ref" v="2"/>
+  <node id="1215209978" version="15" timestamp="2018-10-16T08:43:10Z" uid="481934" user="iWowik" changeset="63568198" lat="55.8196332" lon="37.4968158">
     <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="entrance" v="yes"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="2"/>
   </node>
   <node id="1215233470" version="12" timestamp="2018-01-18T17:48:28Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8462847" lon="37.3612291">
     <tag k="ref" v="5"/>
@@ -4330,12 +4320,12 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="1215233474" version="13" timestamp="2018-01-18T17:48:28Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8464959" lon="37.3592756">
-    <tag k="ref" v="4"/>
+  <node id="1215233474" version="14" timestamp="2018-12-29T17:55:22Z" uid="830106" user="literan" changeset="65871555" lat="55.8464948" lon="37.3592741">
     <tag k="colour" v="blue"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="4"/>
   </node>
   <node id="1215233487" version="11" timestamp="2018-01-18T17:48:28Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8459416" lon="37.3606285">
     <tag k="ref" v="1"/>
@@ -4430,11 +4420,12 @@
     <tag k="ref" v="3"/>
     <tag k="railway" v="subway_entrance"/>
   </node>
-  <node id="1272306024" version="8" timestamp="2018-01-18T17:48:30Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8013474" lon="37.5318353">
+  <node id="1272306024" version="9" timestamp="2018-10-16T08:50:44Z" uid="481934" user="iWowik" changeset="63568428" lat="55.8013474" lon="37.5318353">
     <tag k="colour" v="darkgreen"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
+    <tag k="opening_hours" v="05:20-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="wheelchair" v="no"/>
   </node>
   <node id="1277435590" version="12" timestamp="2018-02-09T10:52:32Z" uid="830106" user="literan" changeset="56213009" lat="55.7656655" lon="37.637548">
@@ -4816,21 +4807,23 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="1802999405" version="11" timestamp="2018-01-18T17:48:36Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8542683" lon="37.4765578">
+  <node id="1802999405" version="13" timestamp="2018-10-17T10:30:12Z" uid="481934" user="iWowik" changeset="63605569" lat="55.8542683" lon="37.4765578">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="main"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="2"/>
-    <tag k="colour" v="darkgreen"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="entrance" v="yes"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="1802999415" version="15" timestamp="2018-01-18T17:48:36Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8557209" lon="37.4756064">
-    <tag k="ref" v="1"/>
+  <node id="1802999415" version="17" timestamp="2018-10-17T10:30:12Z" uid="481934" user="iWowik" changeset="63605569" lat="55.8557209" lon="37.4756064">
     <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="main"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="entrance" v="yes"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
   </node>
   <node id="1810710852" version="9" timestamp="2018-01-18T17:48:36Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7429331" lon="37.5644408">
     <tag k="ref" v="6"/>
@@ -4919,13 +4912,41 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="2026382938" version="10" timestamp="2018-01-18T17:48:38Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8405578" lon="37.4861734">
-    <tag k="ref" v="1"/>
+  <node id="1998862904" version="10" timestamp="2018-10-17T12:35:33Z" uid="481934" user="iWowik" changeset="63609038" lat="55.8557698" lon="37.47584">
     <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="exit"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
-    <tag k="entrance" v="main"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
+  </node>
+  <node id="2026382938" version="11" timestamp="2018-10-16T08:37:12Z" uid="481934" user="iWowik" changeset="63568019" lat="55.8405578" lon="37.4861734">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="main"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
+  </node>
+  <node id="2026382951" version="5" timestamp="2018-10-17T10:40:05Z" uid="481934" user="iWowik" changeset="63605870" lat="55.8391497" lon="37.4874953">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="2"/>
+  </node>
+  <node id="2026382976" version="6" timestamp="2018-10-17T10:40:05Z" uid="481934" user="iWowik" changeset="63605870" lat="55.8406037" lon="37.486358">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
   </node>
   <node id="2032093532" version="6" timestamp="2018-01-18T17:48:38Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6906551" lon="37.7562971">
     <tag k="ref" v="2"/>
@@ -5078,12 +5099,12 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="2231456816" version="10" timestamp="2018-01-18T17:48:40Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.654068" lon="37.6477965">
-    <tag k="ref" v="3"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
+  <node id="2231456816" version="11" timestamp="2018-12-29T17:55:23Z" uid="830106" user="literan" changeset="65871555" lat="55.654068" lon="37.6477965">
     <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
   </node>
   <node id="2231456817" version="9" timestamp="2018-01-18T17:48:40Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6542854" lon="37.6473512">
     <tag k="ref" v="2"/>
@@ -5092,19 +5113,77 @@
     <tag k="entrance" v="exit"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="2231456819" version="9" timestamp="2018-01-18T17:48:41Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.6557198" lon="37.6501614">
-    <tag k="ref" v="1"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
+  <node id="2231456819" version="10" timestamp="2018-12-29T17:55:23Z" uid="830106" user="literan" changeset="65871555" lat="55.6557198" lon="37.6501614">
     <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
-  </node>
-  <node id="2231456820" version="9" timestamp="2018-01-18T17:48:41Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.655935" lon="37.6496883">
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="4"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
+  </node>
+  <node id="2231456820" version="10" timestamp="2018-12-29T17:55:23Z" uid="830106" user="literan" changeset="65871555" lat="55.655935" lon="37.6496883">
     <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="3"/>
+  </node>
+  <node id="2264469814" version="4" timestamp="2018-10-16T09:06:56Z" uid="481934" user="iWowik" changeset="63568922" lat="55.7889071" lon="37.5597745">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+  </node>
+  <node id="2264469817" version="4" timestamp="2018-10-16T09:06:56Z" uid="481934" user="iWowik" changeset="63568922" lat="55.7889341" lon="37.559943">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="main"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
+  </node>
+  <node id="2264469826" version="4" timestamp="2018-10-16T09:06:56Z" uid="481934" user="iWowik" changeset="63568922" lat="55.7889695" lon="37.5599932">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="main"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+  </node>
+  <node id="2264469828" version="4" timestamp="2018-10-16T09:06:56Z" uid="481934" user="iWowik" changeset="63568922" lat="55.7889429" lon="37.5596943">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+  </node>
+  <node id="2264470091" version="3" timestamp="2018-10-16T09:06:56Z" uid="481934" user="iWowik" changeset="63568922" lat="55.7905014" lon="37.5564089">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+  </node>
+  <node id="2264470093" version="3" timestamp="2018-10-16T09:06:56Z" uid="481934" user="iWowik" changeset="63568922" lat="55.7905337" lon="37.5567076">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+  </node>
+  <node id="2264470103" version="3" timestamp="2018-10-16T09:06:56Z" uid="481934" user="iWowik" changeset="63568922" lat="55.790537" lon="37.5564586">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="2"/>
+  </node>
+  <node id="2264470105" version="3" timestamp="2018-10-16T09:06:56Z" uid="481934" user="iWowik" changeset="63568922" lat="55.7905705" lon="37.5566252">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
   </node>
   <node id="2321282232" version="10" timestamp="2018-01-21T19:13:33Z" uid="3580412" user="Alexander-II" changeset="55635763" lat="55.7240138" lon="37.5655401">
     <tag k="ref" v="2"/>
@@ -5281,6 +5360,15 @@
     <tag k="network" v="Московский метрополитен"/>
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+  </node>
+  <node id="2546176530" version="6" timestamp="2018-10-17T10:30:12Z" uid="481934" user="iWowik" changeset="63605569" lat="55.8543218" lon="37.4768108">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="entrance" v="exit"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="2"/>
   </node>
   <node id="2685150774" version="6" timestamp="2018-01-18T17:48:44Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.5816537" lon="37.5779708">
     <tag k="ref" v="1"/>
@@ -5861,19 +5949,19 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="4380562373" version="4" timestamp="2018-01-18T17:48:54Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8140809" lon="37.6019058">
-    <tag k="ref" v="2"/>
+  <node id="4380562373" version="5" timestamp="2018-10-28T18:24:49Z" uid="5646602" user="Anastey" changeset="63957147" lat="55.8140809" lon="37.6019058">
     <tag k="colour" v="lightgreen"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
-  </node>
-  <node id="4380562374" version="4" timestamp="2018-01-18T17:48:54Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8142279" lon="37.6007594">
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="1"/>
+  </node>
+  <node id="4380562374" version="5" timestamp="2018-10-28T18:25:08Z" uid="5646602" user="Anastey" changeset="63957156" lat="55.8142279" lon="37.6007594">
     <tag k="colour" v="lightgreen"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="2"/>
   </node>
   <node id="4395107606" version="4" timestamp="2018-01-18T17:48:54Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8453524" lon="37.6393802">
     <tag k="ref" v="2"/>
@@ -6138,9 +6226,9 @@
     <tag k="network" v="МЦК"/>
     <tag k="railway" v="subway_entrance"/>
   </node>
-  <node id="4639613692" version="4" timestamp="2018-01-18T17:48:58Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.7371218" lon="37.5155808">
-    <tag k="ref" v="6"/>
+  <node id="4639613692" version="5" timestamp="2018-12-06T09:24:50Z" uid="830106" user="literan" changeset="65232256" lat="55.7371316" lon="37.5154561">
     <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="6"/>
   </node>
   <node id="4675779756" version="4" timestamp="2018-01-18T17:48:58Z" uid="3580412" user="Alexander-II" changeset="55556201" lat="55.8459462" lon="37.6394191">
     <tag k="ref" v="1"/>
@@ -6484,11 +6572,12 @@
     <tag k="network" v="Московский метрополитен"/>
     <tag k="railway" v="subway_entrance"/>
   </node>
-  <node id="5102516749" version="5" timestamp="2018-03-16T11:02:33Z" uid="396906" user="ghost_07" changeset="57238379" lat="55.8080261" lon="37.4658857">
+  <node id="5102516749" version="6" timestamp="2018-11-09T23:25:01Z" uid="3821748" user="yegorm" changeset="64341982" lat="55.8080261" lon="37.4658857">
     <tag k="colour" v="violet"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="3"/>
   </node>
   <node id="5104873975" version="7" timestamp="2018-10-08T08:03:07Z" uid="830106" user="literan" changeset="63300110" lat="55.8126762" lon="37.4881332">
     <tag k="network" v="МЦК"/>
@@ -6519,13 +6608,17 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
   </node>
-  <node id="5298948929" version="4" timestamp="2017-12-31T20:18:11Z" uid="5490781" user="molnike" changeset="55065538" lat="55.8775107" lon="37.4815545">
+  <node id="5298948929" version="6" timestamp="2018-12-19T14:02:51Z" uid="481934" user="iWowik" changeset="65612338" lat="55.8775017" lon="37.4815183">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="4"/>
-    <tag k="railway" v="subway_entrance"/>
   </node>
-  <node id="5298948932" version="3" timestamp="2017-12-31T20:18:11Z" uid="5490781" user="molnike" changeset="55065538" lat="55.8773255" lon="37.4823635">
-    <tag k="ref" v="5"/>
+  <node id="5298948932" version="4" timestamp="2018-10-16T08:37:13Z" uid="481934" user="iWowik" changeset="63568019" lat="55.8773255" lon="37.4823635">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
     <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="5"/>
   </node>
   <node id="5310099930" version="2" timestamp="2018-02-28T17:03:31Z" uid="5490781" user="molnike" changeset="56761817" lat="55.785683" lon="37.5319665">
     <tag k="ref" v="2"/>
@@ -6620,20 +6713,27 @@
     <tag k="ref" v="6"/>
     <tag k="railway" v="subway_entrance"/>
   </node>
-  <node id="5314027738" version="1" timestamp="2017-12-31T20:18:10Z" uid="5490781" user="molnike" changeset="55065538" lat="55.8791504" lon="37.4807982">
+  <node id="5314027738" version="2" timestamp="2018-10-16T08:37:14Z" uid="481934" user="iWowik" changeset="63568019" lat="55.8791504" lon="37.4807982">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="1"/>
-    <tag k="railway" v="subway_entrance"/>
   </node>
-  <node id="5314027744" version="1" timestamp="2017-12-31T20:18:10Z" uid="5490781" user="molnike" changeset="55065538" lat="55.8787049" lon="37.4801915">
+  <node id="5314027744" version="3" timestamp="2018-12-21T15:00:59Z" uid="481934" user="iWowik" changeset="65671453" lat="55.8786116" lon="37.4798965">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="2"/>
-    <tag k="railway" v="subway_entrance"/>
   </node>
-  <node id="5314027745" version="1" timestamp="2017-12-31T20:18:11Z" uid="5490781" user="molnike" changeset="55065538" lat="55.8784281" lon="37.4803142">
+  <node id="5314027745" version="3" timestamp="2018-12-21T15:00:59Z" uid="481934" user="iWowik" changeset="65671453" lat="55.8780038" lon="37.480215">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
+    <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="3"/>
-    <tag k="railway" v="subway_entrance"/>
   </node>
-  <node id="5314562119" version="2" timestamp="2018-09-10T10:50:25Z" uid="5490781" user="molnike" changeset="62449240" lat="55.7176442" lon="37.7939293">
-    <tag k="entrance" v="exit"/>
+  <node id="5314562119" version="3" timestamp="2018-12-22T11:20:03Z" uid="830106" user="literan" changeset="65690752" lat="55.7176442" lon="37.7939293">
+    <tag k="check_date" v="2019-02-08"/>
+    <tag k="construction:entrance" v="exit"/>
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="1"/>
   </node>
@@ -6701,17 +6801,19 @@
     <tag k="wheelchair" v="no"/>
     <tag k="description" v="Кольцевая линия"/>
   </node>
-  <node id="5329143725" version="1" timestamp="2018-01-09T10:46:26Z" uid="5490781" user="molnike" changeset="55289338" lat="55.8769651" lon="37.4814882">
-    <tag k="ref" v="6"/>
+  <node id="5329143725" version="3" timestamp="2018-12-26T13:14:13Z" uid="481934" user="iWowik" changeset="65784211" lat="55.8769569" lon="37.4814784">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="opening_hours" v="05:30-01:00"/>
     <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="6"/>
   </node>
   <node id="5443308034" version="1" timestamp="2018-02-28T17:00:43Z" uid="5490781" user="molnike" changeset="56761758" lat="55.7559564" lon="37.524391">
     <tag k="ref" v="1"/>
     <tag k="railway" v="subway_entrance"/>
   </node>
-  <node id="5443308045" version="1" timestamp="2018-02-28T17:00:43Z" uid="5490781" user="molnike" changeset="56761758" lat="55.7577142" lon="37.5231472">
-    <tag k="ref" v="4"/>
+  <node id="5443308045" version="2" timestamp="2018-11-20T07:01:45Z" uid="326091" user="Vadiм" changeset="64684021" lat="55.757674" lon="37.5231773">
     <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="4"/>
   </node>
   <node id="5443317356" version="2" timestamp="2018-03-10T21:08:45Z" uid="674027" user="F-5 System" changeset="57067947" lat="55.7906899" lon="37.5560577">
     <tag k="ref" v="3"/>
@@ -6729,10 +6831,11 @@
     <tag k="ref" v="8"/>
     <tag k="railway" v="subway_entrance"/>
   </node>
-  <node id="5446108052" version="1" timestamp="2018-03-01T17:35:27Z" uid="674027" user="F-5 System" changeset="56795838" lat="55.8006698" lon="37.5311386">
-    <tag k="layer" v="-1"/>
-    <tag k="railway" v="subway_entrance"/>
+  <node id="5446108052" version="2" timestamp="2018-10-16T08:50:44Z" uid="481934" user="iWowik" changeset="63568428" lat="55.8006698" lon="37.5311386">
     <tag k="access:conditional" v="yes @ (05:20-01:00)"/>
+    <tag k="layer" v="-1"/>
+    <tag k="opening_hours" v="05:20-01:00"/>
+    <tag k="railway" v="subway_entrance"/>
   </node>
   <node id="5463220029" version="2" timestamp="2018-03-16T23:22:16Z" uid="674027" user="F-5 System" changeset="57255814" lat="55.798439" lon="37.4999654">
     <tag k="ref" v="2"/>
@@ -6794,11 +6897,11 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="2"/>
   </node>
-  <node id="5868863420" version="1" timestamp="2018-08-30T16:52:56Z" uid="397326" user="trolleway" changeset="62146337" lat="55.6339469" lon="37.3327481">
+  <node id="5868863420" version="2" timestamp="2018-11-15T20:20:06Z" uid="485808" user="Alexey Lukin" changeset="64543343" lat="55.6339151" lon="37.3328447">
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="1"/>
   </node>
-  <node id="5868868485" version="2" timestamp="2018-09-17T11:11:24Z" uid="5490781" user="molnike" changeset="62661180" lat="55.6340394" lon="37.3334931">
+  <node id="5868868485" version="3" timestamp="2018-11-15T20:20:06Z" uid="485808" user="Alexey Lukin" changeset="64543343" lat="55.6340364" lon="37.3336353">
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="2"/>
   </node>
@@ -6810,7 +6913,7 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="5"/>
   </node>
-  <node id="5868903538" version="1" timestamp="2018-08-30T17:17:30Z" uid="397326" user="trolleway" changeset="62147007" lat="55.6343561" lon="37.335581">
+  <node id="5868903538" version="2" timestamp="2018-11-15T20:20:06Z" uid="485808" user="Alexey Lukin" changeset="64543343" lat="55.6343501" lon="37.3355775">
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="4"/>
   </node>
@@ -6834,10 +6937,10 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="4"/>
   </node>
-  <node id="5870389596" version="5" timestamp="2018-09-19T13:17:02Z" uid="5490781" user="molnike" changeset="62730260" lat="55.650197" lon="37.3920732">
+  <node id="5870389596" version="6" timestamp="2018-12-14T14:31:38Z" uid="2853561" user="Владимир К" changeset="65475305" lat="55.650197" lon="37.3920732">
     <tag k="colour" v="yellow"/>
+    <tag k="fixme" v="opening_hours"/>
     <tag k="name" v="Солнцево"/>
-    <tag k="opening_hours" v="fix_me"/>
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="4"/>
   </node>
@@ -6848,7 +6951,7 @@
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="3"/>
   </node>
-  <node id="5874121125" version="1" timestamp="2018-09-01T21:02:05Z" uid="5490781" user="molnike" changeset="62206804" lat="55.6884993" lon="37.4842059">
+  <node id="5874121125" version="2" timestamp="2018-11-16T16:16:11Z" uid="485808" user="Alexey Lukin" changeset="64572874" lat="55.6884922" lon="37.484193">
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="1"/>
   </node>
@@ -6909,5 +7012,33 @@
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="subway_entrance"/>
     <tag k="ref" v="2"/>
+  </node>
+  <node id="6147681743" version="9" timestamp="2018-12-21T08:52:02Z" uid="481934" user="iWowik" changeset="65662411" lat="55.8652227" lon="37.4751679">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="1"/>
+    <tag k="wheelchair" v="no"/>
+  </node>
+  <node id="6147681744" version="9" timestamp="2018-12-21T08:52:03Z" uid="481934" user="iWowik" changeset="65662411" lat="55.8655564" lon="37.4762164">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="2"/>
+    <tag k="wheelchair" v="no"/>
+  </node>
+  <node id="6151169494" version="1" timestamp="2018-12-21T08:52:02Z" uid="481934" user="iWowik" changeset="65662411" lat="55.8655624" lon="37.4762067">
+    <tag k="colour" v="darkgreen"/>
+    <tag k="highway" v="elevator"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="wheelchair" v="yes"/>
+  </node>
+  <node id="6172832827" version="3" timestamp="2019-01-05T20:24:47Z" uid="9233658" user="kashirskiy" changeset="66056520" lat="55.7931898" lon="37.584224">
+    <tag k="name" v="Савёловская"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="7"/>
+  </node>
+  <node id="6172833190" version="3" timestamp="2019-01-05T20:24:47Z" uid="9233658" user="kashirskiy" changeset="66056520" lat="55.7937841" lon="37.5852376">
+    <tag k="name" v="Савёловская"/>
+    <tag k="railway" v="subway_entrance"/>
+    <tag k="ref" v="6"/>
   </node>
 </osm>

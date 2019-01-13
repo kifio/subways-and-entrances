@@ -1,19 +1,20 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <osm version="0.6" generator="Osmosis 0.45">
   <bounds minlon="-180.00000" minlat="-90.00000" maxlon="180.00000" maxlat="90.00000" origin=""/>
-  <node id="60660466" version="16" timestamp="2017-04-01T14:25:30Z" uid="485808" user="Alexey Lukin" changeset="47356941" lat="55.8871805" lon="37.6614355">
-    <tag k="name" v="Медведково"/>
-    <tag k="layer" v="-1"/>
+  <node id="60660466" version="17" timestamp="2018-11-19T15:35:33Z" uid="260756" user="Felis Pimeja" changeset="64661755" lat="55.8871805" lon="37.6614355">
     <tag k="colour" v="orange"/>
+    <tag k="layer" v="-1"/>
+    <tag k="name" v="Медведково"/>
     <tag k="name:be" v="Мядзведкава"/>
     <tag k="name:en" v="Medvedkovo"/>
     <tag k="name:ru" v="Медведково"/>
     <tag k="name:uk" v="Медведково"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q2721373"/>
   </node>
   <node id="60660469" version="22" timestamp="2018-01-03T07:05:49Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.8696254" lon="37.6641842">
     <tag k="name" v="Бабушкинская"/>
@@ -31,24 +32,26 @@
     <tag k="transport" v="subway"/>
     <tag k="opening_hours" v="05:35-01:00"/>
   </node>
-  <node id="68916801" version="26" timestamp="2017-12-09T00:27:48Z" uid="2434322" user="argrento" changeset="54473642" lat="55.7886007" lon="37.7509817">
-    <tag k="name" v="Партизанская"/>
-    <tag k="layer" v="-4"/>
+  <node id="68916801" version="27" timestamp="2018-11-19T17:54:37Z" uid="260756" user="Felis Pimeja" changeset="64667326" lat="55.7886007" lon="37.7509817">
+    <tag k="alt_name:mcm" v="Партизанская"/>
+    <tag k="alt_name:mcm_en" v="Partizanskaya"/>
     <tag k="colour" v="blue"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Партизанская"/>
     <tag k="name:be" v="Партызанская"/>
     <tag k="name:en" v="Partizanskaya"/>
     <tag k="name:fa" v="پارتیزانسکایا"/>
     <tag k="name:ru" v="Партизанская"/>
     <tag k="name:uk" v="Партизанська"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
     <tag k="old_name" v="Измайловский парк"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="station"/>
+    <tag k="station" v="subway"/>
     <tag k="transport" v="subway"/>
     <tag k="wheelchair" v="no"/>
-    <tag k="alt_name:mcm" v="Партизанская"/>
-    <tag k="alt_name:mcm_en" v="Partizanskaya"/>
+    <tag k="wikidata" v="Q2054979"/>
+    <tag k="wikipedia:ru" v="Партизанская (станция метро, Москва)"/>
   </node>
   <node id="68937012" version="24" timestamp="2018-01-03T07:05:20Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7834195" lon="37.7212469">
     <tag k="name" v="Семёновская"/>
@@ -183,10 +186,13 @@
     <tag k="alt_name:mcm" v="Бауманская"/>
     <tag k="alt_name:mcm_en" v="Baumanskaya"/>
   </node>
-  <node id="242546475" version="32" timestamp="2018-01-03T07:05:46Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7567678" lon="37.6218635">
-    <tag k="name" v="Площадь Революции"/>
-    <tag k="layer" v="-4"/>
+  <node id="242546475" version="33" timestamp="2018-11-14T16:48:38Z" uid="260756" user="Felis Pimeja" changeset="64492231" lat="55.7567678" lon="37.6218635">
+    <tag k="alt_name:en" v="Ploschad Revolyutsii;Ploshchad Revolyutsii"/>
+    <tag k="alt_name:mcm" v="Площадь Революции"/>
+    <tag k="alt_name:mcm_en" v="Ploschad Revolyutsiyi"/>
     <tag k="colour" v="blue"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Площадь Революции"/>
     <tag k="name:be" v="Плошча Рэвалюцыі"/>
     <tag k="name:de" v="Revolutionsplatz"/>
     <tag k="name:en" v="Revolution Square"/>
@@ -194,30 +200,30 @@
     <tag k="name:ru" v="Площадь Революции"/>
     <tag k="name:uk" v="Площа Революції"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q2721257"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:en" v="Ploschad Revolyutsii;Ploshchad Revolyutsii"/>
-    <tag k="alt_name:mcm" v="Площадь Революции"/>
-    <tag k="alt_name:mcm_en" v="Ploschad Revolyutsiyi"/>
+    <tag k="wikidata" v="Q2721257"/>
+    <tag k="wikipedia" v="ru:Площадь Революции (станция метро, Москва)"/>
   </node>
-  <node id="242546476" version="33" timestamp="2017-10-01T19:57:02Z" uid="98099" user="evgenykatyshev" changeset="52546224" lat="55.7521987" lon="37.6070395">
-    <tag k="name" v="Арбатская"/>
-    <tag k="layer" v="-4"/>
+  <node id="242546476" version="34" timestamp="2018-11-19T17:54:38Z" uid="260756" user="Felis Pimeja" changeset="64667326" lat="55.7521987" lon="37.6070395">
+    <tag k="alt_name:mcm" v="Арбатская"/>
+    <tag k="alt_name:mcm_en" v="Arbatskaya"/>
     <tag k="colour" v="blue"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Арбатская"/>
     <tag k="name:be" v="Арбацкая"/>
     <tag k="name:en" v="Arbatskaya"/>
     <tag k="name:ru" v="Арбатская"/>
     <tag k="name:uk" v="Арбатська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:mcm" v="Арбатская"/>
-    <tag k="alt_name:mcm_en" v="Arbatskaya"/>
+    <tag k="wikidata" v="Q2604365"/>
+    <tag k="wikipedia:ru" v="Арбатская (станция метро, Арбатско-Покровская линия)"/>
   </node>
   <node id="244036228" version="21" timestamp="2018-01-03T07:04:50Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7408429" lon="37.4169177">
     <tag k="name" v="Молодёжная"/>
@@ -288,19 +294,21 @@
     <tag k="transport" v="subway"/>
     <tag k="alt_name:uk" v="Ковальський міст"/>
   </node>
-  <node id="253016890" version="22" timestamp="2017-06-03T17:19:50Z" uid="485808" user="Alexey Lukin" changeset="49225078" lat="55.7404927" lon="37.6516778">
-    <tag k="name" v="Таганская"/>
-    <tag k="layer" v="-4"/>
+  <node id="253016890" version="23" timestamp="2018-11-07T17:08:49Z" uid="260756" user="Felis Pimeja" changeset="64267655" lat="55.7404927" lon="37.6516778">
     <tag k="colour" v="violet"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Таганская"/>
     <tag k="name:be" v="Таганская"/>
     <tag k="name:en" v="Taganskaya"/>
     <tag k="name:ru" v="Таганская"/>
     <tag k="name:uk" v="Таганська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q3028818"/>
+    <tag k="wikipedia" v="ru:Таганская (станция метро, Таганско-Краснопресненская линия)"/>
   </node>
   <node id="253016891" version="17" timestamp="2018-01-03T07:04:09Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7317991" lon="37.6658821">
     <tag k="name" v="Пролетарская"/>
@@ -332,21 +340,22 @@
     <tag k="wikidata" v="Q2551336"/>
     <tag k="transport" v="subway"/>
   </node>
-  <node id="253016893" version="16" timestamp="2015-01-25T11:10:40Z" uid="676343" user="theirix" changeset="28392560" lat="55.7087389" lon="37.7318594">
-    <tag k="name" v="Текстильщики"/>
-    <tag k="layer" v="-2"/>
+  <node id="253016893" version="17" timestamp="2018-11-19T15:42:16Z" uid="260756" user="Felis Pimeja" changeset="64662052" lat="55.7087389" lon="37.7318594">
+    <tag k="alt_name:en" v="Tekstilschiki"/>
+    <tag k="alt_name:uk" v="Текстильники"/>
     <tag k="colour" v="violet"/>
+    <tag k="layer" v="-2"/>
+    <tag k="name" v="Текстильщики"/>
     <tag k="name:be" v="Тэкстыльшчыкі"/>
     <tag k="name:en" v="Tekstilshchiki"/>
     <tag k="name:ru" v="Текстильщики"/>
     <tag k="name:uk" v="Текстильщики"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:en" v="Tekstilschiki"/>
-    <tag k="alt_name:uk" v="Текстильники"/>
+    <tag k="wikidata" v="Q21152431"/>
   </node>
   <node id="253016894" version="15" timestamp="2018-01-03T07:05:33Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7055467" lon="37.7657675">
     <tag k="name" v="Кузьминки"/>
@@ -488,34 +497,37 @@
     <tag k="alt_name:mcm" v="Славянский бульвар"/>
     <tag k="alt_name:mcm_en" v="Slavyanskiy Bulvar"/>
   </node>
-  <node id="255744331" version="20" timestamp="2017-06-13T04:11:54Z" uid="485808" user="Alexey Lukin" changeset="49486832" lat="55.7517135" lon="37.8167171">
-    <tag k="name" v="Новогиреево"/>
-    <tag k="layer" v="-4"/>
+  <node id="255744331" version="21" timestamp="2018-11-19T15:26:05Z" uid="260756" user="Felis Pimeja" changeset="64661382" lat="55.7517135" lon="37.8167171">
+    <tag k="alt_name:uk" v="Новогірєєво"/>
     <tag k="colour" v="yellow"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Новогиреево"/>
     <tag k="name:be" v="Навагірэева"/>
     <tag k="name:en" v="Novogireyevo"/>
     <tag k="name:ru" v="Новогиреево"/>
     <tag k="name:uk" v="Новогіреєво"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:uk" v="Новогірєєво"/>
+    <tag k="wikidata" v="Q662318"/>
   </node>
-  <node id="255744332" version="18" timestamp="2016-04-23T03:56:08Z" uid="485808" user="Alexey Lukin" changeset="38804549" lat="55.7511407" lon="37.7865341">
-    <tag k="name" v="Перово"/>
-    <tag k="layer" v="-2"/>
+  <node id="255744332" version="19" timestamp="2018-11-19T17:54:38Z" uid="260756" user="Felis Pimeja" changeset="64667326" lat="55.7511407" lon="37.7865341">
     <tag k="colour" v="yellow"/>
+    <tag k="layer" v="-2"/>
+    <tag k="name" v="Перово"/>
     <tag k="name:be" v="Пярова"/>
     <tag k="name:en" v="Perovo"/>
     <tag k="name:ru" v="Перово"/>
     <tag k="name:uk" v="Перово"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q2550994"/>
+    <tag k="wikipedia:ru" v="Перово (станция метро)"/>
   </node>
   <node id="255744578" version="19" timestamp="2017-03-03T16:55:43Z" uid="485808" user="Alexey Lukin" changeset="46553064" lat="55.7574684" lon="37.7493161">
     <tag k="name" v="Шоссе Энтузиастов"/>
@@ -568,19 +580,20 @@
     <tag k="transport" v="subway"/>
     <tag k="wheelchair" v="no"/>
   </node>
-  <node id="259786804" version="17" timestamp="2015-01-25T11:22:32Z" uid="676343" user="theirix" changeset="28392756" lat="55.6572552" lon="37.5405847">
-    <tag k="name" v="Калужская"/>
-    <tag k="layer" v="-4"/>
+  <node id="259786804" version="18" timestamp="2018-11-19T15:28:54Z" uid="260756" user="Felis Pimeja" changeset="64661490" lat="55.6572552" lon="37.5405847">
     <tag k="colour" v="orange"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Калужская"/>
     <tag k="name:be" v="Калужская"/>
     <tag k="name:en" v="Kaluzhskaya"/>
     <tag k="name:ru" v="Калужская"/>
     <tag k="name:uk" v="Калузька"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q2721697"/>
   </node>
   <node id="259786806" version="25" timestamp="2018-01-03T07:05:30Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.6701631" lon="37.5544462">
     <tag k="name" v="Новые Черёмушки"/>
@@ -617,22 +630,24 @@
     <tag k="transport" v="subway"/>
     <tag k="wikipedia" v="ru:Ясенево (станция метро)"/>
   </node>
-  <node id="265949954" version="19" timestamp="2017-10-01T19:57:04Z" uid="98099" user="evgenykatyshev" changeset="52546224" lat="55.8145922" lon="37.734442">
-    <tag k="name" v="Бульвар Рокоссовского"/>
-    <tag k="layer" v="-4"/>
+  <node id="265949954" version="20" timestamp="2018-11-19T17:54:34Z" uid="260756" user="Felis Pimeja" changeset="64667326" lat="55.8145922" lon="37.734442">
+    <tag k="alt_name:mcm" v="Бульвар Рокоссовского"/>
+    <tag k="alt_name:mcm_en" v="Bulvar Rokossovskogo"/>
     <tag k="colour" v="red"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Бульвар Рокоссовского"/>
     <tag k="name:be" v="Бульвар Ракасоўскага"/>
     <tag k="name:en" v="Bul&apos;var Rokossovskogo"/>
     <tag k="name:ru" v="Бульвар Рокоссовского"/>
     <tag k="name:uk" v="Бульвар Рокоссовського"/>
     <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
     <tag k="old_name" v="Улица Подбельского"/>
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="station"/>
+    <tag k="station" v="subway"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:mcm" v="Бульвар Рокоссовского"/>
-    <tag k="alt_name:mcm_en" v="Bulvar Rokossovskogo"/>
+    <tag k="wikidata" v="Q1139323"/>
+    <tag k="wikipedia:ru" v="Бульвар Рокоссовского (станция метро)"/>
   </node>
   <node id="265949956" version="24" timestamp="2018-01-03T07:04:29Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.8038707" lon="37.7449436">
     <tag k="name" v="Черкизовская"/>
@@ -652,23 +667,24 @@
     <tag k="alt_name:mcm" v="Черкизовская"/>
     <tag k="alt_name:mcm_en" v="Cherkizovskaya"/>
   </node>
-  <node id="265949958" version="24" timestamp="2017-12-14T18:46:05Z" uid="103003" user="Alexandrcfif" changeset="54632852" lat="55.7964038" lon="37.7155476">
-    <tag k="name" v="Преображенская площадь"/>
-    <tag k="layer" v="-4"/>
+  <node id="265949958" version="27" timestamp="2018-11-19T15:45:53Z" uid="260756" user="Felis Pimeja" changeset="64662208" lat="55.796429" lon="37.7153143">
+    <tag k="alt_name:en" v="Preobrazhenskaya Ploschad"/>
+    <tag k="alt_name:mcm" v="Преображенская площадь"/>
+    <tag k="alt_name:mcm_en" v="Preobrazhenskaya Ploschad"/>
     <tag k="colour" v="red"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Преображенская площадь"/>
     <tag k="name:be" v="Прэабражэнская плошча"/>
     <tag k="name:en" v="Preobrazhenskaya Ploshchad"/>
     <tag k="name:ru" v="Преображенская площадь"/>
     <tag k="name:uk" v="Преображенська площа"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
     <tag k="wheelchair" v="no"/>
-    <tag k="alt_name:en" v="Preobrazhenskaya Ploschad"/>
-    <tag k="alt_name:mcm" v="Преображенская площадь"/>
-    <tag k="alt_name:mcm_en" v="Preobrazhenskaya Ploschad"/>
+    <tag k="wikidata" v="Q1190916"/>
   </node>
   <node id="266835841" version="30" timestamp="2018-01-03T07:04:40Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.855" lon="37.4761085">
     <tag k="name" v="Речной вокзал"/>
@@ -704,23 +720,23 @@
     <tag k="alt_name:mcm" v="Водный стадион"/>
     <tag k="alt_name:mcm_en" v="Vodniy Stadion"/>
   </node>
-  <node id="266835845" version="29" timestamp="2018-01-03T07:05:24Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.8190236" lon="37.4979002">
-    <tag k="name" v="Войковская"/>
-    <tag k="layer" v="-2"/>
+  <node id="266835845" version="31" timestamp="2018-11-28T17:37:50Z" uid="564990" user="mavl" changeset="64980340" lat="55.8190236" lon="37.4979002">
+    <tag k="alt_name:mcm" v="Войковская"/>
+    <tag k="alt_name:mcm_en" v="Voykovskaya"/>
     <tag k="colour" v="green"/>
+    <tag k="layer" v="-2"/>
+    <tag k="name" v="Войковская"/>
     <tag k="name:be" v="Войкаўская"/>
     <tag k="name:de" v="Wojkowskaja"/>
     <tag k="name:en" v="Voykovskaya"/>
     <tag k="name:ru" v="Войковская"/>
     <tag k="name:uk" v="Войковська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q2547861"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:mcm" v="Войковская"/>
-    <tag k="alt_name:mcm_en" v="Voykovskaya"/>
+    <tag k="wikidata" v="Q2547861"/>
   </node>
   <node id="266835847" version="33" timestamp="2018-01-03T07:05:25Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.800368" lon="37.5330889">
     <tag k="name" v="Аэропорт"/>
@@ -740,22 +756,22 @@
     <tag k="alt_name:mcm" v="Аэропорт"/>
     <tag k="alt_name:mcm_en" v="Aeroport"/>
   </node>
-  <node id="266835848" version="31" timestamp="2018-01-03T07:04:34Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7896396" lon="37.5581058">
-    <tag k="name" v="Динамо"/>
-    <tag k="layer" v="-4"/>
+  <node id="266835848" version="33" timestamp="2019-01-10T21:14:49Z" uid="830106" user="literan" changeset="66209103" lat="55.7896396" lon="37.5581058">
+    <tag k="alt_name:mcm" v="Динамо"/>
+    <tag k="alt_name:mcm_en" v="Dinamo"/>
     <tag k="colour" v="green"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Динамо"/>
     <tag k="name:be" v="Дынама"/>
     <tag k="name:en" v="Dinamo"/>
     <tag k="name:ru" v="Динамо"/>
     <tag k="name:uk" v="Динамо"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q1317045"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:mcm" v="Динамо"/>
-    <tag k="alt_name:mcm_en" v="Dinamo"/>
+    <tag k="wikidata" v="Q1317045"/>
   </node>
   <node id="267334996" version="22" timestamp="2018-09-18T23:30:41Z" uid="485808" user="Alexey Lukin" changeset="62712715" lat="55.7888523" lon="37.6801963">
     <tag k="alt_name:mcm" v="Сокольники"/>
@@ -776,21 +792,22 @@
     <tag k="wikidata" v="Q1190787"/>
     <tag k="wikipedia" v="ru:Сокольники (станция метро)"/>
   </node>
-  <node id="267335088" version="21" timestamp="2017-10-01T19:57:07Z" uid="98099" user="evgenykatyshev" changeset="52546224" lat="55.7752438" lon="37.656081">
-    <tag k="name" v="Комсомольская"/>
-    <tag k="layer" v="-3"/>
+  <node id="267335088" version="22" timestamp="2018-11-19T15:17:49Z" uid="260756" user="Felis Pimeja" changeset="64661089" lat="55.7752438" lon="37.656081">
+    <tag k="alt_name:mcm" v="Комсомольская"/>
+    <tag k="alt_name:mcm_en" v="Komsomolskaya"/>
     <tag k="colour" v="red"/>
+    <tag k="layer" v="-3"/>
+    <tag k="name" v="Комсомольская"/>
     <tag k="name:be" v="Камсамольская"/>
     <tag k="name:en" v="Komsomolskaya"/>
     <tag k="name:ru" v="Комсомольская"/>
     <tag k="name:uk" v="Комсомольська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:mcm" v="Комсомольская"/>
-    <tag k="alt_name:mcm_en" v="Komsomolskaya"/>
+    <tag k="wikidata" v="Q1147948"/>
   </node>
   <node id="267335089" version="20" timestamp="2018-01-03T07:04:30Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.780348" lon="37.6676678">
     <tag k="name" v="Красносельская"/>
@@ -828,21 +845,22 @@
     <tag k="alt_name:mcm" v="Охотный Ряд"/>
     <tag k="alt_name:mcm_en" v="Okhotniy Ryad"/>
   </node>
-  <node id="267335316" version="21" timestamp="2017-10-01T19:57:08Z" uid="98099" user="evgenykatyshev" changeset="52546224" lat="55.7599346" lon="37.6277544">
-    <tag k="name" v="Лубянка"/>
-    <tag k="layer" v="-4"/>
+  <node id="267335316" version="22" timestamp="2018-11-19T16:16:20Z" uid="260756" user="Felis Pimeja" changeset="64663577" lat="55.7599346" lon="37.6277544">
+    <tag k="alt_name:mcm" v="Лубянка"/>
+    <tag k="alt_name:mcm_en" v="Lubyanka"/>
     <tag k="colour" v="red"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Лубянка"/>
     <tag k="name:be" v="Лубянка"/>
     <tag k="name:en" v="Lubyanka"/>
     <tag k="name:ru" v="Лубянка"/>
     <tag k="name:uk" v="Луб’янка"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:mcm" v="Лубянка"/>
-    <tag k="alt_name:mcm_en" v="Lubyanka"/>
+    <tag k="wikidata" v="Q677658"/>
   </node>
   <node id="267335317" version="24" timestamp="2018-01-03T07:04:37Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7658946" lon="37.6388932">
     <tag k="name" v="Чистые пруды"/>
@@ -946,20 +964,21 @@
     <tag k="transport" v="subway"/>
     <tag k="alt_name:en" v="Ploschad Ilyicha"/>
   </node>
-  <node id="276191577" version="24" timestamp="2018-01-03T07:05:38Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7412546" lon="37.6534447">
-    <tag k="name" v="Марксистская"/>
-    <tag k="layer" v="-4"/>
+  <node id="276191577" version="25" timestamp="2018-11-07T17:08:49Z" uid="260756" user="Felis Pimeja" changeset="64267655" lat="55.7412546" lon="37.6534447">
     <tag k="colour" v="yellow"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Марксистская"/>
     <tag k="name:be" v="Марксісцкая"/>
     <tag k="name:en" v="Marksistskaya"/>
     <tag k="name:ru" v="Марксистская"/>
     <tag k="name:uk" v="Марксистська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q2603956"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q2603956"/>
+    <tag k="wikipedia" v="ru:Марксистская (станция метро)"/>
   </node>
   <node id="277499099" version="24" timestamp="2017-12-13T23:51:58Z" uid="485808" user="Alexey Lukin" changeset="54610920" lat="55.7937093" lon="37.6363021">
     <tag k="name" v="Рижская"/>
@@ -1022,19 +1041,21 @@
     <tag k="wikidata" v="Q2548968"/>
     <tag k="transport" v="subway"/>
   </node>
-  <node id="277499852" version="30" timestamp="2016-01-03T02:21:39Z" uid="485808" user="Alexey Lukin" changeset="36330546" lat="55.7411829" lon="37.6271378">
-    <tag k="name" v="Третьяковская"/>
-    <tag k="layer" v="-4"/>
+  <node id="277499852" version="31" timestamp="2018-11-08T08:17:30Z" uid="260756" user="Felis Pimeja" changeset="64284233" lat="55.7411829" lon="37.6271378">
     <tag k="colour" v="orange"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Третьяковская"/>
     <tag k="name:be" v="Траццякоўская"/>
     <tag k="name:en" v="Tretyakovskaya"/>
     <tag k="name:ru" v="Третьяковская"/>
     <tag k="name:uk" v="Третяковська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1734852"/>
+    <tag k="wikipedia" v="ru:Третьяковская (станция метро)"/>
   </node>
   <node id="277499853" version="25" timestamp="2015-11-13T05:04:24Z" uid="485808" user="Alexey Lukin" changeset="35276480" lat="55.7305821" lon="37.6111677">
     <tag k="name" v="Октябрьская"/>
@@ -1074,22 +1095,23 @@
     <tag k="wikipedia" v="ru:Шаболовская (станция метро)"/>
     <tag k="wheelchair" v="yes"/>
   </node>
-  <node id="278692957" version="25" timestamp="2018-01-03T07:04:36Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7454887" lon="37.603689">
-    <tag k="name" v="Кропоткинская"/>
-    <tag k="layer" v="-4"/>
+  <node id="278692957" version="26" timestamp="2018-11-12T14:10:41Z" uid="260756" user="Felis Pimeja" changeset="64407721" lat="55.7454887" lon="37.603689">
+    <tag k="alt_name:mcm" v="Кропоткинская"/>
+    <tag k="alt_name:mcm_en" v="Kropotkinskaya"/>
     <tag k="colour" v="red"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Кропоткинская"/>
     <tag k="name:be" v="Крапоткінская"/>
     <tag k="name:en" v="Kropotkinskaya"/>
     <tag k="name:ru" v="Кропоткинская"/>
     <tag k="name:uk" v="Кропоткінська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q1341676"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:mcm" v="Кропоткинская"/>
-    <tag k="alt_name:mcm_en" v="Kropotkinskaya"/>
+    <tag k="wikidata" v="Q1341676"/>
+    <tag k="wikipedia" v="ru:Кропоткинская (станция метро)"/>
   </node>
   <node id="278692958" version="28" timestamp="2018-01-03T07:04:08Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7512497" lon="37.6100781">
     <tag k="name" v="Библиотека имени Ленина"/>
@@ -1225,22 +1247,23 @@
     <tag k="transport" v="subway"/>
     <tag k="wikipedia" v="ru:Парк культуры (станция метро, Кольцевая линия)"/>
   </node>
-  <node id="291686160" version="24" timestamp="2016-11-23T01:26:58Z" uid="485808" user="Alexey Lukin" changeset="43884587" lat="55.7298063" lon="37.609684">
-    <tag k="name" v="Октябрьская"/>
-    <tag k="layer" v="-4"/>
+  <node id="291686160" version="25" timestamp="2018-11-19T17:25:18Z" uid="260756" user="Felis Pimeja" changeset="64666198" lat="55.7298063" lon="37.609684">
+    <tag k="alt_name:en" v="Oktyabrskaya"/>
     <tag k="colour" v="brown"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Октябрьская"/>
     <tag k="name:be" v="Кастрычніцкая"/>
     <tag k="name:de" v="Oktjabrskaja"/>
     <tag k="name:en" v="Oktyabrskaya"/>
     <tag k="name:ru" v="Октябрьская"/>
     <tag k="name:uk" v="Жовтнева"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
     <tag k="wheelchair" v="yes"/>
-    <tag k="alt_name:en" v="Oktyabrskaya"/>
+    <tag k="wikidata" v="Q2602974"/>
   </node>
   <node id="291687197" version="17" timestamp="2017-02-01T19:56:13Z" uid="3580412" user="Alexander-II" changeset="45725817" lat="55.748863" lon="37.5826924">
     <tag k="name" v="Смоленская"/>
@@ -1258,23 +1281,23 @@
     <tag k="transport" v="subway"/>
     <tag k="wikipedia" v="ru:Смоленская (станция метро, Филёвская линия)"/>
   </node>
-  <node id="291687455" version="32" timestamp="2018-01-03T07:04:28Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7702196" lon="37.5951107">
-    <tag k="name" v="Маяковская"/>
-    <tag k="layer" v="-4"/>
+  <node id="291687455" version="34" timestamp="2019-01-10T21:14:49Z" uid="830106" user="literan" changeset="66209103" lat="55.7702196" lon="37.5951107">
+    <tag k="alt_name:mcm" v="Маяковская"/>
+    <tag k="alt_name:mcm_en" v="Mayakovskaya"/>
     <tag k="colour" v="green"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Маяковская"/>
     <tag k="name:be" v="Маякоўская"/>
     <tag k="name:en" v="Mayakovskaya"/>
     <tag k="name:ru" v="Маяковская"/>
     <tag k="name:uk" v="Маяковська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q1190921"/>
     <tag k="transport" v="subway"/>
     <tag k="wheelchair" v="limited"/>
-    <tag k="alt_name:mcm" v="Маяковская"/>
-    <tag k="alt_name:mcm_en" v="Mayakovskaya"/>
+    <tag k="wikidata" v="Q1190921"/>
   </node>
   <node id="291689166" version="26" timestamp="2018-01-03T07:04:20Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7709056" lon="37.6177532">
     <tag k="name" v="Цветной бульвар"/>
@@ -1325,19 +1348,20 @@
     <tag k="alt_name:mcm" v="Павелецкая"/>
     <tag k="alt_name:mcm_en" v="Paveletskaya"/>
   </node>
-  <node id="292019996" version="16" timestamp="2015-11-16T02:29:56Z" uid="485808" user="Alexey Lukin" changeset="35341426" lat="55.7322275" lon="37.6378319">
-    <tag k="name" v="Павелецкая"/>
-    <tag k="layer" v="-4"/>
+  <node id="292019996" version="17" timestamp="2018-11-19T15:27:40Z" uid="260756" user="Felis Pimeja" changeset="64661441" lat="55.7322275" lon="37.6378319">
     <tag k="colour" v="brown"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Павелецкая"/>
     <tag k="name:be" v="Павелецкая"/>
     <tag k="name:en" v="Paveletskaya"/>
     <tag k="name:ru" v="Павелецкая"/>
     <tag k="name:uk" v="Павелецька"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1364499"/>
   </node>
   <node id="292143794" version="26" timestamp="2018-05-15T18:14:33Z" uid="830106" user="literan" changeset="58993406" lat="55.7575043" lon="37.6190281">
     <tag k="name" v="Театральная"/>
@@ -1366,22 +1390,23 @@
     <tag k="alt_name:mcm" v="Театральная"/>
     <tag k="alt_name:mcm_en" v="Teatralnaya"/>
   </node>
-  <node id="292143796" version="29" timestamp="2018-01-03T07:04:39Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7414147" lon="37.629373">
-    <tag k="name" v="Новокузнецкая"/>
-    <tag k="layer" v="-4"/>
+  <node id="292143796" version="30" timestamp="2018-11-08T08:17:30Z" uid="260756" user="Felis Pimeja" changeset="64284233" lat="55.7414147" lon="37.629373">
+    <tag k="alt_name:mcm" v="Новокузнецкая"/>
+    <tag k="alt_name:mcm_en" v="Novokuznetskaya"/>
     <tag k="colour" v="green"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Новокузнецкая"/>
     <tag k="name:be" v="Новакузнецкая"/>
     <tag k="name:en" v="Novokuznetskaya"/>
     <tag k="name:ru" v="Новокузнецкая"/>
     <tag k="name:uk" v="Новокузнецька"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q1365632"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:mcm" v="Новокузнецкая"/>
-    <tag k="alt_name:mcm_en" v="Novokuznetskaya"/>
+    <tag k="wikidata" v="Q1365632"/>
+    <tag k="wikipedia" v="ru:Новокузнецкая (станция метро)"/>
   </node>
   <node id="292144111" version="25" timestamp="2018-01-03T07:04:37Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7647965" lon="37.6061167">
     <tag k="name" v="Тверская"/>
@@ -1400,10 +1425,12 @@
     <tag k="alt_name:mcm" v="Тверская"/>
     <tag k="alt_name:mcm_en" v="Tverskaya"/>
   </node>
-  <node id="292146578" version="23" timestamp="2017-10-01T19:57:11Z" uid="98099" user="evgenykatyshev" changeset="52546224" lat="55.7073793" lon="37.6576204">
-    <tag k="name" v="Автозаводская"/>
-    <tag k="layer" v="-4"/>
+  <node id="292146578" version="24" timestamp="2018-10-22T16:43:44Z" uid="485808" user="Alexey Lukin" changeset="63765887" lat="55.7073465" lon="37.6576539">
+    <tag k="alt_name:mcm" v="Автозаводская"/>
+    <tag k="alt_name:mcm_en" v="Avtozavodskaya"/>
     <tag k="colour" v="green"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Автозаводская"/>
     <tag k="name:be" v="Аўтазаводская"/>
     <tag k="name:cs" v="Avtozavodskaja"/>
     <tag k="name:en" v="Avtozavodskaya"/>
@@ -1415,31 +1442,30 @@
     <tag k="name:sv" v="Avtozavodskaja"/>
     <tag k="name:uk" v="Автозаводська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q2384688"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q2384688"/>
     <tag k="wikipedia" v="ru:Технопарк (станция метро)"/>
-    <tag k="alt_name:mcm" v="Автозаводская"/>
-    <tag k="alt_name:mcm_en" v="Avtozavodskaya"/>
   </node>
-  <node id="292147581" version="21" timestamp="2017-10-01T19:57:12Z" uid="98099" user="evgenykatyshev" changeset="52546224" lat="55.6784809" lon="37.6638965">
-    <tag k="name" v="Коломенская"/>
+  <node id="292147581" version="22" timestamp="2018-11-19T15:37:49Z" uid="260756" user="Felis Pimeja" changeset="64661859" lat="55.6784809" lon="37.6638965">
+    <tag k="alt_name:mcm" v="Коломенская"/>
+    <tag k="alt_name:mcm_en" v="Kolomenskaya"/>
+    <tag k="colour" v="green"/>
     <tag k="depth" v="9"/>
     <tag k="layer" v="-2"/>
-    <tag k="colour" v="green"/>
+    <tag k="name" v="Коломенская"/>
     <tag k="name:be" v="Каломенская"/>
     <tag k="name:en" v="Kolomenskaya"/>
     <tag k="name:ru" v="Коломенская"/>
     <tag k="name:uk" v="Коломенська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:mcm" v="Коломенская"/>
-    <tag k="alt_name:mcm_en" v="Kolomenskaya"/>
+    <tag k="wikidata" v="Q666527"/>
   </node>
   <node id="292148161" version="13" timestamp="2017-10-01T19:57:12Z" uid="98099" user="evgenykatyshev" changeset="52546224" lat="55.693627" lon="37.6644041">
     <tag k="name" v="Технопарк"/>
@@ -1455,47 +1481,51 @@
     <tag k="alt_name:mcm" v="Технопарк"/>
     <tag k="alt_name:mcm_en" v="Tekhnopark"/>
   </node>
-  <node id="293799708" version="20" timestamp="2017-06-02T14:15:08Z" uid="485808" user="Alexey Lukin" changeset="49197801" lat="55.7795032" lon="37.6317074">
-    <tag k="name" v="Проспект Мира"/>
-    <tag k="layer" v="-4"/>
+  <node id="293799708" version="21" timestamp="2018-11-19T16:06:19Z" uid="260756" user="Felis Pimeja" changeset="64663107" lat="55.7795032" lon="37.6317074">
     <tag k="colour" v="brown"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Проспект Мира"/>
     <tag k="name:be" v="Праспект Міру"/>
     <tag k="name:en" v="Prospekt Mira"/>
     <tag k="name:ru" v="Проспект Мира"/>
     <tag k="name:uk" v="Проспект Миру"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1190913"/>
   </node>
-  <node id="294024698" version="16" timestamp="2015-11-16T01:57:38Z" uid="485808" user="Alexey Lukin" changeset="35341221" lat="55.729148" lon="37.6237142">
-    <tag k="name" v="Добрынинская"/>
-    <tag k="layer" v="-4"/>
+  <node id="294024698" version="17" timestamp="2018-11-19T16:06:52Z" uid="260756" user="Felis Pimeja" changeset="64663135" lat="55.729148" lon="37.6237142">
     <tag k="colour" v="brown"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Добрынинская"/>
     <tag k="name:be" v="Дабрынінская"/>
     <tag k="name:en" v="Dobryninskaya"/>
     <tag k="name:ru" v="Добрынинская"/>
     <tag k="name:uk" v="Добринінська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1233589"/>
   </node>
-  <node id="296045315" version="21" timestamp="2017-06-03T03:37:53Z" uid="485808" user="Alexey Lukin" changeset="49211550" lat="55.741645" lon="37.6510792">
-    <tag k="name" v="Таганская"/>
-    <tag k="layer" v="-4"/>
+  <node id="296045315" version="22" timestamp="2018-11-07T17:08:49Z" uid="260756" user="Felis Pimeja" changeset="64267655" lat="55.741645" lon="37.6510792">
     <tag k="colour" v="brown"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Таганская"/>
     <tag k="name:be" v="Таганская"/>
     <tag k="name:en" v="Taganskaya"/>
     <tag k="name:ru" v="Таганская"/>
     <tag k="name:uk" v="Таганська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1316964"/>
+    <tag k="wikipedia" v="ru:Таганская (станция метро, Кольцевая линия)"/>
   </node>
   <node id="296926132" version="21" timestamp="2018-04-21T18:14:10Z" uid="485808" user="Alexey Lukin" changeset="58295919" lat="55.6534063" lon="37.6194323">
     <tag k="name" v="Варшавская"/>
@@ -1769,20 +1799,21 @@
     <tag k="wikidata" v="Q1187464"/>
     <tag k="transport" v="subway"/>
   </node>
-  <node id="296953130" version="27" timestamp="2017-02-19T13:16:09Z" uid="2778129" user="vitonok" changeset="46215367" lat="55.7281379" lon="37.6245843">
-    <tag k="name" v="Серпуховская"/>
-    <tag k="layer" v="-4"/>
+  <node id="296953130" version="28" timestamp="2018-11-19T16:15:55Z" uid="260756" user="Felis Pimeja" changeset="64663555" lat="55.7281379" lon="37.6245843">
+    <tag k="alt_name:en" v="Serpuhovskaya"/>
     <tag k="colour" v="#a0a2a3"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Серпуховская"/>
     <tag k="name:be" v="Серпухаўская"/>
     <tag k="name:en" v="Serpukhovskaya"/>
     <tag k="name:ru" v="Серпуховская"/>
     <tag k="name:uk" v="Серпуховська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:en" v="Serpuhovskaya"/>
+    <tag k="wikidata" v="Q338822"/>
   </node>
   <node id="296953131" version="24" timestamp="2018-01-03T07:04:24Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7087385" lon="37.6227879">
     <tag k="name" v="Тульская"/>
@@ -1830,36 +1861,37 @@
     <tag k="wikidata" v="Q1187571"/>
     <tag k="transport" v="subway"/>
   </node>
-  <node id="296953134" version="30" timestamp="2017-05-19T04:21:45Z" uid="485808" user="Alexey Lukin" changeset="48809170" lat="55.6626899" lon="37.6055528">
-    <tag k="name" v="Нахимовский проспект"/>
-    <tag k="layer" v="-2"/>
+  <node id="296953134" version="31" timestamp="2018-11-19T16:05:26Z" uid="260756" user="Felis Pimeja" changeset="64663077" lat="55.6626899" lon="37.6055528">
+    <tag k="alt_name:en" v="Nahimovsky Prospekt"/>
     <tag k="colour" v="#a0a2a3"/>
+    <tag k="layer" v="-2"/>
+    <tag k="name" v="Нахимовский проспект"/>
     <tag k="name:be" v="Нахімаўскіі праспект"/>
     <tag k="name:en" v="Nakhimovsky Prospekt"/>
     <tag k="name:ru" v="Нахимовский проспект"/>
     <tag k="name:uk" v="Нахімовський проспект"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
     <tag k="wheelchair" v="yes"/>
-    <tag k="alt_name:en" v="Nahimovsky Prospekt"/>
+    <tag k="wikidata" v="Q1187755"/>
   </node>
-  <node id="296953135" version="28" timestamp="2018-01-03T07:04:23Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.6527686" lon="37.5982422">
-    <tag k="name" v="Севастопольская"/>
-    <tag k="layer" v="-2"/>
+  <node id="296953135" version="29" timestamp="2018-12-21T20:37:46Z" uid="485808" user="Alexey Lukin" changeset="65679490" lat="55.6524098" lon="37.5983369">
     <tag k="colour" v="#a0a2a3"/>
+    <tag k="layer" v="-2"/>
+    <tag k="name" v="Севастопольская"/>
     <tag k="name:be" v="Севастопальская"/>
     <tag k="name:en" v="Sevastopolskaya"/>
     <tag k="name:ru" v="Севастопольская"/>
     <tag k="name:uk" v="Севастопольська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q1187560"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1187560"/>
   </node>
   <node id="296953136" version="26" timestamp="2018-01-03T07:04:25Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.6404122" lon="37.6066184">
     <tag k="name" v="Чертановская"/>
@@ -1920,19 +1952,20 @@
     <tag k="transport" v="subway"/>
     <tag k="wikipedia" v="ru:Пражская (станция метро)"/>
   </node>
-  <node id="296953139" version="23" timestamp="2017-02-19T13:16:11Z" uid="2778129" user="vitonok" changeset="46215367" lat="55.5950846" lon="37.6003221">
-    <tag k="name" v="Улица Академика Янгеля"/>
-    <tag k="layer" v="-2"/>
+  <node id="296953139" version="24" timestamp="2018-11-19T15:45:33Z" uid="260756" user="Felis Pimeja" changeset="64662191" lat="55.5950846" lon="37.6003221">
     <tag k="colour" v="#a0a2a3"/>
+    <tag k="layer" v="-2"/>
+    <tag k="name" v="Улица Академика Янгеля"/>
     <tag k="name:be" v="Вуліца Акадэміка Янгеля"/>
     <tag k="name:en" v="Ulitsa Akademika Yangelya"/>
     <tag k="name:ru" v="Улица Академика Янгеля"/>
     <tag k="name:uk" v="Вулиця Академіка Янгеля"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1187604"/>
   </node>
   <node id="296953140" version="24" timestamp="2018-01-03T07:04:22Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.5825441" lon="37.5963663">
     <tag k="name" v="Аннино"/>
@@ -1965,33 +1998,35 @@
     <tag k="transport" v="subway"/>
     <tag k="wikipedia" v="ru:Тимирязевская (станция метро)"/>
   </node>
-  <node id="296956168" version="26" timestamp="2017-09-11T12:08:15Z" uid="2853561" user="Владимир К" changeset="51938509" lat="55.8067137" lon="37.5817655">
-    <tag k="name" v="Дмитровская"/>
-    <tag k="layer" v="-4"/>
+  <node id="296956168" version="27" timestamp="2018-11-19T15:26:35Z" uid="260756" user="Felis Pimeja" changeset="64661406" lat="55.8067137" lon="37.5817655">
     <tag k="colour" v="#a0a2a3"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Дмитровская"/>
     <tag k="name:be" v="Дзмітраўская"/>
     <tag k="name:en" v="Dmitrovskaya"/>
     <tag k="name:ru" v="Дмитровская"/>
     <tag k="name:uk" v="Дмитрівська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1316425"/>
   </node>
-  <node id="296956169" version="27" timestamp="2017-09-11T12:08:15Z" uid="2853561" user="Владимир К" changeset="51938509" lat="55.7924478" lon="37.5886512">
-    <tag k="name" v="Савёловская"/>
-    <tag k="layer" v="-4"/>
+  <node id="296956169" version="28" timestamp="2018-11-19T16:07:36Z" uid="260756" user="Felis Pimeja" changeset="64663163" lat="55.7924478" lon="37.5886512">
     <tag k="colour" v="#a0a2a3"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Савёловская"/>
     <tag k="name:be" v="Савёлаўская"/>
     <tag k="name:en" v="Savyolovskaya"/>
     <tag k="name:ru" v="Савёловская"/>
     <tag k="name:uk" v="Савелівська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1316293"/>
   </node>
   <node id="296956170" version="30" timestamp="2018-01-03T07:04:05Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7809621" lon="37.6011125">
     <tag k="name" v="Менделеевская"/>
@@ -2129,19 +2164,20 @@
     <tag k="wikidata" v="Q2549030"/>
     <tag k="transport" v="subway"/>
   </node>
-  <node id="296959508" version="24" timestamp="2015-01-25T11:10:30Z" uid="676343" user="theirix" changeset="28392560" lat="55.7735045" lon="37.5464401">
-    <tag k="name" v="Беговая"/>
-    <tag k="layer" v="-2"/>
+  <node id="296959508" version="25" timestamp="2018-11-19T15:36:37Z" uid="260756" user="Felis Pimeja" changeset="64661793" lat="55.7735045" lon="37.5464401">
     <tag k="colour" v="violet"/>
+    <tag k="layer" v="-2"/>
+    <tag k="name" v="Беговая"/>
     <tag k="name:be" v="Бегавая"/>
     <tag k="name:en" v="Begovaya"/>
     <tag k="name:ru" v="Беговая"/>
     <tag k="name:uk" v="Бігова"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q2549465"/>
   </node>
   <node id="296959509" version="28" timestamp="2018-01-03T07:05:49Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7646678" lon="37.5614147">
     <tag k="name" v="Улица 1905 года"/>
@@ -2487,20 +2523,21 @@
     <tag k="alt_name:mcm" v="Университет"/>
     <tag k="alt_name:mcm_en" v="Universitet"/>
   </node>
-  <node id="312816773" version="25" timestamp="2018-01-03T07:04:02Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7381116" lon="37.6170438">
-    <tag k="name" v="Полянка"/>
-    <tag k="layer" v="-4"/>
+  <node id="312816773" version="26" timestamp="2018-11-08T08:17:30Z" uid="260756" user="Felis Pimeja" changeset="64284233" lat="55.7381116" lon="37.6170438">
     <tag k="colour" v="#a0a2a3"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Полянка"/>
     <tag k="name:be" v="Палянка"/>
     <tag k="name:en" v="Polyanka"/>
     <tag k="name:ru" v="Полянка"/>
     <tag k="name:uk" v="Полянка"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q280528"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q280528"/>
+    <tag k="wikipedia" v="ru:Полянка (станция метро)"/>
   </node>
   <node id="314679443" version="14" timestamp="2018-01-03T07:05:43Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.6529714" lon="37.5983627">
     <tag k="name" v="Каховская"/>
@@ -2573,19 +2610,21 @@
     <tag k="wikidata" v="Q1627587"/>
     <tag k="transport" v="subway"/>
   </node>
-  <node id="493292529" version="17" timestamp="2015-10-01T06:44:08Z" uid="485808" user="Alexey Lukin" changeset="34361059" lat="55.7410073" lon="37.6271192">
-    <tag k="name" v="Третьяковская"/>
-    <tag k="layer" v="-4"/>
+  <node id="493292529" version="18" timestamp="2018-11-08T08:17:31Z" uid="260756" user="Felis Pimeja" changeset="64284233" lat="55.7410073" lon="37.6271192">
     <tag k="colour" v="yellow"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Третьяковская"/>
     <tag k="name:be" v="Траццякоўская"/>
     <tag k="name:en" v="Tretyakovskaya"/>
     <tag k="name:ru" v="Третьяковская"/>
     <tag k="name:uk" v="Третяковська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1734852"/>
+    <tag k="wikipedia" v="ru:Третьяковская (станция метро)"/>
   </node>
   <node id="596129560" version="19" timestamp="2018-02-11T03:11:59Z" uid="485808" user="Alexey Lukin" changeset="56254542" lat="55.8458003" lon="37.3622857">
     <tag k="name" v="Митино"/>
@@ -2670,21 +2709,21 @@
     <tag k="transport" v="subway"/>
     <tag k="wikipedia" v="ru:Достоевская (станция метро, Москва)"/>
   </node>
-  <node id="1157975976" version="18" timestamp="2017-10-06T18:31:26Z" uid="485808" user="Alexey Lukin" changeset="52690841" lat="55.776627" lon="37.5834381">
-    <tag k="name" v="Белорусская"/>
-    <tag k="layer" v="-4"/>
+  <node id="1157975976" version="20" timestamp="2019-01-10T21:14:49Z" uid="830106" user="literan" changeset="66209103" lat="55.776627" lon="37.5834381">
+    <tag k="alt_name:mcm" v="Белорусская"/>
+    <tag k="alt_name:mcm_en" v="Belorusskaya"/>
     <tag k="colour" v="green"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Белорусская"/>
     <tag k="name:be" v="Беларуская"/>
     <tag k="name:en" v="Belorusskaya"/>
     <tag k="name:ru" v="Белорусская"/>
     <tag k="name:uk" v="Білоруська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:mcm" v="Белорусская"/>
-    <tag k="alt_name:mcm_en" v="Belorusskaya"/>
   </node>
   <node id="1158396469" version="13" timestamp="2017-10-06T18:31:26Z" uid="485808" user="Alexey Lukin" changeset="52690841" lat="55.7762071" lon="37.5839025">
     <tag k="name" v="Белорусская"/>
@@ -2700,27 +2739,27 @@
     <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
   </node>
-  <node id="1198621087" version="22" timestamp="2018-08-08T07:48:13Z" uid="2853561" user="Владимир К" changeset="61457798" lat="55.7364372" lon="37.5181466">
-    <tag k="name" v="Парк Победы"/>
+  <node id="1198621087" version="24" timestamp="2018-12-11T19:15:42Z" uid="830106" user="literan" changeset="65386788" lat="55.7364372" lon="37.5181466">
+    <tag k="alt_name:en" v="Park Pobedy"/>
+    <tag k="alt_name:mcm" v="Парк Победы"/>
+    <tag k="alt_name:mcm_en" v="Park Pobedy"/>
+    <tag k="colour" v="blue"/>
     <tag k="depth" v="84"/>
     <tag k="layer" v="-4"/>
-    <tag k="colour" v="blue"/>
+    <tag k="name" v="Парк Победы"/>
     <tag k="name:be" v="Парк Перамогі"/>
     <tag k="name:de" v="Siegespark"/>
     <tag k="name:en" v="Victory Park"/>
     <tag k="name:ru" v="Парк Победы"/>
     <tag k="name:uk" v="Парк Перемоги"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q1810822"/>
     <tag k="transport" v="subway"/>
-    <tag k="wikipedia" v="ru:Парк Победы (станция метро, Москва)"/>
     <tag k="wheelchair" v="no"/>
-    <tag k="alt_name:en" v="Park Pobedy"/>
-    <tag k="alt_name:mcm" v="Парк Победы"/>
-    <tag k="alt_name:mcm_en" v="Park Pobedy"/>
+    <tag k="wikidata" v="Q1810822"/>
+    <tag k="wikipedia" v="ru:Парк Победы (станция метро, Москва)"/>
   </node>
   <node id="1221839292" version="8" timestamp="2018-01-03T07:04:47Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.6330883" lon="37.5190729">
     <tag k="name" v="Коньково"/>
@@ -2886,35 +2925,37 @@
     <tag k="wikidata" v="Q15242269"/>
     <tag k="transport" v="subway"/>
   </node>
-  <node id="2591402980" version="9" timestamp="2016-04-16T06:47:15Z" uid="485808" user="Alexey Lukin" changeset="38612456" lat="55.6001108" lon="37.5564674">
-    <tag k="name" v="Битцевский парк"/>
-    <tag k="layer" v="-2"/>
+  <node id="2591402980" version="10" timestamp="2018-11-19T15:42:05Z" uid="260756" user="Felis Pimeja" changeset="64662039" lat="55.6001108" lon="37.5564674">
     <tag k="colour" v="lightblue"/>
+    <tag k="layer" v="-2"/>
+    <tag k="name" v="Битцевский парк"/>
     <tag k="name:en" v="Bitsevskiy park"/>
     <tag k="name:ru" v="Битцевский парк"/>
     <tag k="name:uk" v="Бітцевський парк"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q15199514"/>
   </node>
-  <node id="2692857848" version="8" timestamp="2017-10-10T22:13:48Z" uid="2434322" user="argrento" changeset="52807767" lat="55.7877328" lon="37.7816023">
-    <tag k="name" v="Измайловская"/>
-    <tag k="layer" v="-4"/>
+  <node id="2692857848" version="9" timestamp="2018-11-19T15:37:19Z" uid="260756" user="Felis Pimeja" changeset="64661831" lat="55.7877328" lon="37.7816023">
+    <tag k="alt_name:mcm" v="Измайловская"/>
+    <tag k="alt_name:mcm_en" v="Izmaylovskaya"/>
     <tag k="colour" v="blue"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Измайловская"/>
     <tag k="name:be" v="Ізмайлаўская"/>
     <tag k="name:en" v="Izmaylovskaya"/>
     <tag k="name:ru" v="Измайловская"/>
     <tag k="name:uk" v="Ізмайлівська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
     <tag k="wheelchair" v="limited"/>
-    <tag k="alt_name:mcm" v="Измайловская"/>
-    <tag k="alt_name:mcm_en" v="Izmaylovskaya"/>
+    <tag k="wikidata" v="Q2603992"/>
   </node>
   <node id="2692882978" version="11" timestamp="2017-10-10T13:34:24Z" uid="2434322" user="argrento" changeset="52791960" lat="55.7947265" lon="37.7993959">
     <tag k="name" v="Первомайская"/>
@@ -2954,25 +2995,25 @@
     <tag k="alt_name:mcm" v="Щёлковская"/>
     <tag k="alt_name:mcm_en" v="Schyolkovskaya"/>
   </node>
-  <node id="2950850833" version="11" timestamp="2018-08-08T07:48:13Z" uid="2853561" user="Владимир К" changeset="61457798" lat="55.73607" lon="37.517923">
-    <tag k="name" v="Парк Победы"/>
+  <node id="2950850833" version="14" timestamp="2018-12-11T19:15:44Z" uid="830106" user="literan" changeset="65386788" lat="55.7362567" lon="37.5180358">
+    <tag k="alt_name:en" v="Park Pobedy"/>
+    <tag k="colour" v="yellow"/>
     <tag k="depth" v="84"/>
     <tag k="layer" v="-4"/>
-    <tag k="colour" v="yellow"/>
+    <tag k="name" v="Парк Победы"/>
     <tag k="name:be" v="Парк Перамогі"/>
     <tag k="name:de" v="Siegespark"/>
     <tag k="name:en" v="Victory Park"/>
     <tag k="name:ru" v="Парк Победы"/>
     <tag k="name:uk" v="Парк Перемоги"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wikidata" v="Q1810822"/>
     <tag k="transport" v="subway"/>
-    <tag k="wikipedia" v="ru:Парк Победы (станция метро, Москва)"/>
     <tag k="wheelchair" v="no"/>
-    <tag k="alt_name:en" v="Park Pobedy"/>
+    <tag k="wikidata" v="Q1810822"/>
+    <tag k="wikipedia" v="ru:Парк Победы (станция метро, Москва)"/>
   </node>
   <node id="3224593379" version="9" timestamp="2017-10-01T19:57:31Z" uid="98099" user="evgenykatyshev" changeset="52546224" lat="55.6459539" lon="37.472545">
     <tag k="name" v="Тропарёво"/>
@@ -3113,7 +3154,6 @@
   <node id="5174653609" version="2" timestamp="2018-01-03T07:05:11Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.654962" lon="37.6486874">
     <tag k="name" v="Каширская"/>
     <tag k="subway" v="yes"/>
-    <tag k="colour" v="darkgreen"/>
     <tag k="name:be" v="Кашырская"/>
     <tag k="name:en" v="Kashirskaya"/>
     <tag k="name:ru" v="Каширская"/>
@@ -3126,50 +3166,52 @@
     <tag k="alt_name:mcm" v="Каширская"/>
     <tag k="alt_name:mcm_en" v="Kashirskaya"/>
   </node>
-  <node id="5176248501" version="2" timestamp="2017-10-19T14:55:21Z" uid="290271" user="Zverik" changeset="53070927" lat="55.730741" lon="37.4459445">
-    <tag k="name" v="Кунцевская"/>
+  <node id="5176248501" version="6" timestamp="2018-11-19T16:09:27Z" uid="260756" user="Felis Pimeja" changeset="64663244" lat="55.730741" lon="37.4459445">
     <tag k="colour" v="lightblue"/>
-    <tag k="subway" v="yes"/>
-    <tag k="name:be" v="Кунцаўская"/>
-    <tag k="name:en" v="Kuntsevskaya"/>
-    <tag k="name:uk" v="Кунцевська"/>
-    <tag k="network" v="Московский метрополитен"/>
-    <tag k="railway" v="station"/>
-    <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="wheelchair" v="no"/>
-    <tag k="construction" v="yes"/>
-    <tag k="public_transport" v="stop_position"/>
-  </node>
-  <node id="5176248502" version="1" timestamp="2017-10-19T12:22:16Z" uid="290271" user="Zverik" changeset="53067255" lat="55.7305945" lon="37.4460143">
     <tag k="name" v="Кунцевская"/>
-    <tag k="colour" v="blue"/>
     <tag k="name:be" v="Кунцаўская"/>
     <tag k="name:en" v="Kuntsevskaya"/>
     <tag k="name:uk" v="Кунцевська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="transport" v="subway"/>
+    <tag k="subway" v="yes"/>
+    <tag k="wheelchair" v="no"/>
+    <tag k="wikidata" v="Q1384273"/>
+  </node>
+  <node id="5176248502" version="2" timestamp="2018-11-19T16:09:28Z" uid="260756" user="Felis Pimeja" changeset="64663244" lat="55.7305945" lon="37.4460143">
     <tag k="alt_name:mcm" v="Кунцевская"/>
     <tag k="alt_name:mcm_en" v="Kuntsevskaya"/>
+    <tag k="colour" v="blue"/>
+    <tag k="name" v="Кунцевская"/>
+    <tag k="name:be" v="Кунцаўская"/>
+    <tag k="name:en" v="Kuntsevskaya"/>
+    <tag k="name:uk" v="Кунцевська"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="station"/>
+    <tag k="station" v="subway"/>
+    <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q1384273"/>
   </node>
-  <node id="5176322725" version="1" timestamp="2017-10-19T12:50:45Z" uid="290271" user="Zverik" changeset="53067969" lat="55.7555324" lon="37.6335865">
-    <tag k="name" v="Китай-город"/>
-    <tag k="layer" v="-4"/>
+  <node id="5176322725" version="2" timestamp="2018-11-04T14:00:29Z" uid="260756" user="Felis Pimeja" changeset="64166975" lat="55.7555324" lon="37.6335865">
+    <tag k="alt_name:uk" v="Китай-місто"/>
     <tag k="colour" v="violet"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Китай-город"/>
     <tag k="name:be" v="Кітай-горад"/>
     <tag k="name:en" v="Kitay-gorod"/>
     <tag k="name:pl" v="Kitajgród"/>
     <tag k="name:ru" v="Китай-город"/>
     <tag k="name:uk" v="Китай-город"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
-    <tag k="alt_name:uk" v="Китай-місто"/>
+    <tag k="wikidata" v="Q2463121"/>
+    <tag k="wikipedia" v="ru:Китай-город (станция метро)"/>
   </node>
   <node id="5176322726" version="1" timestamp="2017-10-19T12:50:45Z" uid="290271" user="Zverik" changeset="53067969" lat="55.7554765" lon="37.633211">
     <tag k="name" v="Китай-город"/>
@@ -3336,22 +3378,24 @@
     <tag k="alt_name:mcm" v="Волоколамская"/>
     <tag k="alt_name:mcm_en" v="Volokolamskaya"/>
   </node>
-  <node id="5202107570" version="1" timestamp="2017-10-31T12:30:35Z" uid="290271" user="Zverik" changeset="53394298" lat="55.7579973" lon="37.6580796">
-    <tag k="name" v="Курская"/>
-    <tag k="layer" v="-4"/>
+  <node id="5202107570" version="2" timestamp="2018-11-03T14:05:58Z" uid="260756" user="Felis Pimeja" changeset="64141013" lat="55.7579973" lon="37.6580796">
+    <tag k="alt_name:mcm" v="Курская"/>
+    <tag k="alt_name:mcm_en" v="Kurskaya"/>
     <tag k="colour" v="blue"/>
+    <tag k="esr:user" v="191551"/>
+    <tag k="express:user" v="2000001"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Курская"/>
     <tag k="name:be" v="Курская"/>
     <tag k="name:en" v="Kurskaya"/>
     <tag k="name:ru" v="Курская"/>
     <tag k="name:uk" v="Курська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="esr:user" v="191551"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
-    <tag k="alt_name:mcm" v="Курская"/>
-    <tag k="express:user" v="2000001"/>
-    <tag k="alt_name:mcm_en" v="Kurskaya"/>
+    <tag k="wikidata" v="Q2723878"/>
+    <tag k="wikipedia" v="ru:Курская (станция метро, Арбатско-Покровская линия)"/>
   </node>
   <node id="5202107572" version="2" timestamp="2018-01-03T07:04:16Z" uid="250196" user="adivik2000" changeset="55120827" lat="55.7568632" lon="37.6567226">
     <tag k="name" v="Чкаловская"/>
@@ -3374,19 +3418,21 @@
     <tag k="wikidata" v="Q939190"/>
     <tag k="transport" v="subway"/>
   </node>
-  <node id="5202107573" version="1" timestamp="2017-10-31T12:30:36Z" uid="290271" user="Zverik" changeset="53394298" lat="55.7572385" lon="37.6593527">
-    <tag k="name" v="Курская"/>
-    <tag k="layer" v="-4"/>
+  <node id="5202107573" version="2" timestamp="2018-11-03T14:05:58Z" uid="260756" user="Felis Pimeja" changeset="64141013" lat="55.7572385" lon="37.6593527">
     <tag k="colour" v="brown"/>
-    <tag k="subway" v="yes"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Курская"/>
     <tag k="name:be" v="Курская"/>
     <tag k="name:en" v="Kurskaya"/>
     <tag k="name:ru" v="Курская"/>
     <tag k="name:uk" v="Курська"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="subway" v="yes"/>
+    <tag k="wikidata" v="Q432042"/>
+    <tag k="wikipedia" v="ru:Курская (станция метро, Кольцевая линия)"/>
   </node>
   <node id="5202107574" version="1" timestamp="2017-10-31T12:30:36Z" uid="290271" user="Zverik" changeset="53394298" lat="55.8212919" lon="37.6413461">
     <tag k="name" v="ВДНХ"/>
@@ -3433,25 +3479,29 @@
     <tag k="alt_name:mcm" v="Сокол"/>
     <tag k="alt_name:mcm_en" v="Sokol"/>
   </node>
-  <node id="5308689093" version="2" timestamp="2017-12-28T20:13:37Z" uid="485808" user="Alexey Lukin" changeset="54992937" lat="55.8781328" lon="37.4807583">
-    <tag k="name" v="Ховрино"/>
-    <tag k="layer" v="-4"/>
+  <node id="5308689093" version="4" timestamp="2018-12-19T14:00:16Z" uid="481934" user="iWowik" changeset="65612271" lat="55.8781328" lon="37.4807583">
     <tag k="colour" v="green"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Ховрино"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q4472156"/>
+    <tag k="wikipedia" v="ru:Ховрино (станция метро)"/>
   </node>
-  <node id="5436404611" version="3" timestamp="2018-02-26T19:37:40Z" uid="830106" user="literan" changeset="56700650" lat="55.7767037" lon="37.5192001">
-    <tag k="name" v="Хорошёвская"/>
+  <node id="5436404611" version="5" timestamp="2018-11-22T13:14:40Z" uid="9126171" user="azakh-world" changeset="64782046" lat="55.7767037" lon="37.5192001">
     <tag k="layer" v="-5"/>
+    <tag k="name" v="Хорошёвская"/>
     <tag k="name:en" v="Horoshyovskaya"/>
     <tag k="name:ru" v="Хорошёвская"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q4500187"/>
+    <tag k="wikipedia" v="ru:Хорошёвская (станция метро)"/>
   </node>
   <node id="5436412993" version="2" timestamp="2018-10-12T16:59:38Z" uid="102162" user="-WI-" changeset="63465733" lat="55.7918907" lon="37.5570509">
     <tag k="layer" v="-5"/>
@@ -3465,16 +3515,18 @@
     <tag k="transport" v="subway"/>
     <tag k="wikidata" v="Q4361260"/>
   </node>
-  <node id="5436420781" version="1" timestamp="2018-02-26T01:52:06Z" uid="485808" user="Alexey Lukin" changeset="56674937" lat="55.786561" lon="37.5332007">
-    <tag k="name" v="ЦСКА"/>
+  <node id="5436420781" version="2" timestamp="2018-11-19T18:02:52Z" uid="260756" user="Felis Pimeja" changeset="64667632" lat="55.786561" lon="37.5332007">
     <tag k="layer" v="-5"/>
+    <tag k="name" v="ЦСКА"/>
     <tag k="name:en" v="CSKA"/>
     <tag k="name:ru" v="ЦСКА"/>
     <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="railway" v="station"/>
     <tag k="station" v="subway"/>
-    <tag k="operator" v="ГУП «Московский метрополитен»"/>
     <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q4498830"/>
+    <tag k="wikipedia:ru" v="ЦСКА (станция метро)"/>
   </node>
   <node id="5436430994" version="1" timestamp="2018-02-26T02:06:27Z" uid="485808" user="Alexey Lukin" changeset="56675083" lat="55.7571292" lon="37.5240139">
     <tag k="name" v="Шелепиха"/>
@@ -3537,7 +3589,7 @@
     <tag k="transport" v="subway"/>
     <tag k="wikipedia" v="ru:Окружная (станция метро)"/>
   </node>
-  <node id="5868120884" version="3" timestamp="2018-08-30T12:57:46Z" uid="397326" user="trolleway" changeset="62139136" lat="55.689526" lon="37.4831836">
+  <node id="5868120884" version="4" timestamp="2018-11-16T16:16:10Z" uid="485808" user="Alexey Lukin" changeset="64572874" lat="55.6893407" lon="37.4828246">
     <tag k="colour" v="yellow"/>
     <tag k="fixme" v="Уточнить расположение и достоверность wheelchair"/>
     <tag k="layer" v="-4"/>
@@ -3551,7 +3603,7 @@
     <tag k="wheelchair" v="yes"/>
     <tag k="wikidata" v="Q4298337"/>
   </node>
-  <node id="5868122985" version="4" timestamp="2018-09-17T13:06:13Z" uid="5490781" user="molnike" changeset="62664541" lat="55.6705445" lon="37.4489403">
+  <node id="5868122985" version="5" timestamp="2018-11-14T23:29:01Z" uid="485808" user="Alexey Lukin" changeset="64507035" lat="55.6705052" lon="37.4487297">
     <tag k="colour" v="yellow"/>
     <tag k="fixme" v="Уточнить расположение и достоверность wheelchair"/>
     <tag k="layer" v="-4"/>
@@ -3565,7 +3617,7 @@
     <tag k="wheelchair" v="yes"/>
     <tag k="wikidata" v="Q4340635"/>
   </node>
-  <node id="5868122986" version="2" timestamp="2018-09-17T11:24:10Z" uid="5490781" user="molnike" changeset="62661485" lat="55.6394433" lon="37.3548853">
+  <node id="5868122986" version="6" timestamp="2018-11-22T13:14:40Z" uid="9126171" user="azakh-world" changeset="64782046" lat="55.6396636" lon="37.3552286">
     <tag k="colour" v="yellow"/>
     <tag k="fixme" v="Уточнить расположение и достоверность wheelchair"/>
     <tag k="layer" v="-4"/>
@@ -3577,8 +3629,10 @@
     <tag k="station" v="subway"/>
     <tag k="transport" v="subway"/>
     <tag k="wheelchair" v="yes"/>
+    <tag k="wikidata" v="Q4324873"/>
+    <tag k="wikipedia" v="ru:Новопеределкино (станция метро)"/>
   </node>
-  <node id="5868122987" version="3" timestamp="2018-08-30T14:27:31Z" uid="830106" user="literan" changeset="62142206" lat="55.6339719" lon="37.3349945">
+  <node id="5868122987" version="4" timestamp="2018-11-15T20:20:06Z" uid="485808" user="Alexey Lukin" changeset="64543343" lat="55.6340332" lon="37.3351152">
     <tag k="colour" v="yellow"/>
     <tag k="fixme" v="Уточнить расположение и достоверность wheelchair"/>
     <tag k="layer" v="-4"/>
@@ -3592,7 +3646,7 @@
     <tag k="wheelchair" v="yes"/>
     <tag k="wikidata" v="Q16691227"/>
   </node>
-  <node id="5868122988" version="3" timestamp="2018-09-19T13:33:25Z" uid="5490781" user="molnike" changeset="62730835" lat="55.647755" lon="37.3704696">
+  <node id="5868122988" version="4" timestamp="2018-11-15T19:54:39Z" uid="485808" user="Alexey Lukin" changeset="64542467" lat="55.6477716" lon="37.3705045">
     <tag k="colour" v="yellow"/>
     <tag k="fixme" v="Уточнить расположение и достоверность wheelchair"/>
     <tag k="layer" v="-4"/>
@@ -3606,7 +3660,7 @@
     <tag k="wheelchair" v="yes"/>
     <tag k="wikidata" v="Q4094418"/>
   </node>
-  <node id="5868122989" version="4" timestamp="2018-09-03T12:51:04Z" uid="830106" user="literan" changeset="62246909" lat="55.6498377" lon="37.3912172">
+  <node id="5868122989" version="5" timestamp="2018-11-15T19:54:39Z" uid="485808" user="Alexey Lukin" changeset="64542467" lat="55.6497253" lon="37.3911124">
     <tag k="colour" v="yellow"/>
     <tag k="fixme" v="Уточнить расположение и достоверность wheelchair"/>
     <tag k="layer" v="-4"/>
@@ -3637,5 +3691,30 @@
     <tag k="transport" v="subway"/>
     <tag k="wheelchair" v="yes"/>
     <tag k="wikidata" v="Q16705780"/>
+  </node>
+  <node id="6147634222" version="1" timestamp="2018-12-19T14:00:16Z" uid="481934" user="iWowik" changeset="65612271" lat="55.865014" lon="37.4748195">
+    <tag k="colour" v="green"/>
+    <tag k="layer" v="-4"/>
+    <tag k="name" v="Беломорская"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="station"/>
+    <tag k="station" v="subway"/>
+    <tag k="transport" v="subway"/>
+    <tag k="wikidata" v="Q4082593"/>
+    <tag k="wikipedia" v="ru:Беломорская (станция метро)"/>
+  </node>
+  <node id="6172651201" version="2" timestamp="2019-01-05T20:37:13Z" uid="9233658" user="kashirskiy" changeset="66056757" lat="55.7923612" lon="37.5864226">
+    <tag k="colour" v="#a0a2a3"/>
+    <tag k="layer" v="-5"/>
+    <tag k="name" v="Савёловская"/>
+    <tag k="name:be" v="Савёлаўская"/>
+    <tag k="name:en" v="Savyolovskaya"/>
+    <tag k="name:ru" v="Савёловская"/>
+    <tag k="name:uk" v="Савелівська"/>
+    <tag k="network" v="Московский метрополитен"/>
+    <tag k="operator" v="ГУП «Московский метрополитен»"/>
+    <tag k="railway" v="station"/>
+    <tag k="station" v="subway"/>
+    <tag k="transport" v="subway"/>
   </node>
 </osm>
