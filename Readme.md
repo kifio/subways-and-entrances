@@ -4,7 +4,8 @@ This project used for taking data about entrances and subway from osm,
 drawing it in simple android app and trying to map entrances to stations.
 
 TODO: Write description
-TODO: Generate entrance icons in code, rewrite code with MVVM or MVP
+TODO: Rewrite code with MVP
+TODO: Add Google Maps
 
 Osmosis installation instructions:
 https://wiki.openstreetmap.org/wiki/Osmosis/Installation

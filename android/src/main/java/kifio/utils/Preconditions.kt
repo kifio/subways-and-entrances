@@ -1,4 +1,4 @@
-package kifio
+package kifio.utils
 
 import java.lang.NullPointerException
 

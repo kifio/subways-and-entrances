@@ -1,6 +1,5 @@
 package kifio
 
-import com.mapbox.geojson.FeatureCollection
 import com.mapbox.geojson.Point
 import com.mapbox.turf.TurfClassification
 import kifio.OpenStreetMapParser.Companion.buildEntrance
@@ -8,14 +7,13 @@ import kifio.OpenStreetMapParser.Companion.buildStation
 import kifio.data.Entrance
 import kifio.data.Station
 import java.io.InputStream
-import java.lang.IllegalArgumentException
 
 object MetroMap {
 
     /**
      * Build map where stations is keys and
      */
-    fun buildMap(efis: InputStream, sfis: InputStream): Map<Station, FeatureCollection> {
+    fun buildMap(efis: InputStream, sfis: InputStream): Map<Station, List<Entrance>> {
         val osmParser = OpenStreetMapParser()
         val entrances = osmParser.loadFromOsm(efis, ::buildEntrance)
         val stations = osmParser.loadFromOsm(sfis, ::buildStation)
@@ -24,7 +22,7 @@ object MetroMap {
 
     private fun mapEntrancesToStations(
             entrances: MutableSet<Entrance>,
-            stationsPoints: Map<Point, Station>): Map<Station, FeatureCollection> {
+            stationsPoints: Map<Point, Station>): Map<Station, List<Entrance>> {
 
         val points = stationsPoints.keys.toList()
         val results = mutableMapOf<Station, MutableList<Entrance>>()
@@ -35,17 +33,7 @@ object MetroMap {
             results.getOrPut(station) {mutableListOf()}.add(it)
         }
 
-        return transformResults(results)
-    }
-
-    private fun transformResults(stations: MutableMap<Station, MutableList<Entrance>>): Map<Station, FeatureCollection> {
-        val results = mutableMapOf<Station, FeatureCollection>()
-        stations.forEach { entry -> results[entry.key] = transfornEntrances(entry.value) }
         return results
-    }
-
-    private fun transfornEntrances(entrances: MutableList<Entrance>): FeatureCollection {
-        return FeatureCollection.fromFeatures(entrances.map { it.toFeature() }.toList())
     }
 
     private fun createStationsPointsMap(stations: MutableSet<Station>): Map<Point, Station> {

@@ -5,7 +5,9 @@ mainClassName = 'kifio.LoaderKt'
 
 dependencies {
     implementation project (":model")
-    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-services:4.3.0'
+    implementation ('com.mapbox.mapboxsdk:mapbox-sdk-services:4.3.0') {
+        transitive = true
+    }
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
 

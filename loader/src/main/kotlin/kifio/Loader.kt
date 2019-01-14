@@ -14,8 +14,8 @@ fun main(args: Array<String>) {
 
     when {
         args.isEmpty() -> {
-            efis = FileInputStream("../android/src/main/assets/entrances.osm")  //
-            sfis = FileInputStream("../android/src/main/assets/stations.osm")  //
+            efis = FileInputStream("../android/src/main/assets/entrances.osm")
+            sfis = FileInputStream("../android/src/main/assets/stations.osm")
             outputFile = "entrances.json"
         }
         args.size == 3 -> {
