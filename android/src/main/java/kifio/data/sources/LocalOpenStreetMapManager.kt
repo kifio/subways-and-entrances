@@ -1,6 +1,6 @@
 package kifio.data.sources
 
-import android.content.Context
+import kifio.App
 import kifio.MetroMap
 import kifio.data.Entrance
 import kifio.data.Station
@@ -10,6 +10,7 @@ import kifio.data.Station
  * Android App does not actually works with .pbf files, required data must be ejected with parser module.
  */
 class LocalOpenStreetMapManager : DataManager {
-    override fun getGeoData(ctx: Context): Map<Station, List<Entrance>> =
-            MetroMap.buildMap(ctx.assets.open("entrances.osm"), ctx.assets.open("stations.osm"))
+    override fun getGeoData(): Map<Station, List<Entrance>> =
+            MetroMap.buildMap(App.instance.assets.open("entrances.osm"),
+                    App.instance.assets.open("stations.osm"))
 }

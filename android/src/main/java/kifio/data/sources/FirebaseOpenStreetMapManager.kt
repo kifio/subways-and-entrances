@@ -9,5 +9,5 @@ import kifio.data.Station
  * DataManager for getting data from Fireabase.
  */
 class FirebaseOpenStreetMapManager : DataManager {
-    override fun getGeoData(ctx: Context): Map<Station, List<Entrance>> = emptyMap()
+    override fun getGeoData(): Map<Station, List<Entrance>> = emptyMap()
 }

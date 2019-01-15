@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/mapbox"
+        android:title="@string/mapbox"
+        android:icon="@drawable/ic_mapbox"/>
+
+    <item android:id="@+id/google"
+        android:title="@string/google"
+        android:icon="@drawable/ic_google_logo"/>
+</menu>

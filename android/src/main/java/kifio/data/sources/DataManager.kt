@@ -8,5 +8,5 @@ import kifio.data.Station
  * Base interface for all sources, which prefers stations and entrances.
  */
 interface DataManager {
-    fun getGeoData(ctx: Context): Map<Station, List<Entrance>>
+    fun getGeoData(): Map<Station, List<Entrance>>
 }

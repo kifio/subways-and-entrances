@@ -1,18 +1,18 @@
 package kifio.utils
 
-import android.content.Context
 import android.content.res.Resources
 import android.graphics.*
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
 import android.support.v4.content.ContextCompat
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
+import kifio.App
 import kifio.R
 
 /**
  * Class which used for creating and caching Bitmaps markers.
  */
-class BitmapManager(private val ctx: Context) {
+class BitmapManager() {
 
     private val bitmaps = mutableMapOf<String, Bitmap>()
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
@@ -85,14 +85,14 @@ class BitmapManager(private val ctx: Context) {
     }
 
     private fun drawRoundedBitmapDrawable(bitmap: Bitmap, canvas: Canvas) {
-        val roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(ctx.resources, bitmap)
+        val roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(App.instance.resources, bitmap)
         roundedBitmapDrawable.setAntiAlias(true)
         roundedBitmapDrawable.cornerRadius = SUBWAY_ICON_CORNER
         roundedBitmapDrawable.draw(canvas)
     }
 
     private fun drawLogo(canvas: Canvas) {
-        val drawable = ContextCompat.getDrawable(ctx, R.drawable.metro_white) ?: return
+        val drawable = ContextCompat.getDrawable(App.instance, R.drawable.metro_white) ?: return
         canvas.drawBitmap(fromDrawable(drawable, LOGO_SIZE.toInt().toPx()),
                 ((STATION_SIZE - LOGO_SIZE) / 2).toPx(), ((STATION_SIZE - LOGO_SIZE) / 2).toPx(), null)
     }

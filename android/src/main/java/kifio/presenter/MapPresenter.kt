@@ -12,7 +12,7 @@ import java.util.*
 
 class MapPresenter(mapView: MapView, dataManager: DataManager) {
 
-    private val bitmapManager: BitmapManager = BitmapManager(mapView.getContext())
+    private val bitmapManager: BitmapManager = BitmapManager()
     private var mapView: MapView? = mapView
     private var dataManager: DataManager? = dataManager
 
@@ -20,8 +20,7 @@ class MapPresenter(mapView: MapView, dataManager: DataManager) {
 
     fun loadEntrancesOffline() {
         GlobalScope.launch {
-            val ctx = mapView?.getContext() ?: throw IllegalStateException()
-            parseData((dataManager?.getGeoData(ctx)) ?: throw IllegalStateException())
+            parseData((dataManager?.getGeoData()) ?: throw IllegalStateException())
         }
     }
 

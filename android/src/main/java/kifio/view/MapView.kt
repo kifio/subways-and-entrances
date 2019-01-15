@@ -9,5 +9,4 @@ import android.content.Context
 interface MapView {
     fun addStationsLayer(geoJsonData: String)
     fun addEntrancesLayer(geoJsonData: String)
-    fun getContext(): Context
 }
