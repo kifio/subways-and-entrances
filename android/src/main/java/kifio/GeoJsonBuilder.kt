@@ -1,3 +1,0 @@
-package kifio
-
-class GeoJsonBuilder

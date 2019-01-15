@@ -9,35 +9,34 @@ import android.support.v4.content.ContextCompat
 import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
 import kifio.R
 
-class BitmapManager {
+/**
+ * Class which used for creating and caching Bitmaps markers.
+ */
+class BitmapManager(private val ctx: Context) {
 
-    private val bitmaps = mutableMapOf<Int, Bitmap>()
+    private val bitmaps = mutableMapOf<String, Bitmap>()
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
     private val textRect = Rect()
     private val entranceColor = Color.parseColor("#FDB913")
 
-    fun getIcons() = bitmaps.values
+    fun getIcons() = bitmaps
 
-    fun hasIcon(key: Int): Boolean {
+    fun getIcon(key: String) = bitmaps[key]
+
+    fun hasIcon(key: String): Boolean {
         return bitmaps[key] != null
     }
 
-    fun getEntranceIcon(number: Int): Bitmap {
-        var bitmap = bitmaps[number]
-        if (bitmap == null) {
-            bitmap = buildEntranceLogo(number, ENTRANCE_SIZE.toPx())
-            bitmaps[number] = bitmap
+    fun addEntranceIcon(number: String) {
+        if (bitmaps[number] == null) {
+            bitmaps[number] = buildEntranceLogo(number.toInt(), ENTRANCE_SIZE.toPx())
         }
-        return bitmap
     }
 
-    fun getStationIcon(ctx: Context, color: Int): Bitmap {
-        var bitmap = bitmaps[color]
-        if (bitmap == null) {
-            bitmap = buildStationLogo(ctx, color, STATION_SIZE.toPx())
-            bitmaps[color] = bitmap
+    fun addStationIcon(color: String) {
+        if (bitmaps[color] == null) {
+            bitmaps[color] = buildStationLogo(Color.parseColor(color), STATION_SIZE.toPx())
         }
-        return bitmap
     }
 
     private fun buildEntranceLogo(number: Int, size: Int): Bitmap {
@@ -67,12 +66,12 @@ class BitmapManager {
         canvas.drawText(number, size / 2, size - ((size - textRect.height()) / 2), paint)
     }
 
-    private fun buildStationLogo(ctx: Context, color: Int, size: Int): Bitmap {
+    private fun buildStationLogo(color: Int, size: Int): Bitmap {
         val bitmap = Bitmap.createBitmap(size, size, Bitmap.Config.ARGB_8888)
         val canvas = Canvas(bitmap)
         drawBackground(color, size, canvas)
-        drawRoundedBitmapDrawable(ctx.resources, bitmap, canvas)
-        drawLogo(ctx, canvas)
+        drawRoundedBitmapDrawable(bitmap, canvas)
+        drawLogo(canvas)
         return bitmap
     }
 
@@ -85,16 +84,16 @@ class BitmapManager {
         gradientDrawable.draw(canvas)
     }
 
-    private fun drawRoundedBitmapDrawable(resources: Resources, bitmap: Bitmap, canvas: Canvas) {
-        val roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(resources, bitmap)
+    private fun drawRoundedBitmapDrawable(bitmap: Bitmap, canvas: Canvas) {
+        val roundedBitmapDrawable = RoundedBitmapDrawableFactory.create(ctx.resources, bitmap)
         roundedBitmapDrawable.setAntiAlias(true)
         roundedBitmapDrawable.cornerRadius = SUBWAY_ICON_CORNER
         roundedBitmapDrawable.draw(canvas)
     }
 
-    private fun drawLogo(ctx: Context, canvas: Canvas) {
-        val drawable = ContextCompat.getDrawable(ctx, R.drawable.metro_white)
-        canvas.drawBitmap(fromDrawable(checkNotNull(drawable), LOGO_SIZE.toInt().toPx()),
+    private fun drawLogo(canvas: Canvas) {
+        val drawable = ContextCompat.getDrawable(ctx, R.drawable.metro_white) ?: return
+        canvas.drawBitmap(fromDrawable(drawable, LOGO_SIZE.toInt().toPx()),
                 ((STATION_SIZE - LOGO_SIZE) / 2).toPx(), ((STATION_SIZE - LOGO_SIZE) / 2).toPx(), null)
     }
 
@@ -112,7 +111,7 @@ class BitmapManager {
         private const val STROKE_WIDTH = 2
         private const val SUBWAY_ICON_CORNER = 10f
         private const val ENTRANCE_ICON_CORNER = 2f
-        private const val STATION_SIZE = 36
+        private const val STATION_SIZE = 40
         private const val LOGO_SIZE = 24f
         private const val ENTRANCE_SIZE = 24
     }

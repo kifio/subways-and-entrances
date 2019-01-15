@@ -3,6 +3,7 @@ package kifio.data
 import com.mapbox.geojson.Feature
 import com.mapbox.geojson.Point
 import kifio.DataConstants
+import java.awt.Color
 
 class Station(val name: String,
               val color: String,
@@ -20,10 +21,12 @@ class Station(val name: String,
         return true
     }
 
+    override fun getIconId() = color
+
     override fun hashCode(): Int {
         var hash = 7
-        hash = 31 * hash + (name.hashCode())
-        hash = 31 * hash + (if (color == null) 0 else color?.hashCode())
+        hash = 31 * hash + name.hashCode()
+        hash = 31 * hash + color.hashCode()
         return hash;
     }
 
@@ -34,6 +37,7 @@ class Station(val name: String,
         feature.addStringProperty(DataConstants.NAME, name)
         feature.addStringProperty(DataConstants.COLOR, color)
         feature.addStringProperty(DataConstants.CLASS, Station::class.java.simpleName)
+        feature.addStringProperty(DataConstants.ICON, getIconId())
         return feature
     }
 }

@@ -20,6 +20,9 @@ class Entrance(val ref: Int?,
         feature.addNumberProperty(DataConstants.REF, ref)
         feature.addStringProperty(DataConstants.COLOR, color)
         feature.addStringProperty(DataConstants.CLASS, Entrance::class.java.simpleName)
+        feature.addStringProperty(DataConstants.ICON, getIconId())
         return feature
     }
+
+    override fun getIconId() = ref.toString()
 }

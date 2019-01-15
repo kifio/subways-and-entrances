@@ -7,4 +7,5 @@ object DataConstants {
     const val REF = "ref"
     const val NAME = "name"
     const val CLASS = "class"
+    const val ICON = "icon"
 }
