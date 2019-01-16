@@ -35,27 +35,37 @@ class MapsActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.mapbox) {
-            supportFragmentManager.beginTransaction().replace(R.id.container,
-                    getMapboxFragment(), MapboxMapFragment::class.java.simpleName).commit()
+            hideFragment(GoogleMapsFragment::class.java.simpleName)
+            showFragment(MapboxMapFragment::class.java.simpleName, ::newMapboxFragment)
         } else if (item.itemId == R.id.google) {
-            supportFragmentManager.beginTransaction().replace(R.id.container,
-                    getGoogleMapsFragment(), GoogleMapsFragment::class.java.simpleName).commit()
+            hideFragment(MapboxMapFragment::class.java.simpleName)
+            showFragment(GoogleMapsFragment::class.java.simpleName, ::newGoogleMapsFragment)
         }
-
         return false
     }
 
-    private fun getMapboxFragment(): Fragment {
-        Timber.d(MapboxMapFragment::class.java.simpleName)
-        return supportFragmentManager.findFragmentByTag(MapboxMapFragment::class.java.simpleName)
-                ?: MapboxMapFragment.newInstance()
+    private fun findFragment(tag: String) = supportFragmentManager.findFragmentByTag(tag)
+
+    private fun showFragment(fragmentName: String, newInstance: () -> Fragment) {
+        val fragment = findFragment(fragmentName)
+        if (fragment == null) {
+            supportFragmentManager.beginTransaction().add(R.id.container,
+                    newInstance(), fragmentName).commit()
+        } else if (fragment.isDetached) {
+            supportFragmentManager.beginTransaction().attach(fragment).commit()
+        }
     }
 
-    private fun getGoogleMapsFragment(): Fragment {
-        Timber.d(GoogleMapsFragment::class.java.simpleName)
-        return supportFragmentManager.findFragmentByTag(GoogleMapsFragment::class.java.simpleName)
-                ?: GoogleMapsFragment.newInstance()
+    private fun hideFragment(fragmentName: String) {
+        val fragment = findFragment(fragmentName)
+        if (fragment != null && fragment.isAdded) {
+            supportFragmentManager.beginTransaction().detach(fragment).commit()
+        }
     }
+
+    private fun newGoogleMapsFragment() = GoogleMapsFragment.newInstance()
+
+    private fun newMapboxFragment() = MapboxMapFragment.newInstance()
 
     companion object {
         private const val SELECTED_ITEM = "PAGE"

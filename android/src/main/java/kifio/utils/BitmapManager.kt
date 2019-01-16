@@ -12,7 +12,7 @@ import kifio.R
 /**
  * Class which used for creating and caching Bitmaps markers.
  */
-class BitmapManager() {
+class BitmapManager {
 
     private val bitmaps = mutableMapOf<String, Bitmap>()
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
