@@ -5,6 +5,7 @@ import kifio.subway.utils.BitmapManager
 import kifio.subway.view.MapView
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.util.*
 
 class MapPresenter(mapView: MapView, dataManager: DataManager) {
 
@@ -15,8 +16,10 @@ class MapPresenter(mapView: MapView, dataManager: DataManager) {
 
     fun loadEntrancesOffline() {
         GlobalScope.launch {
-            mapView?.addStationsLayer(dataManager?.getStationsJson())
-            mapView?.addEntrancesLayer(dataManager?.getEntrancesJson())
+            val stations = dataManager?.getStationsJson()
+            val entrances = dataManager?.getEntrancesJson()
+            mapView?.addStationsLayer(stations)
+            mapView?.addEntrancesLayer(entrances)
         }
     }
 

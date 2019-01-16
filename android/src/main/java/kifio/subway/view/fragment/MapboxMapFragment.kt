@@ -12,6 +12,8 @@ import com.mapbox.mapboxsdk.maps.SupportMapFragment
 import com.mapbox.mapboxsdk.style.layers.PropertyFactory
 import com.mapbox.mapboxsdk.style.layers.SymbolLayer
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource
+import com.mapbox.mapboxsdk.style.layers.Property
+import com.mapbox.mapboxsdk.style.layers.PropertyFactory.visibility
 import com.mapbox.mapboxsdk.utils.MapFragmentUtils
 import kifio.subway.R
 import kifio.subway.data.model.LocalOpenStreetMapManager
@@ -20,6 +22,7 @@ import kifio.subway.view.MapView
 import kifio.subway.view.activity.MapsActivity
 import timber.log.Timber
 import java.lang.IllegalStateException
+import java.util.*
 
 class MapboxMapFragment : SupportMapFragment(), MapView {
 
@@ -31,6 +34,7 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
         private const val STATIONS = "STATIONS"
         private const val ENTRANCES = "ENTRANCES"
         private const val INITIAL_ZOOM = 9.0
+        private const val ENTRANCES_ZOOM_THRESHOLD = 13.0
 
         fun newInstance(): MapboxMapFragment {
             val mapFragment = MapboxMapFragment()
@@ -61,11 +65,27 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
         map = mapboxMap
         mapboxMap.uiSettings.isRotateGesturesEnabled = false
         presenter.loadEntrancesOffline()
+        map.addOnCameraMoveListener(object: MapboxMap.OnCameraMoveListener {
+            override fun  onCameraMove() {
+                val stationsLayer = mapboxMap.getLayer(STATIONS)
+                val entrancesLayer = mapboxMap.getLayer(ENTRANCES)
+                Timber.d("current zoom: ${mapboxMap.getCameraPosition().zoom}; treshold: $ENTRANCES_ZOOM_THRESHOLD")
+                if (mapboxMap.getCameraPosition().zoom > ENTRANCES_ZOOM_THRESHOLD) {
+                    if (entrancesLayer != null) {
+                        entrancesLayer.setProperties(visibility(Property.VISIBLE))
+                    }
+                } else {
+                    if (entrancesLayer != null) {
+                        entrancesLayer.setProperties(visibility(Property.NONE))
+                    }
+                }
+            }
+        })
     }
 
     override fun addStationsLayer(geoJsonData: String?) {
         if (geoJsonData != null) {
-            addLayer(geoJsonData, STATIONS)
+            addLayer(geoJsonData, STATIONS, Property.VISIBLE)
         } else {
             Timber.e("Stations layer is empty!")
         }
@@ -73,26 +93,26 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
 
     override fun addEntrancesLayer(geoJsonData: String?) {
         if (geoJsonData != null) {
-            addLayer(geoJsonData, ENTRANCES)
+            addLayer(geoJsonData, ENTRANCES, Property.NONE)
         } else {
             Timber.e("Stations layer is empty!")
         }
     }
 
-    private fun addImage(iconId: String, icons: Map<String, Bitmap>) {
-        map.addImage(iconId, icons[iconId] ?: throw IllegalStateException())
+    private fun addImage(icon: Map.Entry<String, Bitmap>) {
+        map.addImage(icon.key, icon.value ?: throw IllegalStateException())
     }
 
     override fun getContext() = activity
 
-    private fun addLayer(geoJsonData: String, layer: String) {
+    private fun addLayer(geoJsonData: String, layer: String, visibility: String) {
         activity?.runOnUiThread {
             val features = FeatureCollection.fromJson(geoJsonData)
             val icons = presenter.getIcons()
-            icons.keys.forEach { addImage(it, icons) }
-            map.addSource(GeoJsonSource("$layer-source", features))
-            map.addLayer(SymbolLayer("$layer-layer", "$layer-source")
-                    .withProperties(PropertyFactory.iconImage("{icon}")))
+            icons.entries.forEach { it -> addImage(it) }
+            map.addSource(GeoJsonSource("$layer", features))
+            map.addLayer(SymbolLayer("$layer", "$layer")
+                    .withProperties(PropertyFactory.iconImage("{icon}"), visibility(visibility)))
         }
     }
 }

@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
 import kifio.subway.App
 import kifio.subway.R
+import java.util.*
 
 /**
  * Class which used for creating and caching Bitmaps markers.
@@ -32,7 +33,7 @@ class BitmapManager {
     private val textRect = Rect()
     private val entranceColor = Color.parseColor("#FDB913")
 
-    fun getIcons() = bitmaps
+    fun getIcons(): Map<String, Bitmap> = bitmaps
 
     fun getIcon(key: String) = bitmaps[key]
 
