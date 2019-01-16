@@ -11,7 +11,7 @@ import com.google.maps.android.data.geojson.GeoJsonFeature
 import com.google.maps.android.data.geojson.GeoJsonLayer
 import com.google.maps.android.data.geojson.GeoJsonPointStyle
 import kifio.DataConstants
-import kifio.subway.data.sources.LocalOpenStreetMapManager
+import kifio.subway.data.model.LocalOpenStreetMapManager
 import kifio.subway.presenter.MapPresenter
 import kifio.subway.view.MapView
 import kifio.subway.view.activity.MapsActivity
@@ -22,7 +22,7 @@ import timber.log.Timber
 class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
 
     private lateinit var map: GoogleMap
-    private val presenter = MapPresenter(this, LocalOpenStreetMapManager())
+    private val presenter = MapPresenter(this, LocalOpenStreetMapManager.instanse)
 
     companion object {
 
@@ -48,13 +48,20 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
         super.onDestroy()
     }
 
-    override fun addStationsLayer(geoJsonData: String) {
-        addLayer(GeoJsonLayer(map, JSONObject(geoJsonData)))
-
+    override fun addStationsLayer(geoJsonData: String?) {
+        if (geoJsonData != null) {
+            addLayer(GeoJsonLayer(map, JSONObject(geoJsonData)))
+        } else {
+            Timber.e("Stations layer is empty!")
+        }
     }
 
-    override fun addEntrancesLayer(geoJsonData: String) {
-        addLayer(GeoJsonLayer(map, JSONObject(geoJsonData)))
+    override fun addEntrancesLayer(geoJsonData: String?) {
+        if (geoJsonData != null) {
+            addLayer(GeoJsonLayer(map, JSONObject(geoJsonData)))
+        } else {
+            Timber.e("Entrances layer is empty!")
+        }
     }
 
     private fun getPointStyle(feature: GeoJsonFeature): GeoJsonPointStyle {

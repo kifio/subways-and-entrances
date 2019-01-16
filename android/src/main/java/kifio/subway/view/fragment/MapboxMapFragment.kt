@@ -14,7 +14,7 @@ import com.mapbox.mapboxsdk.style.layers.SymbolLayer
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource
 import com.mapbox.mapboxsdk.utils.MapFragmentUtils
 import kifio.subway.R
-import kifio.subway.data.sources.LocalOpenStreetMapManager
+import kifio.subway.data.model.LocalOpenStreetMapManager
 import kifio.subway.presenter.MapPresenter
 import kifio.subway.view.MapView
 import kifio.subway.view.activity.MapsActivity
@@ -24,7 +24,7 @@ import java.lang.IllegalStateException
 class MapboxMapFragment : SupportMapFragment(), MapView {
 
     private lateinit var map: MapboxMap
-    private val presenter = MapPresenter(this, LocalOpenStreetMapManager())
+    private val presenter = MapPresenter(this, LocalOpenStreetMapManager.instanse)
 
     companion object {
 
@@ -63,12 +63,20 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
         presenter.loadEntrancesOffline()
     }
 
-    override fun addStationsLayer(geoJsonData: String) {
-        addLayer(geoJsonData, STATIONS)
+    override fun addStationsLayer(geoJsonData: String?) {
+        if (geoJsonData != null) {
+            addLayer(geoJsonData, STATIONS)
+        } else {
+            Timber.e("Stations layer is empty!")
+        }
     }
 
-    override fun addEntrancesLayer(geoJsonData: String) {
-        addLayer(geoJsonData, ENTRANCES)
+    override fun addEntrancesLayer(geoJsonData: String?) {
+        if (geoJsonData != null) {
+            addLayer(geoJsonData, ENTRANCES)
+        } else {
+            Timber.e("Stations layer is empty!")
+        }
     }
 
     private fun addImage(iconId: String, icons: Map<String, Bitmap>) {

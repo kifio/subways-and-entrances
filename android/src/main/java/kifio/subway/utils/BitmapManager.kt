@@ -14,6 +14,19 @@ import kifio.subway.R
  */
 class BitmapManager {
 
+    companion object {
+        private const val STROKE_WIDTH = 2
+        private const val SUBWAY_ICON_CORNER = 10f
+        private const val ENTRANCE_ICON_CORNER = 2f
+        private const val STATION_SIZE = 20
+        private const val LOGO_SIZE = 12f
+        private const val ENTRANCE_SIZE = 12
+        private const val ENTRANCE_NUMBER_TEXT_SIZE = 10f
+
+        var instanse = BitmapManager()
+            private set
+    }
+
     private val bitmaps = mutableMapOf<String, Bitmap>()
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
     private val textRect = Rect()
@@ -105,16 +118,6 @@ class BitmapManager {
         drawable.setBounds(0, 0, canvas.width, canvas.height)
         drawable.draw(canvas)
         return bitmap
-    }
-
-    companion object {
-        private const val STROKE_WIDTH = 2
-        private const val SUBWAY_ICON_CORNER = 10f
-        private const val ENTRANCE_ICON_CORNER = 2f
-        private const val STATION_SIZE = 20
-        private const val LOGO_SIZE = 12f
-        private const val ENTRANCE_SIZE = 12
-        private const val ENTRANCE_NUMBER_TEXT_SIZE = 10f
     }
 
     private fun Int.toPx() = this * Resources.getSystem().displayMetrics.density.toInt()
