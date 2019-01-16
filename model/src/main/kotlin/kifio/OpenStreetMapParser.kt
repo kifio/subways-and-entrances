@@ -1,13 +1,8 @@
 package kifio
 
-import com.mapbox.geojson.Feature
-import com.mapbox.geojson.FeatureCollection
-import com.mapbox.geojson.Point
-import com.mapbox.turf.TurfClassification
-import com.mapbox.turf.TurfMeasurement
-import kifio.data.Entrance
-import kifio.data.MapData
-import kifio.data.Station
+import kifio.subway.data.Entrance
+import kifio.subway.data.MapData
+import kifio.subway.data.Station
 import org.w3c.dom.Element
 import org.w3c.dom.NamedNodeMap
 import org.w3c.dom.Node

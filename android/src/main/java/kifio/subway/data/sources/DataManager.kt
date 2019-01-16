@@ -1,8 +1,7 @@
-package kifio.data.sources
+package kifio.subway.data.sources
 
-import android.content.Context
-import kifio.data.Entrance
-import kifio.data.Station
+import kifio.subway.data.Entrance
+import kifio.subway.data.Station
 
 /**
  * Base interface for all sources, which prefers stations and entrances.

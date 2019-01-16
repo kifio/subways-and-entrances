@@ -4,8 +4,8 @@ import com.mapbox.geojson.Point
 import com.mapbox.turf.TurfClassification
 import kifio.OpenStreetMapParser.Companion.buildEntrance
 import kifio.OpenStreetMapParser.Companion.buildStation
-import kifio.data.Entrance
-import kifio.data.Station
+import kifio.subway.data.Entrance
+import kifio.subway.data.Station
 import java.io.InputStream
 
 object MetroMap {

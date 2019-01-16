@@ -1,16 +1,14 @@
-package kifio.view.activity
+package kifio.subway.view.activity
 
 import android.os.Bundle
 import android.os.PersistableBundle
-import android.support.design.widget.BottomNavigationView
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.appcompat.app.AppCompatActivity
 import android.view.MenuItem
-import kifio.R
-import kifio.view.fragment.GoogleMapsFragment
-import kifio.view.fragment.MapboxMapFragment
+import kifio.subway.R
+import kifio.subway.view.fragment.GoogleMapsFragment
+import kifio.subway.view.fragment.MapboxMapFragment
 import kotlinx.android.synthetic.main.activity_maps.*
-import timber.log.Timber
 
 /**
  * Host activity for all MapFragments
@@ -46,7 +44,7 @@ class MapsActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     private fun findFragment(tag: String) = supportFragmentManager.findFragmentByTag(tag)
 
-    private fun showFragment(fragmentName: String, newInstance: () -> Fragment) {
+    private fun showFragment(fragmentName: String, newInstance: () -> androidx.fragment.app.Fragment) {
         val fragment = findFragment(fragmentName)
         if (fragment == null) {
             supportFragmentManager.beginTransaction().add(R.id.container,
@@ -69,5 +67,7 @@ class MapsActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     companion object {
         private const val SELECTED_ITEM = "PAGE"
+        const val INITIAL_LAT = 55.7558
+        const val INITIAL_LON = 37.6173
     }
 }

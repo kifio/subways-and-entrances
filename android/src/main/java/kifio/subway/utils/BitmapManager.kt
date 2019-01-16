@@ -1,13 +1,13 @@
-package kifio.utils
+package kifio.subway.utils
 
 import android.content.res.Resources
 import android.graphics.*
 import android.graphics.drawable.Drawable
 import android.graphics.drawable.GradientDrawable
-import android.support.v4.content.ContextCompat
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory
-import kifio.App
-import kifio.R
+import androidx.core.content.ContextCompat
+import androidx.core.graphics.drawable.RoundedBitmapDrawableFactory
+import kifio.subway.App
+import kifio.subway.R
 
 /**
  * Class which used for creating and caching Bitmaps markers.
@@ -60,7 +60,7 @@ class BitmapManager {
         paint.color = entranceColor
         paint.strokeWidth = 0.5f.toPx()
         paint.style = Paint.Style.FILL_AND_STROKE
-        paint.textSize = 20f.toPx()
+        paint.textSize = ENTRANCE_NUMBER_TEXT_SIZE.toPx()
         paint.getTextBounds(number,0, number.length, textRect)
         paint.textAlign = Paint.Align.CENTER
         canvas.drawText(number, size / 2, size - ((size - textRect.height()) / 2), paint)
@@ -111,9 +111,10 @@ class BitmapManager {
         private const val STROKE_WIDTH = 2
         private const val SUBWAY_ICON_CORNER = 10f
         private const val ENTRANCE_ICON_CORNER = 2f
-        private const val STATION_SIZE = 40
-        private const val LOGO_SIZE = 24f
-        private const val ENTRANCE_SIZE = 24
+        private const val STATION_SIZE = 20
+        private const val LOGO_SIZE = 12f
+        private const val ENTRANCE_SIZE = 12
+        private const val ENTRANCE_NUMBER_TEXT_SIZE = 10f
     }
 
     private fun Int.toPx() = this * Resources.getSystem().displayMetrics.density.toInt()

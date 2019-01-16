@@ -1,9 +1,9 @@
-package kifio.data.sources
+package kifio.subway.data.sources
 
-import kifio.App
+import kifio.subway.App
 import kifio.MetroMap
-import kifio.data.Entrance
-import kifio.data.Station
+import kifio.subway.data.Entrance
+import kifio.subway.data.Station
 
 /**
  * DataManager for getting data parsed from .pbf files.

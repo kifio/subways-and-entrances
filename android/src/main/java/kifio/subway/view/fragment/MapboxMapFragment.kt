@@ -1,4 +1,4 @@
-package kifio.view.fragment
+package kifio.subway.view.fragment
 
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -13,10 +13,11 @@ import com.mapbox.mapboxsdk.style.layers.PropertyFactory
 import com.mapbox.mapboxsdk.style.layers.SymbolLayer
 import com.mapbox.mapboxsdk.style.sources.GeoJsonSource
 import com.mapbox.mapboxsdk.utils.MapFragmentUtils
-import kifio.R
-import kifio.data.sources.LocalOpenStreetMapManager
-import kifio.presenter.MapPresenter
-import kifio.view.MapView
+import kifio.subway.R
+import kifio.subway.data.sources.LocalOpenStreetMapManager
+import kifio.subway.presenter.MapPresenter
+import kifio.subway.view.MapView
+import kifio.subway.view.activity.MapsActivity
 import timber.log.Timber
 import java.lang.IllegalStateException
 
@@ -29,8 +30,6 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
 
         private const val STATIONS = "STATIONS"
         private const val ENTRANCES = "ENTRANCES"
-        private const val INITIAL_LAT = 55.7558
-        private const val INITIAL_LON = 37.6173
         private const val INITIAL_ZOOM = 9.0
 
         fun newInstance(): MapboxMapFragment {
@@ -41,7 +40,8 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
         }
 
         private fun getCameraPosition() = CameraPosition.Builder()
-                .target(LatLng(INITIAL_LAT, INITIAL_LON)).zoom(INITIAL_ZOOM).build()
+                .target(LatLng(MapsActivity.INITIAL_LAT, MapsActivity.INITIAL_LON))
+                .zoom(INITIAL_ZOOM).build()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,8 +84,7 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
             icons.keys.forEach { addImage(it, icons) }
             map.addSource(GeoJsonSource("$layer-source", features))
             map.addLayer(SymbolLayer("$layer-layer", "$layer-source")
-                    .withProperties(PropertyFactory.iconImage("{icon}"),
-                            PropertyFactory.iconSize(0.5f)))
+                    .withProperties(PropertyFactory.iconImage("{icon}")))
         }
     }
 }

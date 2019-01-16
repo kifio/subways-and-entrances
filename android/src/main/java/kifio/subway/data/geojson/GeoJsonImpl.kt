@@ -1,4 +1,4 @@
-package kifio.data.geojson
+package kifio.subway.data.geojson
 
 import com.google.gson.*
 import com.mapbox.geojson.BoundingBox

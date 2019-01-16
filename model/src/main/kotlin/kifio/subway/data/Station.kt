@@ -1,9 +1,8 @@
-package kifio.data
+package kifio.subway.data
 
 import com.mapbox.geojson.Feature
 import com.mapbox.geojson.Point
 import kifio.DataConstants
-import java.awt.Color
 
 class Station(val name: String,
               val color: String,

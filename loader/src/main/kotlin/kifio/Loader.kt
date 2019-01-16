@@ -2,7 +2,7 @@ package kifio
 
 import com.mapbox.geojson.FeatureCollection
 import kifio.MetroMap.buildMap
-import kifio.data.Station
+import kifio.subway.data.Station
 import java.io.File
 import java.io.FileInputStream
 

@@ -1,11 +1,11 @@
-package kifio.presenter
+package kifio.subway.presenter
 
 import com.mapbox.geojson.Feature
-import kifio.data.*
-import kifio.data.geojson.GeoJsonImpl
-import kifio.data.sources.DataManager
-import kifio.utils.BitmapManager
-import kifio.view.MapView
+import kifio.subway.data.*
+import kifio.subway.data.geojson.GeoJsonImpl
+import kifio.subway.data.sources.DataManager
+import kifio.subway.utils.BitmapManager
+import kifio.subway.view.MapView
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.util.*

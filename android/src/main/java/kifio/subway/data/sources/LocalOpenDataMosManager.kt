@@ -1,9 +1,7 @@
-package kifio.data.sources
+package kifio.subway.data.sources
 
-import android.content.Context
-import kifio.MetroMap
-import kifio.data.Entrance
-import kifio.data.Station
+import kifio.subway.data.Entrance
+import kifio.subway.data.Station
 
 /**
  * DataManager for getting data from OpenDataMos resource.

@@ -1,6 +1,4 @@
-package kifio.view
-
-import android.content.Context
+package kifio.subway.view
 
 /**
  * Interface for View.

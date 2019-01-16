@@ -1,4 +1,4 @@
-package kifio
+package kifio.subway
 
 import android.app.Application
 import timber.log.Timber

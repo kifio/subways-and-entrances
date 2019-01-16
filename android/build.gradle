@@ -9,7 +9,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "kifio.subwaysandentrances"
+        applicationId "kifio.subway"
         minSdkVersion 22
         targetSdkVersion 28
         versionCode 1
@@ -42,8 +42,9 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.8.5'
     implementation 'com.jakewharton.timber:timber:4.7.1'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.1.0'
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    implementation 'com.google.maps.android:android-maps-utils:0.5'
+    implementation 'com.google.android.material:material:1.1.0-alpha02'
     implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:6.5.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
 }
