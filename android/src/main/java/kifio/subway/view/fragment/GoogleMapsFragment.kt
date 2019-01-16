@@ -3,6 +3,8 @@ package kifio.subway.view.fragment
 import android.os.Bundle
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.GoogleMap.OnCameraMoveCanceledListener
+import com.google.android.gms.maps.GoogleMap.OnCameraIdleListener
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
@@ -22,11 +24,14 @@ import timber.log.Timber
 class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
 
     private lateinit var map: GoogleMap
+    private var stationsLayer: GeoJsonLayer? = null
+    private var entrancesLayer: GeoJsonLayer? = null
     private val presenter = MapPresenter(this, LocalOpenStreetMapManager.instanse)
 
     companion object {
 
         private const val INITIAL_ZOOM = 10.0
+        private const val ENTRANCES_ZOOM_THRESHOLD = 12.0
         fun newInstance() = GoogleMapsFragment()
     }
 
@@ -40,6 +45,14 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
         presenter.loadEntrancesOffline()
         map.moveCamera(CameraUpdateFactory
                 .newLatLngZoom(LatLng(MapsActivity.INITIAL_LAT, MapsActivity.INITIAL_LON), INITIAL_ZOOM.toFloat()))
+        map.setOnCameraIdleListener(object: OnCameraIdleListener {
+            override fun onCameraIdle() {
+                Timber.d("onCameraIdle, zoom: ${map.cameraPosition.zoom}")
+                entrancesLayer?.features?.forEach {
+                    /* Timber.d("onCameraIdle, feature.visibility: ${map.cameraPosition.zoom > ENTRANCES_ZOOM_THRESHOLD}") */
+                }
+            }
+        })
     }
 
     override fun onDestroy() {
@@ -50,7 +63,8 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
 
     override fun addStationsLayer(geoJsonData: String?) {
         if (geoJsonData != null) {
-            addLayer(GeoJsonLayer(map, JSONObject(geoJsonData)))
+            stationsLayer = GeoJsonLayer(map, JSONObject(geoJsonData))
+            addLayer(stationsLayer)
         } else {
             Timber.e("Stations layer is empty!")
         }
@@ -58,6 +72,7 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
 
     override fun addEntrancesLayer(geoJsonData: String?) {
         if (geoJsonData != null) {
+            entrancesLayer = GeoJsonLayer(map, JSONObject(geoJsonData))
             addLayer(GeoJsonLayer(map, JSONObject(geoJsonData)))
         } else {
             Timber.e("Entrances layer is empty!")
@@ -71,8 +86,10 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
         return pointStyle
     }
 
-    private fun addLayer(layer: GeoJsonLayer) {
-        layer.features.forEach { it.pointStyle = getPointStyle(it) }
-        activity?.runOnUiThread { layer.addLayerToMap() }
+    private fun addLayer(layer: GeoJsonLayer?) {
+        if (layer != null) {
+            layer.features.forEach { it.pointStyle = getPointStyle(it) }
+            activity?.runOnUiThread { layer.addLayerToMap() }
+        }
     }
 }

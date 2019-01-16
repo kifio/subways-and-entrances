@@ -49,13 +49,11 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
-        Timber.d("onCreate")
         super.onCreate(savedInstanceState)
         Mapbox.getInstance(requireActivity(), getString(R.string.mapbox_access_token))
     }
 
     override fun onDestroy() {
-        Timber.d("onDestroy")
         presenter.onDestroy()
         super.onDestroy()
     }
@@ -69,7 +67,6 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
             override fun  onCameraMove() {
                 val stationsLayer = mapboxMap.getLayer(STATIONS)
                 val entrancesLayer = mapboxMap.getLayer(ENTRANCES)
-                Timber.d("current zoom: ${mapboxMap.getCameraPosition().zoom}; treshold: $ENTRANCES_ZOOM_THRESHOLD")
                 if (mapboxMap.getCameraPosition().zoom > ENTRANCES_ZOOM_THRESHOLD) {
                     if (entrancesLayer != null) {
                         entrancesLayer.setProperties(visibility(Property.VISIBLE))
