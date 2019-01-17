@@ -3,8 +3,6 @@ package kifio.subway.view.fragment
 import android.os.Bundle
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.GoogleMap.OnCameraMoveCanceledListener
-import com.google.android.gms.maps.GoogleMap.OnCameraIdleListener
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
@@ -20,7 +18,6 @@ import kifio.subway.view.activity.MapsActivity
 import org.json.JSONObject
 import timber.log.Timber
 
-
 class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
 
     private lateinit var map: GoogleMap
@@ -31,7 +28,7 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
     companion object {
 
         private const val INITIAL_ZOOM = 10.0
-        private const val ENTRANCES_ZOOM_THRESHOLD = 12.0
+        private const val ENTRANCES_ZOOM_THRESHOLD = 14.0
         fun newInstance() = GoogleMapsFragment()
     }
 
@@ -45,11 +42,13 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
         presenter.loadEntrancesOffline()
         map.moveCamera(CameraUpdateFactory
                 .newLatLngZoom(LatLng(MapsActivity.INITIAL_LAT, MapsActivity.INITIAL_LON), INITIAL_ZOOM.toFloat()))
-        map.setOnCameraIdleListener(object: OnCameraIdleListener {
-            override fun onCameraIdle() {
-                Timber.d("onCameraIdle, zoom: ${map.cameraPosition.zoom}")
-                entrancesLayer?.features?.forEach {
-                    /* Timber.d("onCameraIdle, feature.visibility: ${map.cameraPosition.zoom > ENTRANCES_ZOOM_THRESHOLD}") */
+        map.setOnCameraMoveListener(object: GoogleMap.OnCameraMoveListener{
+            override fun onCameraMove() {
+                val layer = entrancesLayer ?: return
+                if (!layer.isLayerOnMap && map.cameraPosition.zoom >= ENTRANCES_ZOOM_THRESHOLD) {
+                    layer.addLayerToMap()
+                } else if (layer.isLayerOnMap && map.cameraPosition.zoom < ENTRANCES_ZOOM_THRESHOLD) {
+                    layer.removeLayerFromMap()
                 }
             }
         })
@@ -64,6 +63,7 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
     override fun addStationsLayer(geoJsonData: String?) {
         if (geoJsonData != null) {
             stationsLayer = GeoJsonLayer(map, JSONObject(geoJsonData))
+            stationsLayer?.features?.forEach { it.pointStyle = getPointStyle(it) }
             addLayer(stationsLayer)
         } else {
             Timber.e("Stations layer is empty!")
@@ -73,7 +73,7 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
     override fun addEntrancesLayer(geoJsonData: String?) {
         if (geoJsonData != null) {
             entrancesLayer = GeoJsonLayer(map, JSONObject(geoJsonData))
-            addLayer(GeoJsonLayer(map, JSONObject(geoJsonData)))
+            entrancesLayer?.features?.forEach { it.pointStyle = getPointStyle(it) }
         } else {
             Timber.e("Entrances layer is empty!")
         }
@@ -88,7 +88,6 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
 
     private fun addLayer(layer: GeoJsonLayer?) {
         if (layer != null) {
-            layer.features.forEach { it.pointStyle = getPointStyle(it) }
             activity?.runOnUiThread { layer.addLayerToMap() }
         }
     }
