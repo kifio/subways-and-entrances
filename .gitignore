@@ -2,6 +2,7 @@ pkey.json
 build/
 .gradle/
 .idea/
+out/
 .DS_Store
 local.properties
 android/src/main/res/values/google_maps_api.xml
