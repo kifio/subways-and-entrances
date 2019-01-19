@@ -10,6 +10,7 @@ import kifio.subway.R
 import kifio.subway.view.fragment.GoogleMapsFragment
 import kifio.subway.view.fragment.MapboxMapFragment
 import kotlinx.android.synthetic.main.activity_maps.*
+import timber.log.Timber
 
 /**
  * Host activity for all MapFragments
@@ -48,9 +49,11 @@ class MapsActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private fun<T: Fragment> showFragment(fragmentName: String, newInstance: () -> T) {
         val fragment = findFragment(fragmentName)
         if (fragment == null) {
+            Timber.d("Add $fragmentName")
             supportFragmentManager.beginTransaction().add(R.id.container,
                     newInstance(), fragmentName).commit()
         } else if (fragment.isDetached) {
+            Timber.d("Attach $fragmentName")
             supportFragmentManager.beginTransaction().attach(fragment).commit()
         }
     }
@@ -58,6 +61,7 @@ class MapsActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private fun hideFragment(fragmentName: String) {
         val fragment = findFragment(fragmentName)
         if (fragment != null && fragment.isAdded) {
+            Timber.d("Detach $fragmentName")
             supportFragmentManager.beginTransaction().detach(fragment).commit()
         }
     }

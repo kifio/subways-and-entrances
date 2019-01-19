@@ -8,4 +8,6 @@ object DataConstants {
     const val NAME = "name"
     const val CLASS = "class"
     const val ICON = "icon"
+    const val STATION = "station"
+    const val ENTRANCE = "entrance"
 }

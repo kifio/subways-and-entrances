@@ -1,5 +1,6 @@
 package kifio.subway.view.fragment
 
+import android.graphics.Bitmap
 import android.os.Bundle
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -11,6 +12,9 @@ import com.google.maps.android.data.geojson.GeoJsonFeature
 import com.google.maps.android.data.geojson.GeoJsonLayer
 import com.google.maps.android.data.geojson.GeoJsonPointStyle
 import kifio.DataConstants
+import kifio.data.Entrance
+import kifio.data.Station
+import kifio.subway.utils.BitmapManager
 import kifio.subway.presenter.MapPresenterImpl
 import kifio.subway.view.MapView
 import kifio.subway.view.activity.MapsActivity
@@ -25,7 +29,6 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
     private val presenter = MapPresenterImpl(this)
 
     companion object {
-
         private const val INITIAL_ZOOM = 10.0
         private const val ENTRANCES_ZOOM_THRESHOLD = 14.0
         fun newInstance() = GoogleMapsFragment()
@@ -85,8 +88,18 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
     private fun getPointStyle(feature: GeoJsonFeature): GeoJsonPointStyle {
         val pointStyle = GeoJsonPointStyle()
         pointStyle.icon = BitmapDescriptorFactory
-                .fromBitmap(presenter.getIcons()[feature.getProperty(DataConstants.ICON)])
+                .fromBitmap(getImage(feature))
         return pointStyle
+    }
+
+    private fun getImage(feature: GeoJsonFeature): Bitmap {
+        if (feature.getProperty(DataConstants.CLASS) == Station::class.simpleName) {
+            return BitmapManager.instance.getStationIcon(feature.getProperty(DataConstants.ICON))
+        } else if (feature.getProperty(DataConstants.CLASS) == Entrance::class.simpleName) {
+            return BitmapManager.instance.getEntranceIcon(feature.getProperty(DataConstants.ICON))
+        } else {
+            throw IllegalStateException("Unknown feature")
+        }
     }
 
     private fun addLayer(layer: GeoJsonLayer?) {

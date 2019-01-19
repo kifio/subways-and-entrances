@@ -3,6 +3,7 @@ package kifio.subway.view.fragment
 import android.graphics.Bitmap
 import android.os.Bundle
 import com.mapbox.geojson.FeatureCollection
+import com.mapbox.geojson.Feature
 import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.camera.CameraPosition
 import com.mapbox.mapboxsdk.geometry.LatLng
@@ -15,12 +16,15 @@ import com.mapbox.mapboxsdk.style.sources.GeoJsonSource
 import com.mapbox.mapboxsdk.style.layers.Property
 import com.mapbox.mapboxsdk.style.layers.PropertyFactory.visibility
 import com.mapbox.mapboxsdk.utils.MapFragmentUtils
+import kifio.DataConstants
+import kifio.data.Entrance
+import kifio.data.Station
 import kifio.subway.presenter.MapPresenterImpl
 import kifio.subway.view.MapView
 import kifio.subway.view.activity.MapsActivity
+import kifio.subway.utils.BitmapManager
 import timber.log.Timber
 import java.lang.IllegalStateException
-import java.util.*
 import kifio.subway.R
 
 class MapboxMapFragment : SupportMapFragment(), MapView {
@@ -63,16 +67,10 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
         mapboxMap.uiSettings.isRotateGesturesEnabled = false
         presenter.loadSubwayMap()
         map.addOnCameraMoveListener {
-            val stationsLayer = mapboxMap.getLayer(STATIONS)
-            val entrancesLayer = mapboxMap.getLayer(ENTRANCES)
             if (mapboxMap.getCameraPosition().zoom > ENTRANCES_ZOOM_THRESHOLD) {
-                if (entrancesLayer != null) {
-                    entrancesLayer.setProperties(visibility(Property.VISIBLE))
-                }
+                mapboxMap.getLayer(ENTRANCES)?.setProperties(visibility(Property.VISIBLE))
             } else {
-                if (entrancesLayer != null) {
-                    entrancesLayer.setProperties(visibility(Property.NONE))
-                }
+                mapboxMap.getLayer(ENTRANCES)?.setProperties(visibility(Property.NONE))
             }
         }
     }
@@ -93,20 +91,29 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
         }
     }
 
-    private fun addImage(icon: Map.Entry<String, Bitmap>) {
-        map.addImage(icon.key, icon.value ?: throw IllegalStateException())
-    }
-
     override fun getContext() = activity
 
     private fun addLayer(geoJsonData: String, layer: String, visibility: String) {
         activity?.runOnUiThread {
             val features = FeatureCollection.fromJson(geoJsonData)
-            val icons = presenter.getIcons()
-            icons.entries.forEach { it -> addImage(it) }
+            features.features()?.forEach { addImage(it) } ?: throw IllegalStateException("Features can't be null")
             map.addSource(GeoJsonSource("$layer", features))
             map.addLayer(SymbolLayer("$layer", "$layer")
                     .withProperties(PropertyFactory.iconImage("{icon}"), visibility(visibility)))
+        }
+    }
+
+    private fun addImage(feature: Feature) {
+        if (feature.getStringProperty(DataConstants.CLASS) == Station::class.simpleName) {
+            addImage(feature.getStringProperty(DataConstants.ICON), BitmapManager.instance::getStationIcon)
+        } else if (feature.getStringProperty(DataConstants.CLASS) == Entrance::class.simpleName) {
+            addImage(feature.getStringProperty(DataConstants.ICON), BitmapManager.instance::getEntranceIcon)
+        }
+    }
+
+    private fun addImage(iconId: String, getIcon: (key: String) -> Bitmap) {
+        if (map.getImage(iconId) == null) {
+            map.addImage(iconId, getIcon(iconId))
         }
     }
 }

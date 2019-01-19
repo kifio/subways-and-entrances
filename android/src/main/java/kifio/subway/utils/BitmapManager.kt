@@ -24,7 +24,7 @@ class BitmapManager {
         private const val ENTRANCE_SIZE = 12
         private const val ENTRANCE_NUMBER_TEXT_SIZE = 10f
 
-        var instanse = BitmapManager()
+        var instance = BitmapManager()
             private set
     }
 
@@ -41,16 +41,22 @@ class BitmapManager {
         return bitmaps[key] != null
     }
 
-    fun addEntranceIcon(number: String) {
-        if (bitmaps[number] == null) {
-            bitmaps[number] = buildEntranceLogo(number.toInt(), ENTRANCE_SIZE.toPx())
-        }
+    fun getEntranceIcon(number: String): Bitmap {
+        return getIcon(number, number.toInt(), ENTRANCE_SIZE.toPx(), ::buildEntranceLogo)
     }
 
-    fun addStationIcon(color: String) {
-        if (bitmaps[color] == null) {
-            bitmaps[color] = buildStationLogo(Color.parseColor(color), STATION_SIZE.toPx())
+    fun getStationIcon(color: String): Bitmap {
+        return getIcon(color, Color.parseColor(color), STATION_SIZE.toPx(), ::buildStationLogo)
+    }
+
+    private fun getIcon(key: String, property: Int, size: Int,
+         buildIcon: (id: Int, size: Int) -> Bitmap): Bitmap {
+        var bitmap = bitmaps[key]
+        if (bitmap == null) {
+            bitmap = buildIcon(property, size)
+            bitmaps[key] = bitmap
         }
+        return bitmap
     }
 
     private fun buildEntranceLogo(number: Int, size: Int): Bitmap {

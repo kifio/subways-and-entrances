@@ -3,7 +3,6 @@ package kifio.subway.presenter
 import kifio.GetGeoJson
 import kifio.geojson.GeoJson
 import kifio.subway.App
-import kifio.subway.utils.BitmapManager
 import kifio.subway.view.MapView
 import java.io.InputStream
 import java.util.concurrent.Executors
@@ -11,8 +10,6 @@ import java.util.concurrent.Executors
 class MapPresenterImpl(mapView: MapView) : MapPresenter {
 
     private var mapView: MapView? = mapView
-
-    fun getIcons() = BitmapManager.instanse.getIcons()
 
     override fun loadSubwayMap() {
         val executor = Executors.newSingleThreadExecutor()
