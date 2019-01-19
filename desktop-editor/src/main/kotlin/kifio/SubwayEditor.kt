@@ -1,8 +1,5 @@
 package kifio
 
-import javafx.application.Application
-import tornadofx.App
+import tornadofx.*
 
-class SubwayEditor: App(RootView::class) {
-
-}
+class SubwayEditor: App(SEView::class)

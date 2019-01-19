@@ -15,19 +15,18 @@ import com.mapbox.mapboxsdk.style.sources.GeoJsonSource
 import com.mapbox.mapboxsdk.style.layers.Property
 import com.mapbox.mapboxsdk.style.layers.PropertyFactory.visibility
 import com.mapbox.mapboxsdk.utils.MapFragmentUtils
-import kifio.subway.R
-import kifio.subway.data.model.LocalOpenStreetMapManager
-import kifio.subway.presenter.MapPresenter
+import kifio.subway.presenter.MapPresenterImpl
 import kifio.subway.view.MapView
 import kifio.subway.view.activity.MapsActivity
 import timber.log.Timber
 import java.lang.IllegalStateException
 import java.util.*
+import kifio.subway.R
 
 class MapboxMapFragment : SupportMapFragment(), MapView {
 
     private lateinit var map: MapboxMap
-    private val presenter = MapPresenter(this, LocalOpenStreetMapManager.instanse)
+    private val presenter = MapPresenterImpl(this)
 
     companion object {
 
@@ -62,22 +61,20 @@ class MapboxMapFragment : SupportMapFragment(), MapView {
         super.onMapReady(mapboxMap)
         map = mapboxMap
         mapboxMap.uiSettings.isRotateGesturesEnabled = false
-        presenter.loadEntrancesOffline()
-        map.addOnCameraMoveListener(object: MapboxMap.OnCameraMoveListener {
-            override fun  onCameraMove() {
-                val stationsLayer = mapboxMap.getLayer(STATIONS)
-                val entrancesLayer = mapboxMap.getLayer(ENTRANCES)
-                if (mapboxMap.getCameraPosition().zoom > ENTRANCES_ZOOM_THRESHOLD) {
-                    if (entrancesLayer != null) {
-                        entrancesLayer.setProperties(visibility(Property.VISIBLE))
-                    }
-                } else {
-                    if (entrancesLayer != null) {
-                        entrancesLayer.setProperties(visibility(Property.NONE))
-                    }
+        presenter.loadSubwayMap()
+        map.addOnCameraMoveListener {
+            val stationsLayer = mapboxMap.getLayer(STATIONS)
+            val entrancesLayer = mapboxMap.getLayer(ENTRANCES)
+            if (mapboxMap.getCameraPosition().zoom > ENTRANCES_ZOOM_THRESHOLD) {
+                if (entrancesLayer != null) {
+                    entrancesLayer.setProperties(visibility(Property.VISIBLE))
+                }
+            } else {
+                if (entrancesLayer != null) {
+                    entrancesLayer.setProperties(visibility(Property.NONE))
                 }
             }
-        })
+        }
     }
 
     override fun addStationsLayer(geoJsonData: String?) {

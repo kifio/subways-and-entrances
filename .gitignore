@@ -7,6 +7,7 @@ out/
 local.properties
 android/src/main/res/values/google_maps_api.xml
 android/src/main/res/values/mapbox_conf.xml
+desktop-editor/src/main/res/yandex_maps_api_key.txt
 *.iml
 *.csv
 *.osm

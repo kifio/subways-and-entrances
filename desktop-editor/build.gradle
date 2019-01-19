@@ -1,16 +1,23 @@
 apply plugin: 'kotlin'
 apply plugin: 'application'
 
-mainClassName = 'kifio.SubwayEditor'
-
 dependencies {
-    implementation project (":model")
-    implementation project (":loader")
+    implementation project (':domain')
     implementation 'no.tornado:tornadofx:1.7.18'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 }
 
 sourceCompatibility = 1.8
 
 compileKotlin {
     kotlinOptions.jvmTarget = "1.8"
+}
+repositories {
+    mavenCentral()
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
 }

@@ -11,8 +11,7 @@ import com.google.maps.android.data.geojson.GeoJsonFeature
 import com.google.maps.android.data.geojson.GeoJsonLayer
 import com.google.maps.android.data.geojson.GeoJsonPointStyle
 import kifio.DataConstants
-import kifio.subway.data.model.LocalOpenStreetMapManager
-import kifio.subway.presenter.MapPresenter
+import kifio.subway.presenter.MapPresenterImpl
 import kifio.subway.view.MapView
 import kifio.subway.view.activity.MapsActivity
 import org.json.JSONObject
@@ -23,7 +22,7 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
     private lateinit var map: GoogleMap
     private var stationsLayer: GeoJsonLayer? = null
     private var entrancesLayer: GeoJsonLayer? = null
-    private val presenter = MapPresenter(this, LocalOpenStreetMapManager.instanse)
+    private val presenter = MapPresenterImpl(this)
 
     companion object {
 
@@ -39,7 +38,7 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
 
     override fun onMapReady(map: GoogleMap) {
         this.map = map
-        presenter.loadEntrancesOffline()
+        presenter.loadSubwayMap()
         map.moveCamera(CameraUpdateFactory
                 .newLatLngZoom(LatLng(MapsActivity.INITIAL_LAT, MapsActivity.INITIAL_LON), INITIAL_ZOOM.toFloat()))
         map.setOnCameraMoveListener(object: GoogleMap.OnCameraMoveListener{
@@ -63,7 +62,9 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
     override fun addStationsLayer(geoJsonData: String?) {
         if (geoJsonData != null) {
             stationsLayer = GeoJsonLayer(map, JSONObject(geoJsonData))
-            stationsLayer?.features?.forEach { it.pointStyle = getPointStyle(it) }
+            stationsLayer?.features?.forEach {
+                it.pointStyle = getPointStyle(it)
+            }
             addLayer(stationsLayer)
         } else {
             Timber.e("Stations layer is empty!")
@@ -73,7 +74,9 @@ class GoogleMapsFragment: SupportMapFragment(), OnMapReadyCallback, MapView {
     override fun addEntrancesLayer(geoJsonData: String?) {
         if (geoJsonData != null) {
             entrancesLayer = GeoJsonLayer(map, JSONObject(geoJsonData))
-            entrancesLayer?.features?.forEach { it.pointStyle = getPointStyle(it) }
+            entrancesLayer?.features?.forEach {
+                it.pointStyle = getPointStyle(it)
+            }
         } else {
             Timber.e("Entrances layer is empty!")
         }

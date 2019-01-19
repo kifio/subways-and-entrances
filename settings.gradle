@@ -1,1 +1,1 @@
-include ':loader', ':model', ':desktop-editor'//,':android'
+include ':desktop-editor', ':android', ':domain', ':data'

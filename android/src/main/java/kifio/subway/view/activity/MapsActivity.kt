@@ -5,6 +5,7 @@ import android.os.PersistableBundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import android.view.MenuItem
+import androidx.fragment.app.Fragment
 import kifio.subway.R
 import kifio.subway.view.fragment.GoogleMapsFragment
 import kifio.subway.view.fragment.MapboxMapFragment
@@ -44,7 +45,7 @@ class MapsActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
 
     private fun findFragment(tag: String) = supportFragmentManager.findFragmentByTag(tag)
 
-    private fun showFragment(fragmentName: String, newInstance: () -> androidx.fragment.app.Fragment) {
+    private fun<T: Fragment> showFragment(fragmentName: String, newInstance: () -> T) {
         val fragment = findFragment(fragmentName)
         if (fragment == null) {
             supportFragmentManager.beginTransaction().add(R.id.container,

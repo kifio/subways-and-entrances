@@ -1,8 +1,9 @@
-package kifio
+package kifio.repository.osm
 
-import kifio.subway.data.Entrance
-import kifio.subway.data.MapData
-import kifio.subway.data.Station
+import kifio.data.Entrance
+import kifio.data.MapData
+import kifio.data.Station
+import kifio.repository.SubwayParser
 import org.w3c.dom.Element
 import org.w3c.dom.NamedNodeMap
 import org.w3c.dom.Node
@@ -20,12 +21,12 @@ import javax.xml.parsers.DocumentBuilderFactory
  *
  * Parser extract from node lat, lon and data required for mapping entrances to stations. For now it is color property.
  */
-class OpenStreetMapParser {
+internal class OsmParser: SubwayParser {
 
     private val tmpMap = mutableMapOf<String, String>()
     private val builder = DocumentBuilderFactory.newInstance().newDocumentBuilder()
 
-    fun <T: MapData> loadFromOsm(inputStream: InputStream, parse: (data: Map<String, String>) -> T): MutableSet<T> {
+    override fun <T: MapData> loadFromOsm(inputStream: InputStream, parse: (data: Map<String, String>) -> T): MutableSet<T> {
         return parse(inputStream, parse)
     }
 

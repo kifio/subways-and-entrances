@@ -2,9 +2,8 @@ apply plugin: 'java'
 apply plugin: 'kotlin'
 
 dependencies {
-    implementation fileTree(dir: '../libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
-    implementation 'com.mapbox.mapboxsdk:mapbox-sdk-services:4.3.0'
+    implementation ('com.mapbox.mapboxsdk:mapbox-sdk-services:4.3.0') { transitive = true }
     implementation 'com.mapbox.mapboxsdk:mapbox-sdk-turf:4.3.0'
 }
 
