@@ -1,30 +1,23 @@
 package kifio
 
 import tornadofx.*
+import javafx.scene.web.WebView
 
-class SEView : View(), MapView {
+class SEView : View() {
 
     private val presenter = SEPresenter(this)
 
     override val root = borderpane {
         left {
             webview {
-                engine.loadContent(presenter.getMapHtml())
+                presenter.showMap(engine)
             }
         }
 
         right {
-            listview(presenter.getStationsList()) {
+            listview(presenter.list) {
 
             }
         }
-    }
-
-    override fun addStationsLayer(geoJsonData: String?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun addEntrancesLayer(geoJsonData: String?) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }
