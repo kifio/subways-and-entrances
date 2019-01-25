@@ -36,7 +36,6 @@ class SEPresenter(val view: SEView) {
         engine.loadContent(html)
         engine.loadWorker.stateProperty().addListener { _, _, newValue ->
             mapReady = newValue == Worker.State.SUCCEEDED
-            println(mapReady)
         }
     }
 
@@ -45,6 +44,7 @@ class SEPresenter(val view: SEView) {
             if (newState == Worker.State.SUCCEEDED) {
                 println("initCommunication")
                 doc = engine.executeScript("window") as JSObject
+                doc.setMember("app", JavaBridge())
                 loadEntrancesOffline()
             }
         }
@@ -66,14 +66,27 @@ class SEPresenter(val view: SEView) {
     }
 
     fun updateMap(stations: GeoJson, entrances: GeoJson) {
-
+        invokeJS("addFeatures(${stations.toJson()})")
     }
 
     private fun invokeJS(str: String) {
-
+        if (mapReady) {
+            doc.eval(str);
+        } else {
+            engine.getLoadWorker().stateProperty().addListener { _, _, newState ->
+                if (newState == Worker.State.SUCCEEDED) {
+                    doc.eval(str);
+                }
+            }
+        }
     }
 
-//
+    class JavaBridge {
+        fun log(message: String) {
+            println(message)
+        }
+    }
+
 //    fun getStationsPainter(): WaypointPainter<Waypoint> {
 //        return  WaypointPainter<Waypoint>().apply {
 //            waypoints = metroMap.keys.map { StationWaypoint(it) }.toSet()
