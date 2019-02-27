@@ -89,9 +89,9 @@ class OpenStreetMapParser {
 
         fun buildEntrance(data: Map<String, String>): Entrance {
             val lat = data["lat"]?.toDouble()
-                    ?: throw IllegalArgumentException("Entrance without lat")
+                    ?: throw IllegalArgumentException("OpenDataMosEntrance without lat")
             val lon = data["lon"]?.toDouble()
-                    ?: throw IllegalArgumentException("Entrance without lon")
+                    ?: throw IllegalArgumentException("OpenDataMosEntrance without lon")
             val ref = data["ref"]?.toInt() ?: -1
             return Entrance(ref, data["colour"], lat, lon)
         }

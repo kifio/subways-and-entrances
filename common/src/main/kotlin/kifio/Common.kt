@@ -9,16 +9,20 @@ import java.util.*
 
 object Common {
 
-    fun buildMap(efis: InputStream, sfis: InputStream): Map<Station, MutableList<Entrance>> {
+    fun buildMap(efis: InputStream, sfis: InputStream): Map<Station, List<Entrance>> {
         val osmParser = OpenStreetMapParser()
         val entrances = osmParser.loadFromOsm(efis, ::buildEntrance)
         val stations = osmParser.loadFromOsm(sfis, ::buildStation)
         val map = mutableMapOf<Station, MutableList<Entrance>>()
         entrances.forEach {
             val station = osmParser.nearestStation(it.lat, it.lon, stations)
-            val entrances = map.getOrPut(station, {mutableListOf<Entrance>()})
-            entrances.add(it)
+            map.getOrPut(station) { mutableListOf() }.add(it)
         }
         return map
+    }
+
+    fun buildMap(pathToJson: String): Map<Station, List<Entrance>> {
+        val odmParser = OpenDataMosParser()
+        return odmParser.parse(pathToJson)
     }
 }
